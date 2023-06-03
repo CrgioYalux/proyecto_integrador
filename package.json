@@ -1,0 +1,22 @@
+{
+  "name": "accountability_taken",
+  "private": true,
+  "version": "1.0.0",
+  "license": "MIT",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev:client": "yarn workspace client run dev",
+    "dev:server": "yarn workspace server run dev",
+    "build": "yarn workspace server run build && yarn workspace client run build",
+    "start": "yarn run build && yarn workspace server run start"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.3"
+  }
+}

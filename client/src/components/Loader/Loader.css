@@ -1,0 +1,38 @@
+.Loader {
+    --Loader-color: var(--brand-color-l-base);
+    --Loader-size: 2;
+
+    width: calc(30px * var(--Loader-size));
+    height: calc(30px * var(--Loader-size));
+
+    overflow: hidden;
+
+    border: calc(3px * var(--Loader-size)) solid var(--Loader-color);
+
+    font-size: calc(5px * var(--Loader-size));
+
+    box-sizing: content-box;
+}
+
+.Loader > p {
+    position: relative;
+
+    top: 45%;
+    transform: translate(0, -50%);
+
+    font-size: 2em;
+    letter-spacing: 4em;
+    text-decoration: wavy var(--Loader-color) line-through calc(5px * var(--Loader-size));
+
+    animation: leftToRight 1s linear forwards infinite;
+}
+
+@keyframes leftToRight {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -4.875em;
+    }
+}

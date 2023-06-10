@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect } from 'react';
 import type { Theme } from './utils';
 import { getSystemTheme, applyTheme } from './utils';
 

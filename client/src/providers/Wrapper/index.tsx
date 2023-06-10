@@ -1,4 +1,5 @@
-import ThemeContextProvider from "../Theme";
+import ThemeContextProvider from '../Theme';
+import { BrowserRouter } from 'react-router-dom';
 
 interface ProvidersWrapperProps {
     children: React.ReactNode;
@@ -7,7 +8,9 @@ interface ProvidersWrapperProps {
 const ProvidersWrapper: React.FC<ProvidersWrapperProps> = ({ children }) => {
     return (
         <ThemeContextProvider>
-        {children}
+            <BrowserRouter>
+                {children}
+            </BrowserRouter>
         </ThemeContextProvider>
     );
 };

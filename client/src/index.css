@@ -23,13 +23,10 @@
 }
 
 :root {
-  /* Fonts */
-
   /* Colors */
-
   /* Brand color */
 
-  --brand-color-hue: 0;
+  --brand-color-hue: 210;
   --brand-color-saturation: 50;
   --brand-color-lightness: 50;
 

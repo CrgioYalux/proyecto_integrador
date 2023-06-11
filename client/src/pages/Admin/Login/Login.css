@@ -1,6 +1,6 @@
 .Login {
     height: max-content;
-    max-width: 80vw;
+    max-width: 50vw;
   
     background-color: transparent;
     font-size: 1em;
@@ -16,8 +16,7 @@
 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
 
     gap: calc(var(--Login-form-spacing) * 2);
     padding: calc(var(--Login-form-spacing) * 2);
@@ -33,6 +32,7 @@
 }
 
 .Login > form > label {
+    width: 100%;
     position: relative;
 
     display: flex;
@@ -40,62 +40,56 @@
     align-items: center;
 
     color: inherit;
+
     font-size: 1em;
-}
-
-.Login > form > label > input {
-    flex: 1 1 auto;
-
-    background-color: transparent;
-    color: inherit;
-
-    font-size: 1.25em;
-    padding: .25em;
-    text-align: center;
 
     border: 2px solid currentColor;
     border-radius: calc(var(--brand-border-radius) - var(--Login-form-spacing));
 }
 
-.Login > form > label > input:focus {
-    outline-offset: 2px;
+.Login > form > label > input {
+    width: 100%;
+    background-color: transparent;
+    color: inherit;
+
+    font-size: 1.25em;
+    padding: .25em;
+
+    border: 0;
+    border-radius: calc(var(--brand-border-radius) - var(--Login-form-spacing));
+    outline: 0;
 }
 
-.Login > form > label > input:placeholder-shown {
-    color: var(--primary-color-l-highest);
+.Login > form > label:nth-child(2) > input {
+    max-width: 85%;
 }
 
-.Login > form > label > input:first-child {
-    margin-top: auto;
+.Login > form > label:nth-child(1) > input {
+    max-width: 100%;
 }
 
 .Login > form > label > button {
     position: absolute;
-    right: 5px;
+    right: 0;
 
-    font-size: .75em;
+    height: 100%;
+    aspect-ratio: 1;
 
-    color: inherit;
+    display: grid;
+    place-items: center;
+
     background-color: transparent;
 
     border: 0;
     outline: 0;
 
-    opacity: .75;
     cursor: pointer;
 }
 
-.Login > form > label > button:focus {
-    text-decoration: underline;
-}
-
-.Login > form > label > input:placeholder-shown + button {
-    opacity: .5;
-    cursor: default;
-}
-
-.Login > form > label:first-child {
-    margin-top: auto;
+.Login > form > label > button > * {
+    height: 60%;
+    aspect-ratio: 1;
+    fill: var(--brand-color-l-base);
 }
 
 .Login > form > button {
@@ -116,4 +110,20 @@
     border-radius: calc(var(--brand-border-radius) - var(--Login-form-spacing));
 
     cursor: pointer;
+}
+
+.Login > form > label > input:placeholder-shown {
+    color: var(--primary-color-l-highest);
+}
+
+.Login > form > label > input:first-child {
+    margin-top: auto;
+}
+
+.Login > form > label > button:focus {
+    text-decoration: underline;
+}
+
+.Login > form > label:first-child {
+    margin-top: auto;
 }

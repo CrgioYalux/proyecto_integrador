@@ -1,7 +1,8 @@
 .Login {
-    height: max-content;
-    max-width: 50vw;
-  
+    width: 30vw;
+    min-width: 300px;
+    aspect-ratio: 1;
+
     background-color: transparent;
     font-size: 1em;
 }
@@ -31,6 +32,17 @@
     border-radius: var(--brand-border-radius);
 }
 
+.Login > form > strong {
+    margin: auto;
+
+    font-size: 1.4em;
+    line-height: 1;
+    letter-spacing: 2px;
+    font-weight: 700;
+
+    color: var(--primary-color-l-high);
+}
+
 .Login > form > label {
     width: 100%;
     position: relative;
@@ -40,11 +52,12 @@
     align-items: center;
 
     color: inherit;
-
     font-size: 1em;
 
     border: 2px solid currentColor;
     border-radius: calc(var(--brand-border-radius) - var(--Login-form-spacing));
+
+    overflow: hidden;
 }
 
 .Login > form > label > input {
@@ -56,8 +69,13 @@
     padding: .25em;
 
     border: 0;
-    border-radius: calc(var(--brand-border-radius) - var(--Login-form-spacing));
+    border-left: 10px solid transparent;
+    border-radius: 0;
     outline: 0;
+}
+
+.Login > form > label > input:focus {
+    border-color: var(--brand-color-l-base);
 }
 
 .Login > form > label:nth-child(2) > input {
@@ -85,7 +103,6 @@
 
     cursor: pointer;
 }
-
 .Login > form > label > button > * {
     height: 60%;
     aspect-ratio: 1;

@@ -19,6 +19,7 @@ const Login: React.FC<LoginProps> = ({ }) => {
     return (
         <div className='Login'>
             <form onSubmit={handleSubmit}>
+                <strong>Login</strong>
                 <label htmlFor='username'>
                     <input 
                     type='text'

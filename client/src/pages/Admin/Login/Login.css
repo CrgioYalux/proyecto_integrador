@@ -1,0 +1,119 @@
+.Login {
+    height: max-content;
+    max-width: 80vw;
+  
+    background-color: transparent;
+    font-size: 1em;
+}
+
+.Login > form {
+    --Login-form-spacing: 5px;
+
+    height: 100%;
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: calc(var(--Login-form-spacing) * 2);
+    padding: calc(var(--Login-form-spacing) * 2);
+
+    color: var(--primary-color-l-high);
+    font-size: 1em;
+
+    background-color: var(--secondary-color-l-low);
+    box-shadow: var(--Login-form-spacing) var(--Login-form-spacing) 0 var(--secondary-color-l-lowest);
+
+    border: 2px solid currentColor;
+    border-radius: var(--brand-border-radius);
+}
+
+.Login > form > label {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    color: inherit;
+    font-size: 1em;
+}
+
+.Login > form > label > input {
+    flex: 1 1 auto;
+
+    background-color: transparent;
+    color: inherit;
+
+    font-size: 1.25em;
+    padding: .25em;
+    text-align: center;
+
+    border: 2px solid currentColor;
+    border-radius: calc(var(--brand-border-radius) - var(--Login-form-spacing));
+}
+
+.Login > form > label > input:focus {
+    outline-offset: 2px;
+}
+
+.Login > form > label > input:placeholder-shown {
+    color: var(--primary-color-l-highest);
+}
+
+.Login > form > label > input:first-child {
+    margin-top: auto;
+}
+
+.Login > form > label > button {
+    position: absolute;
+    right: 5px;
+
+    font-size: .75em;
+
+    color: inherit;
+    background-color: transparent;
+
+    border: 0;
+    outline: 0;
+
+    opacity: .75;
+    cursor: pointer;
+}
+
+.Login > form > label > button:focus {
+    text-decoration: underline;
+}
+
+.Login > form > label > input:placeholder-shown + button {
+    opacity: .5;
+    cursor: default;
+}
+
+.Login > form > label:first-child {
+    margin-top: auto;
+}
+
+.Login > form > button {
+    margin-top: auto;
+    margin-bottom: var(--Login-form-spacing);
+    margin-left: auto;
+    margin-right: var(--Login-form-spacing);
+
+    font-size: .85em;
+    font-weight: 600;
+    padding: .35em 1em;
+
+    color: var(--secondary-color-l-low);
+    background-color: var(--primary-color-l-high);
+    box-shadow: calc(var(--Login-form-spacing) / 2) calc(var(--Login-form-spacing) / 2) 0 var(--primary-color-l-highest);
+
+    border: 2px solid currentColor;
+    border-radius: calc(var(--brand-border-radius) - var(--Login-form-spacing));
+
+    cursor: pointer;
+}

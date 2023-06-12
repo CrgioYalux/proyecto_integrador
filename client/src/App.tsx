@@ -20,21 +20,20 @@ function App() {
 
     return (
         <Routes>
-            <Route path='/'>
-                <Route index element={<Home />} />
-                <Route path='/cart' element={<Cart />} />
-            </Route>
-
             <Route path='/admin' element={<Admin><Outlet /></Admin>}>
                 <Route index element={state.userSession.logged ? <Home /> : <Navigate to='/admin/login' />} />
                 <Route
                 path='login'
                 element={state.userSession.logged ? <Navigate to='/admin' /> : <Login />}
                 />
-                <Route path='*' element={state.userSession.logged ? <div>404</div> : <Navigate to='/admin/login' />} />
+                <Route path='*' element={<h1>404</h1>} />
             </Route>
 
-            <Route path='*' element={<div>404</div>} />
+            <Route path='/'>
+                <Route index element={<h1>Ecommerce goes here</h1>} />
+                <Route path='/cart' element={<Cart />} />
+                <Route path='*' element={<h1>404</h1>} />
+            </Route>
         </Routes>
     );
 };

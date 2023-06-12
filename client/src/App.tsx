@@ -1,7 +1,6 @@
 import './App.css';
 
 import { Routes, Route, Link, Navigate } from 'react-router-dom';
-import SwitchThemeBT from './components/SwitchThemeBT';
 import Loader from './components/Loader';
 import TimedRender from './components/TimedRender';
 import Login from './pages/Admin/Login';
@@ -38,7 +37,7 @@ function App() {
     const [state, actions] = useAdminSystem();
     return (
         <div className='App'>
-            <SwitchThemeBT />
+            {/*<SwitchThemeBT />*/}
             {state.userSession.logged && <button onClick={() => actions.userSession.logOut()}>log out</button>}
             <Routes>
                 <Route path='/'>

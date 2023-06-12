@@ -1,4 +1,6 @@
 .Login {
+    --Login-accent-color: var(--brand-color-l-lower);
+
     width: 30vw;
     min-width: 300px;
     aspect-ratio: 1;
@@ -72,10 +74,16 @@
     border-left: 10px solid transparent;
     border-radius: 0;
     outline: 0;
+
+    transition: border-color .25s;
 }
 
 .Login > form > label > input:focus {
-    border-color: var(--brand-color-l-base);
+    border-color: var(--primary-color-l-high);
+}
+
+.Login > form > label > input:not(:placeholder-shown) {
+    border-color: var(--Login-accent-color);
 }
 
 .Login > form > label:nth-child(2) > input {
@@ -99,14 +107,16 @@
     background-color: transparent;
 
     border: 0;
+    border-radius: 50%;
     outline: 0;
 
     cursor: pointer;
 }
+
 .Login > form > label > button > * {
     height: 60%;
     aspect-ratio: 1;
-    fill: var(--brand-color-l-base);
+    fill: var(--Login-accent-color);
 }
 
 .Login > form > button {
@@ -129,6 +139,10 @@
     cursor: pointer;
 }
 
+.Login > form > button:focus {
+    outline: 2px solid var(--Login-accent-color);
+}
+
 .Login > form > label > input:placeholder-shown {
     color: var(--primary-color-l-highest);
 }
@@ -138,7 +152,8 @@
 }
 
 .Login > form > label > button:focus {
-    text-decoration: underline;
+    outline: 2px solid var(--Login-accent-color);
+    outline-offset: -5px;
 }
 
 .Login > form > label:first-child {

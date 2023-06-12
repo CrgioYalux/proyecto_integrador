@@ -1,0 +1,13 @@
+.Admin {
+    flex: 1 1 auto;
+    margin: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--secondary-color-l-low);
+    border-radius: var(--brand-border-radius);
+    background-color: var(--brand-color-l-lowest);
+}

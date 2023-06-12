@@ -1,21 +1,10 @@
 .Login {
+    --Login-form-spacing: 5px;
     --Login-accent-color: var(--brand-color-l-lower);
 
     width: 30vw;
     min-width: 300px;
     aspect-ratio: 1;
-
-    background-color: transparent;
-    font-size: 1em;
-}
-
-.Login > form {
-    --Login-form-spacing: 5px;
-
-    height: 100%;
-    width: 100%;
-
-    position: relative;
 
     display: flex;
     flex-direction: column;
@@ -34,7 +23,7 @@
     border-radius: var(--brand-border-radius);
 }
 
-.Login > form > strong {
+.Login > strong {
     margin: auto;
 
     font-size: 1.4em;
@@ -45,7 +34,7 @@
     color: var(--primary-color-l-high);
 }
 
-.Login > form > label {
+.Login > label {
     width: 100%;
     position: relative;
 
@@ -62,7 +51,7 @@
     overflow: hidden;
 }
 
-.Login > form > label > input {
+.Login > label > input {
     width: 100%;
     background-color: transparent;
     color: inherit;
@@ -78,23 +67,23 @@
     transition: border-color .25s;
 }
 
-.Login > form > label > input:focus {
+.Login > label > input:focus {
     border-color: var(--primary-color-l-high);
 }
 
-.Login > form > label > input:not(:placeholder-shown) {
+.Login > label > input:not(:placeholder-shown) {
     border-color: var(--Login-accent-color);
 }
 
-.Login > form > label:nth-child(2) > input {
+.Login > label:nth-child(2) > input {
     max-width: 85%;
 }
 
-.Login > form > label:nth-child(1) > input {
+.Login > label:nth-child(1) > input {
     max-width: 100%;
 }
 
-.Login > form > label > button {
+.Login > label > button {
     position: absolute;
     right: 0;
 
@@ -113,13 +102,13 @@
     cursor: pointer;
 }
 
-.Login > form > label > button > * {
+.Login > label > button > * {
     height: 60%;
     aspect-ratio: 1;
     fill: var(--Login-accent-color);
 }
 
-.Login > form > button {
+.Login > button {
     margin-top: auto;
     margin-bottom: var(--Login-form-spacing);
     margin-left: auto;
@@ -139,23 +128,23 @@
     cursor: pointer;
 }
 
-.Login > form > button:focus {
+.Login > button:focus {
     outline: 2px solid var(--Login-accent-color);
 }
 
-.Login > form > label > input:placeholder-shown {
+.Login > label > input:placeholder-shown {
     color: var(--primary-color-l-highest);
 }
 
-.Login > form > label > input:first-child {
+.Login > label > input:first-child {
     margin-top: auto;
 }
 
-.Login > form > label > button:focus {
+.Login > label > button:focus {
     outline: 2px solid var(--Login-accent-color);
     outline-offset: -5px;
 }
 
-.Login > form > label:first-child {
+.Login > label:first-child {
     margin-top: auto;
 }

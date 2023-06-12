@@ -17,35 +17,33 @@ const Login: React.FC<LoginProps> = ({ }) => {
     };
 
     return (
-        <div className='Login'>
-            <form onSubmit={handleSubmit}>
-                <strong>Login</strong>
-                <label htmlFor='username'>
-                    <input 
-                    type='text'
-                    placeholder='username'
-                    id='username'
-                    name='username'
-                    required
-                    autoFocus
-                    />
-                </label>
-                <label htmlFor='password'>
-                    <input 
-                    type={passwordInputType}
-                    placeholder='password'
-                    id='password'
-                    name='password'
-                    required
-                    />
-                    <button
-                    type='button'
-                    onClick={() => setPassworInputType(prev => prev === 'password' ? 'text' : 'password' )}
-                    >{passwordInputType === 'password' ? <OpenEye /> : <ClosedEye />}</button>
-                </label>
-                <button type='submit'>ENTER</button>
-            </form>
-        </div>
+        <form className='Login' onSubmit={handleSubmit}>
+            <strong>Login</strong>
+            <label htmlFor='username'>
+                <input 
+                type='text'
+                placeholder='username'
+                id='username'
+                name='username'
+                required
+                autoFocus
+                />
+            </label>
+            <label htmlFor='password'>
+                <input 
+                type={passwordInputType}
+                placeholder='password'
+                id='password'
+                name='password'
+                required
+                />
+                <button
+                type='button'
+                onClick={() => setPassworInputType(prev => prev === 'password' ? 'text' : 'password' )}
+                >{passwordInputType === 'password' ? <OpenEye /> : <ClosedEye />}</button>
+            </label>
+            <button type='submit'>ENTER</button>
+        </form>
     );
 };
 

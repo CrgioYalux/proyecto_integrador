@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from 'react';
-import { BUSINESS_INFO } from './consts';
+import { BUSINESS_INFO, LOGIN_INFO } from './consts';
 import type { AdminSystemState, AdminSystemActions, UserSessionState, UserSessionActions } from './utils';
 
 type AdminSystemContext = readonly [
@@ -9,7 +9,7 @@ type AdminSystemContext = readonly [
 
 const Context = createContext<AdminSystemContext>([
     { userSession: { logged: false }, businessInfo: BUSINESS_INFO },
-    { userSession: { logIn: () => {}, logOut: () => {} } },
+    { userSession: { logIn: () => new Promise(() => {}), logOut: () => {} } },
 ]);
 
 interface AdminSystemContextProviderProps {
@@ -20,7 +20,21 @@ const AdminSystemContextProvider: React.FC<AdminSystemContextProviderProps> = ({
     const [userSessionState, setUserSessionState] = useState<UserSessionState>({ logged: false });
 
     const userSessionActions: UserSessionActions = {
-        logIn: () => { setUserSessionState((prev) => ({ ...prev, logged: true })); },
+        logIn: (loginInfo) => {
+            return new Promise<boolean>((resolve, reject) => {
+                setTimeout(() => {
+                    if (loginInfo.username === LOGIN_INFO.username && loginInfo.password === LOGIN_INFO.password) {
+                        setUserSessionState((prev) => ({ ...prev, logged: true, loginInfo: LOGIN_INFO }));
+                        resolve(true);
+                    } else {
+                        if (userSessionState.logged) {
+                            setUserSessionState((prev) => ({ ...prev, logged: false, loginInfo: undefined }));
+                        }
+                        reject('Wrong credentials');
+                    }
+                }, 2000);
+            });
+        },
         logOut: () => { setUserSessionState((prev) => ({ ...prev, logged: false })); },
     };
 

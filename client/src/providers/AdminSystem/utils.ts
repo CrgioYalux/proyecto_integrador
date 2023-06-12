@@ -14,13 +14,15 @@ type AdminLoginInfo = {
     password: string,
 };
 
+type LoginInfo = Omit<AdminLoginInfo, 'role'>;
+
 type UserSessionState = {
     logged: boolean,
     loginInfo?: AdminLoginInfo,
 };
 
 type UserSessionActions = {
-    logIn: () => void,
+    logIn: (loginInfo: LoginInfo) => Promise<boolean>,
     logOut: () => void,
 };
 
@@ -33,4 +35,4 @@ type AdminSystemActions = {
     userSession: UserSessionActions,
 };
 
-export type { BusinessInfo, AdminSystemState, AdminSystemActions, UserSessionState, UserSessionActions };
+export type { BusinessInfo, LoginInfo, AdminLoginInfo, AdminSystemState, AdminSystemActions, UserSessionState, UserSessionActions };

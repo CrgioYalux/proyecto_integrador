@@ -1,4 +1,4 @@
-import type { BusinessInfo } from './utils';
+import type { BusinessInfo, AdminLoginInfo } from './utils';
 
 const BUSINESS_INFO: BusinessInfo = {
     name: 'SOL SRL',
@@ -10,4 +10,10 @@ const BUSINESS_INFO: BusinessInfo = {
     activityStart: '01/05/2001',
 };
 
-export { BUSINESS_INFO };
+const LOGIN_INFO: AdminLoginInfo = {
+    username: 'admin',
+    password: 'admin',
+    role: 'admin',
+};
+
+export { BUSINESS_INFO, LOGIN_INFO };

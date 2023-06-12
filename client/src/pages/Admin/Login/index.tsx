@@ -1,19 +1,45 @@
 import './Login.css';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useAdminSystem } from "../../../providers/AdminSystem";
 import OpenEye from '../../../components/Icons/OpenEye';
 import ClosedEye from '../../../components/Icons/ClosedEye';
 
-interface LoginProps {
-};
+interface LoginProps { };
 
 const Login: React.FC<LoginProps> = ({ }) => {
     const [_, actions] = useAdminSystem();
     const [passwordInputType, setPassworInputType] = useState<'password'|'text'>('password');
+    const formTipSpanRef = useRef<HTMLSpanElement | null>(null);
+    const submitButtonRef = useRef<HTMLButtonElement | null>(null);
 
-    const handleSubmit = (event: React.SyntheticEvent<HTMLFormElement>): void => {
+    const handleSubmit = (event: React.SyntheticEvent): void => {
         event.preventDefault();
-        actions.userSession.logIn();
+
+        const form = event.target as HTMLFormElement & {
+            username: HTMLInputElement,
+            password: HTMLInputElement,
+            tip: HTMLSpanElement,
+        };
+
+        if (submitButtonRef.current) {
+            submitButtonRef.current.textContent = '...';
+        }
+
+        actions.userSession.logIn({ username: form.username.value, password: form.password. value })
+            .then(() => {
+                form.classList.remove('--login-failed');
+            })
+            .catch((reason: string) => {
+                form.classList.add('--login-failed');
+                if (formTipSpanRef.current) {
+                    formTipSpanRef.current.textContent = reason;
+                }
+            })
+            .finally(() => {
+                if (submitButtonRef.current) {
+                    submitButtonRef.current.textContent = 'ENTER'
+                }
+            });
     };
 
     return (
@@ -42,7 +68,8 @@ const Login: React.FC<LoginProps> = ({ }) => {
                 onClick={() => setPassworInputType(prev => prev === 'password' ? 'text' : 'password' )}
                 >{passwordInputType === 'password' ? <OpenEye /> : <ClosedEye />}</button>
             </label>
-            <button type='submit'>ENTER</button>
+            <span ref={formTipSpanRef}></span>
+            <button type='submit' ref={submitButtonRef}>ENTER</button>
         </form>
     );
 };

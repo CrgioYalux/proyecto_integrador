@@ -23,6 +23,15 @@
     border-radius: var(--brand-border-radius);
 }
 
+.Login.--login-failed {
+    --Login-accent-color: var(--unsuccess-color);
+}
+
+.Login > span {
+    margin: 0 auto;
+    color: var(--unsuccess-color);
+}
+
 .Login > strong {
     margin: auto;
 

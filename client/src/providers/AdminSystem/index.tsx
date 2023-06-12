@@ -1,28 +1,6 @@
 import { createContext, useContext, useState } from 'react';
-
-type AdminLoginInfo = {
-    role: 'admin' | 'readonly',
-    username: string,
-    password: string,
-};
-
-type UserSessionState = {
-    logged: boolean,
-    loginInfo?: AdminLoginInfo,
-};
-
-type UserSessionActions = {
-    logIn: () => void,
-    logOut: () => void,
-};
-
-type AdminSystemState = {
-    userSession: UserSessionState,
-};
-
-type AdminSystemActions = {
-    userSession: UserSessionActions,
-};
+import { BUSINESS_INFO } from './consts';
+import type { AdminSystemState, AdminSystemActions, UserSessionState, UserSessionActions } from './utils';
 
 type AdminSystemContext = readonly [
     state: AdminSystemState,
@@ -30,7 +8,7 @@ type AdminSystemContext = readonly [
 ];
 
 const Context = createContext<AdminSystemContext>([
-    { userSession: { logged: false } },
+    { userSession: { logged: false }, businessInfo: BUSINESS_INFO },
     { userSession: { logIn: () => {}, logOut: () => {} } },
 ]);
 
@@ -47,7 +25,7 @@ const AdminSystemContextProvider: React.FC<AdminSystemContextProviderProps> = ({
     };
 
     const value: AdminSystemContext = [
-        { userSession: userSessionState },
+        { userSession: userSessionState, businessInfo: BUSINESS_INFO },
         { userSession: userSessionActions },
     ];
 

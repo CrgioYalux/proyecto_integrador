@@ -1,13 +1,13 @@
 import type { BusinessInfo, AdminLoginInfo } from './utils';
 
 const BUSINESS_INFO: BusinessInfo = {
-    name: 'SOL SRL',
+    name: 'TrendStyle',
     cuit: '33-45454545-9',
     tel: '0381-4000000',
-    email: 'sorsrl@gmail.com',
+    email: 'trendstyle@gmail.com',
     address: 'SAN MARTIN 145 - SMT',
     category: 'Responsable Inscripto',
-    activityStart: '01/05/2001',
+    activityStart: '13/6/2023',
 };
 
 const LOGIN_INFO: AdminLoginInfo = {

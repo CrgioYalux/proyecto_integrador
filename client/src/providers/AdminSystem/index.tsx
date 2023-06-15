@@ -12,7 +12,7 @@ const Context = createContext<AdminSystemContext>([
     { userSession: { logIn: () => new Promise(() => {}), logOut: () => {} } },
 ]);
 
-interface AdminSystemContextProviderProps {
+type AdminSystemContextProviderProps = {
     children: React.ReactNode;
 };
 
@@ -33,6 +33,9 @@ const AdminSystemContextProvider: React.FC<AdminSystemContextProviderProps> = ({
                         reject('Wrong credentials');
                     }
                 }, 2000);
+
+                // get /api/admin/login { username, password }
+                // 
             });
         },
         logOut: () => { setUserSessionState((prev) => ({ ...prev, logged: false })); },

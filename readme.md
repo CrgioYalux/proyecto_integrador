@@ -16,6 +16,7 @@ para hacer la estructura del proyecto que abarca las aplicaciones **client** y *
 
 ### Git flow
 ```
+$ git branch my_branch // para crear la branch
 $ git checkout my_branch
 $ git add .
 $ git commit -m "feat|docs|fix|chore|ref: commit message"

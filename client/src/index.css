@@ -270,7 +270,6 @@
 
 body {
   min-height: 100vh;
-
   background-color: var(--primary-color-l-high);
   color: var(--secondary-color-l-lowest);
 }

@@ -67,7 +67,7 @@ function App() {
                 {/* Fallback route for when no path matches */}
                 <Route path='*' element={<h1>404</h1>} />
             </Route>
-
+            
             <Route path='/'>
                 <Route index element={<Navigate to='/admin'/>} />
                 <Route path='/cart' element={<div>Cart component</div>} />

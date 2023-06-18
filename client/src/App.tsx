@@ -1,17 +1,30 @@
 import './App.css';
 
-import { Routes, Route, Link, Navigate, Outlet } from 'react-router-dom';
+import { Routes, Route, Navigate, Outlet, Link } from 'react-router-dom';
 import { useAdminSystem } from './providers/AdminSystem';
 import Admin from './pages/Admin';
-import Home from './pages/Admin/Home';
+// import Home from './pages/Admin/Home';
 import Sales from './pages/Admin/Sales';
 import Login from './pages/Admin/Login';
 
-const Cart: React.FC<{}> = ({ }) => {
+interface ProtectedRouteProps { 
+};
+
+const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ }) => {
+    const [state] = useAdminSystem();
+
+    if (state.userSession.logged) return <Outlet /> 
+    return <Navigate to='/admin/login' replace />
+};
+
+const Home: React.FC<{}> = () => {
     return (
-        <div className='Cart'>
-            Cart
-            <Link to='/'>Home</Link>
+        <div>
+            <Link to='/admin/sales'>sales</Link>
+            <Link to='/admin/sales/new'>new sale</Link>
+            <Link to='/admin/purchases'>purchases</Link>
+            <Link to='/admin/inventory'>inventory</Link>
+            <Link to='/admin'>admin</Link>
         </div>
     );
 };
@@ -22,25 +35,42 @@ function App() {
     return (
         <Routes>
             <Route path='/admin' element={<Admin><Outlet /></Admin>}>
-                <Route index element={state.userSession.logged ? <Home /> : <Navigate to='/admin/login' />} />
+                <Route element={<ProtectedRoute />}>
+                    {/* Route for Home page */}
+                    <Route index element={<Home />} />
 
-                {/*Ruta para Login*/}
-                <Route
-                path='login'
-                element={state.userSession.logged ? <Navigate to='/admin' /> : <Login />}
-                />
+                    {/* Route for Sales page */}
+                    <Route path='sales'>
+                        <Route index element={<div>Where the sales history should go</div>} />
+                        <Route path='new' element={<Sales />} />
+                    </Route>
 
-                {/*Ruta para mi pagina de VENTAS*/}
-                <Route
-                path='sales'
-                element={state.userSession.logged ? <Sales /> : <Login />}
-                />
+                    {/* Route for Purchases page */}
+                    <Route path='purchases'>
+                        <Route index element={<div>Where the purchases history should go</div>} />
+                        <Route path='new' element={<div>Where new purchases should be made</div>}/>
+                    </Route>
+
+                    {/* Route for Accounting Entries */}
+                    <Route path='accounting_entries'>
+                        <Route index element={<div>Where the accounting entries history should go</div>} />
+                        <Route path=':id' element={<div>Where a specific accounting entry should be shown</div>} />
+                    </Route>
+
+                    {/* Route for Inventory page */}
+                    <Route path='inventory' element={<div>Where the inventory should go</div>} />
+                </Route>
+
+                {/* Route for Login page */}
+                <Route path='login' element={state.userSession.logged ? <Navigate to='/admin'/> : <Login />} />
+
+                {/* Fallback route for when no path matches */}
                 <Route path='*' element={<h1>404</h1>} />
             </Route>
 
             <Route path='/'>
-                <Route index element={<h1>Ecommerce goes here</h1>} />
-                <Route path='/cart' element={<Cart />} />
+                <Route index element={<Navigate to='/admin'/>} />
+                <Route path='/cart' element={<div>Cart component</div>} />
                 <Route path='*' element={<h1>404</h1>} />
             </Route>
         </Routes>

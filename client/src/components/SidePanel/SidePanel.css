@@ -1,0 +1,107 @@
+.SidePanel_label {
+    --SidePanel_label-spacing: 5px;
+
+    position: absolute;
+    top: var(--SidePanel_label-spacing);
+    right: var(--SidePanel_label-spacing);
+
+    border-radius: var(--brand-border-radius);
+    padding: 0;
+}
+
+.SidePanel_label > input {
+    display: none;
+}
+
+.SidePanel_label_icon {
+    position: absolute;
+    top: var(--SidePanel_label-spacing);
+    right: var(--SidePanel_label-spacing);
+
+    width: 50px;
+    height: 50px;
+
+    fill: var(--secondary-color-l-base);
+    border-radius: calc(var(--brand-border-radius) - var(--SidePanel_label-spacing));
+
+    z-index: 100;
+
+    cursor: pointer;
+}
+
+.SidePanel_logo {
+    max-width: 125px;
+    aspect-ratio: 1;
+
+    display: grid;
+    place-items: center;
+
+    background-color: var(--brand-color-l-low);
+    border-radius: 50%;
+}
+
+.SidePanel_logo > img {
+    width: 100%;
+}
+
+.SidePanel_label > input:checked + .SidePanel_label_icon {
+    background-color: var(--primary-color-l-base);
+}
+
+.SidePanel_label > input:checked + .SidePanel_label_icon + .SidePanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.SidePanel {
+    display: none;
+
+    height: 40vh;
+    aspect-ratio: 1;
+
+    background-color: var(--primary-color-l-high);
+    border-radius: var(--brand-border-radius);
+
+    padding: var(--SidePanel_label-spacing);
+}
+
+.SidePanel_session_info {
+    margin-top: auto;
+
+    display: grid;
+    place-items: center;
+    gap: var(--SidePanel_label-spacing);
+}
+
+.SidePanel_session_info > span {
+    color: var(--secondary-color-l-base);
+    font-weight: 500;
+}
+
+.SidePanel_options {
+    margin-top: auto;
+
+    display: flex;
+    flex-direction: row;
+    gap: var(--SidePanel_label-spacing);
+}
+
+.SidePanel_options > .SidePanel_options_bt {
+    border-radius: calc(var(--brand-border-radius) - var(--SidePanel_label-spacing));
+    font-weight: 500;
+}
+
+.SidePanel_options > .SidePanel_options_lang_bt {
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.SidePanel_options > .SidePanel_options_logout_bt {
+    margin-left: auto;
+    background-color: hsl(0, 50%, 50%);
+}
+
+.SidePanel_options > .SidePanel_options_logout_bt:hover {
+    background-color: hsl(0, 50%, 40%);
+}

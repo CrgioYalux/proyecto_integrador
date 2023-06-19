@@ -1,5 +1,5 @@
+import SidePanel from '../../components/SidePanel';
 import './Admin.css';
-import SwitchThemeBT from '../../components/SwitchThemeBT';
 
 interface AdminProps {
     children?: React.ReactNode;
@@ -8,7 +8,7 @@ interface AdminProps {
 const Admin: React.FC<AdminProps> = ({ children }) => {
     return (
         <div className='Admin'>
-            <SwitchThemeBT className='Admin_SwitchThemeBT' />
+            <SidePanel />
             {children}
         </div>
     );

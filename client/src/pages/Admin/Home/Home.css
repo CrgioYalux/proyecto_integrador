@@ -19,6 +19,7 @@
 }
 
 .Home > h1 {
+    color: var(--brand-color-l-base);
     text-align: center;
 }
 
@@ -38,6 +39,11 @@
     aspect-ratio: 1;
     display: grid;
     place-items: center;
+}
+
+.Home_linkButton:focus {
+    outline: 1px solid var(--primary-color-l-base);
+    outline-offset: 2px;
 }
 
 .Home_linkButton > span {

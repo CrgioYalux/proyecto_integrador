@@ -6,6 +6,7 @@ import Admin from '../../pages/Admin';
 import Login from '../../pages/Admin/Login';
 import Sales from '../../pages/Admin/Sales';
 import Home from '../../pages/Admin/Home';
+import Purchases from '../../pages/Admin/Purchases';
 
 interface BusinessRouterProps {};
 
@@ -27,7 +28,7 @@ const BusinessRouter: React.FC<BusinessRouterProps> = () => {
 
                     {/* Route for Purchases page */}
                     <Route path='purchases'>
-                        <Route index element={<div>Where the purchases history should go</div>} />
+                        <Route index element={<Purchases />} />
                         <Route path='new' element={<div>Where new purchases should be made</div>}/>
                     </Route>
 

@@ -1,3 +1,5 @@
+import './SwitchThemeBT.css';
+
 import { useTheme } from '../../providers/Theme';
 import Button from '../Button';
 
@@ -11,9 +13,9 @@ const SwitchThemeBT: React.FC<SwitchThemeBTProps> = ({ className }) => {
     return (
         <Button 
         onClick={() => switchTheme()}
-        className={className ?? ''}
+        className={`SwitchThemeBT ${className ?? ''}`}
         >
-            {theme.slice(0, 1).toUpperCase() + theme.slice(1)} mode
+            {theme === 'dark' ? 'Light' : 'Dark'} mode
         </Button>
     );
 };

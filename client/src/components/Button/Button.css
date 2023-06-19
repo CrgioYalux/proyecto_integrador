@@ -4,24 +4,24 @@
     font-weight: 600;
     padding: .25em .75em;
 
-    border: 0;
-    outline: 0px solid var(--primary-color-l-base);
-
     color: var(--primary-color-l-base);
     background-color: var(--secondary-color-l-lowest);
 
-    border-radius: calc(var(--brand-border-radius) - 5px);
+    border-radius: var(--brand-border-radius);
+
+    border: 0;
+    outline: 0;
 
     cursor: pointer;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    
+
+    transition: background-color .15s;
 }
-.Button:hover{   
+
+.Button:hover {
     background-color: var(--primary-color-l-highest);
-    outline: 2px solid var(--primary-color-l-base);
 }
-.Button:focus{
-    outline: 0;
+
+.Button:focus {
+    outline: 1px solid var(--secondary-color-l-base);
+    outline-offset: 2px;
 }

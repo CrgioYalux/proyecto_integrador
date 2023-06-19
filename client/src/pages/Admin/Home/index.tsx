@@ -1,13 +1,16 @@
 import './Home.css';
+
 import { useAdminSystem } from "../../../providers/AdminSystem";
+import { useNavigate } from 'react-router-dom';
+
 import logoImgUrl from '../../../assets/TrendStyle.png';
 import Button from '../../../components/Button';
-import { Link } from 'react-router-dom';
 
 interface HomeProps {};
 
 const Home: React.FC<HomeProps> = ({ }) => {
     const [state, actions] = useAdminSystem();
+    const navigate = useNavigate();
 
     return (
         <div className='Home'>
@@ -16,21 +19,11 @@ const Home: React.FC<HomeProps> = ({ }) => {
                 <img src={logoImgUrl} />
             </div>
             <div className='Home_container'>
-                <Button className='Home_linkButton'>
-                    <Link to="/admin/sales">SALES</Link>
-                </Button>
-                <Button className='Home_linkButton'>
-                    <Link to="/admin/accounting_entries">ACCOUNTING ENTRIES</Link>
-                </Button>
-                <Button className='Home_linkButton'>
-                    <Link to="/admin/purchases">PURCHASES</Link>
-                </Button>
-                <Button className='Home_linkButton'>
-                    <Link to="/admin/inventory">INVENTORY</Link>
-                </Button>
-                <Button className='Home_linkButton'>
-                    <Link to="/admin/accounts">ACCOUNTS</Link>
-                </Button>
+                <Button className='Home_linkButton' onClick={() => navigate('/admin/sales')}><span>SALES</span></Button>
+                <Button className='Home_linkButton' onClick={() => navigate('/admin/purchases')}><span>PURCHASES</span></Button>
+                <Button className='Home_linkButton' onClick={() => navigate('/admin/accounting_entries')}><span>ACCOUNTING ENTRIES</span></Button>
+                <Button className='Home_linkButton' onClick={() => navigate('/admin/inventory')}><span>INVENTORY</span></Button>
+                <Button className='Home_linkButton' onClick={() => navigate('/admin/accounts')}><span>ACCOUNTS</span></Button>
             </div>
             <Button className='Home_logOutButton' onClick={() => actions.userSession.logOut()}>log out</Button>
         </div>

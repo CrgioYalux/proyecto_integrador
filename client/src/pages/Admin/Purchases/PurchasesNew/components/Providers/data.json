@@ -1,0 +1,48 @@
+{"providers":[
+
+        {   
+            "id":1,
+            "name":"adidas",
+            "cuit":"20-345554120-2",
+            "adress":"Av. Soldati 2003",
+            "products":[
+                {
+                    "id":1,
+                    "name":"T-Shirt",
+                    "stock":200,
+                    "unitPrice":100,
+                    "description":"simple tshirt",
+                    "size":["s", "m", "l", "xl"],
+                    "color":["black", "white", "red", "blue"]
+                },
+                {
+                    "id":2,
+                    "name":"Joggings",
+                    "stock":200,
+                    "unitPrice":150,
+                    "description":"simple joggins",
+                    "size":["s", "m", "l", "xl"],
+                    "color":["black", "white", "red", "blue"]
+                },
+                {
+                    "id":3,
+                    "name":"Jeans",
+                    "stock":200,
+                    "unitPrice":100,
+                    "description":"simple jeans",
+                    "size":["s", "m", "l", "xl"],
+                    "color":["black", "white", "red", "blue"]
+                },
+                {
+                    "id":4,
+                    "name":"Striped T-Shirt",
+                    "stock":200,
+                    "unitPrice":100,
+                    "description":"simple striped tshirt",
+                    "size":["s", "m", "l", "xl"],
+                    "color":["black", "white", "red", "blue"]
+                }
+            ]
+        }
+]}
+

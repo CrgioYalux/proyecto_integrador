@@ -1,5 +1,7 @@
 import './Purchases.css';
-import ClothingFilter from '../../../components/ClothingFilter';
+import { useNavigate } from 'react-router-dom';
+import Button from '../../../components/Button';
+
 
 interface PurchasesProps{
 
@@ -7,10 +9,11 @@ interface PurchasesProps{
 
 
 const Purchases :React.FC<PurchasesProps>= ({})=>{
-   return(
-    <div>
-        <ClothingFilter />
-    </div>
+    const navigate = useNavigate();
+    return(
+        <div className='Purchases'>
+            <Button onClick={() => navigate('/admin/purchases/new')}></Button>
+        </div>
    );
 };
 export default Purchases;

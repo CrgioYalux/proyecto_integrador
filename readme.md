@@ -35,6 +35,8 @@ $ git push -u origin my_branch
 ---
 
 ### Links a cosas útiles
+- [PDF en el que encontré traducciones al inglés de conceptos de contabilidad](https://elingua.es/PDF/contabilidad1.pdf)
+- [BEM: Una convención para nombrar clases de CSS](https://getbem.com/naming/)
 - [Diagrama de Excalidraw](https://excalidraw.com/#room=acfc500c095aee59fe2f,p29P6cAN6qS7IcLzD09tnA)
 - [Typescript cheatsheets](https://www.typescriptlang.org/cheatsheets)
 - [React Docs](https://react.dev/)

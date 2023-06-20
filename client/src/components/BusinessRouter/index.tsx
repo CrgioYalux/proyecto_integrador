@@ -3,9 +3,10 @@ import { useAdminSystem } from '../../providers/AdminSystem';
 
 import ProtectedRoute from './ProtectedRoute';
 import Admin from '../../pages/Admin';
+import Home from '../../pages/Admin/Home';
 import Login from '../../pages/Admin/Login';
 import Sales from '../../pages/Admin/Sales';
-import Home from '../../pages/Admin/Home';
+import Accounts from '../../pages/Admin/Accounts';
 
 interface BusinessRouterProps {};
 
@@ -35,6 +36,12 @@ const BusinessRouter: React.FC<BusinessRouterProps> = () => {
                     <Route path='accounting_entries'>
                         <Route index element={<div>Where the accounting entries history should go</div>} /> 
                         <Route path=':id' element={<div>Where a specific accounting entry should be shown</div>} />
+                    </Route>
+
+                    {/* Route for Accounts */}
+                    <Route path='accounts'>
+                        <Route index element={<Accounts />} /> 
+                        <Route path=':id' element={<div>Where a specific account should be shown</div>} />
                     </Route>
 
                     {/* Route for Inventory page */}

@@ -1,0 +1,37 @@
+.WalkAccounts-list {
+    --WalkAccounts-list-spacing: 5px;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--WalkAccounts-list-spacing);
+
+    background-color: transparent;
+}
+
+.WalkAccounts-list__item { 
+    border: 1px solid var(--secondary-color-l-low);
+
+    padding: var(--WalkAccounts-list-spacing);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--WalkAccounts-list-spacing);
+
+    list-style: none;
+}
+
+.WalkAccounts-list__item > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--WalkAccounts-list-spacing);
+}
+
+.WalkAccounts-list-item__text {
+    color: var(--secondary-color-l-low);
+}
+
+.WalkAccounts-list-item__icon {
+    cursor: pointer;
+    fill: var(--secondary-color-l-low);
+}

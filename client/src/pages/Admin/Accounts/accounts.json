@@ -1,0 +1,86 @@
+{
+    "accounts": [
+        {   
+            "id": 1,
+            "name": "Activo",
+            "accounts": [
+                {
+                    "id": 1,
+                    "name": "Cajas",
+                    "accounts": [
+                        {
+                            "id": 1,
+                            "name": "Caja ARS"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Caja USD"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Bancos",
+                    "accounts": [
+                        {
+                            "id": 1,
+                            "name": "Banco RIO"
+                        },
+                        {
+                            "id": 2,
+                            "name": "Banco MACRO"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Pasivo",
+            "accounts": [
+                {
+                    "id": 1,
+                    "name": "Cuentas Por Pagar"
+                },
+                {
+                    "id": 2,
+                    "name": "Prestamos"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Patrimonio Neto",
+            "accounts": [
+                {
+                    "id": 1,
+                    "name": "Capital"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Egresos",
+            "accounts": [
+                {
+                    "id": 1,
+                    "name": "Costo Mercadería Vendida"
+                },
+                {
+                    "id": 2,
+                    "name": "Gastos"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Ingresos",
+            "accounts": [
+                {
+                    "id": 1,
+                    "name": "Ventas"
+                }
+            ]
+        }
+    ]
+}

@@ -12,6 +12,8 @@
 
     border-radius: var(--brand-border-radius);
     background-color: var(--primary-color-l-base);
+
+    padding: 12.5vh 0 2.5vh 0;
 }
 
 .Admin > .Admin__previous-page-bt {

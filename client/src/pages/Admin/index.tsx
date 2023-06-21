@@ -3,7 +3,7 @@ import './Admin.css';
 import { useLocation } from 'react-router-dom';
 
 import PreviousPageBT from '../../components/PreviousPageBT';
-import SidePanel from '../../components/SidePanel';
+import SidePanel from './SidePanel';
 
 interface AdminProps {
     children?: React.ReactNode;

@@ -6,6 +6,7 @@ import Admin from '../../pages/Admin';
 import Login from '../../pages/Admin/Login';
 import Sales from '../../pages/Admin/Sales';
 import Home from '../../pages/Admin/Home';
+import Inventory from '../../pages/Admin/Inventory'
 
 interface BusinessRouterProps {};
 
@@ -38,7 +39,7 @@ const BusinessRouter: React.FC<BusinessRouterProps> = () => {
                     </Route>
 
                     {/* Route for Inventory page */}
-                    <Route path='inventory' element={<div>Where the inventory should go</div>} />
+                    <Route path='inventory' element={<Inventory />} />
                 </Route>
 
                 {/* Route for Login page */}

@@ -1,0 +1,20 @@
+{
+    "clothes": [
+        {
+            "id": "0001",
+            "type": "t-shirt",
+            "price": 200,
+            "colour": "pink",
+            "size": "xl",
+            "amount": 20
+        },
+        {
+            "id": "0002",
+            "type": "t-shirt",
+            "price": 400,
+            "colour": "blue",
+            "size": "m",
+            "amount": 5
+        }
+    ]
+}

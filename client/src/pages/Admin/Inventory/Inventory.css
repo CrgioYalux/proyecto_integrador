@@ -1,0 +1,36 @@
+.Title {
+    text-align: center;
+    position: fixed;
+    top: 40px;
+}
+
+.Button-back button{
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    right: 200px;
+}
+
+.Search-box{
+    width: 300px;
+
+    padding: 10px;
+    display: flex;
+
+    border-radius: 10px;
+
+    position: relative;
+    left: 450px;
+    bottom: 100px;
+}
+
+.Search-box input{
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.Search-box button{ 
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 15px;
+}

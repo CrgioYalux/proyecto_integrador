@@ -1,0 +1,29 @@
+.Accounts {
+    width: 90vw;
+    max-width: 750px;
+
+    background-color: var(--primary-color-l-high);
+    border-radius: var(--brand-border-radius);
+}
+
+.Accounts > h1 {
+    text-align: center;
+}
+
+.Accounts__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.Accounts-content__WalkAccounts {
+    flex: 0 0 40%;
+    margin-left: 10px;
+    margin-right: auto;
+}
+
+.Accounts-content__PostingAccount {
+    flex: 0 0 50%;
+    margin-left: auto;
+    margin-right: 10px;
+}

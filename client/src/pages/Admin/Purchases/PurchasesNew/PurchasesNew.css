@@ -1,7 +1,53 @@
 .PurchasesNew {
     max-width: 1000px;
     width: 90vw;
-
-    background-color: var(--primary-color-l-high);
+    padding: 10px;
+    display: grid;
+    grid-template-areas:"title title" "providers cart" "filter filter";
+    grid-template-rows:5% 70% 1fr;
+    grid-template-columns: 60% 1fr;
+    gap: 10px;
+    background-color: var(--primary-color-l-higher);
     border-radius: var(--brand-border-radius);
+}
+.PurchasesNew > h1 {
+    grid-area: title;
+    text-align: center;
+}
+.PurchasesNew_providers {
+    grid-area: providers;
+    max-width: 600px;
+    padding: 10px;
+    overflow: auto;
+    border-radius: var(--brand-border-radius);
+
+    background-color: var(--primary-color-l-highest);
+    
+    outline-offset: -2px;
+}
+.PurchasesNew_filter {
+    grid-area: filter;
+    background-color: var(--primary-color-l-highest);
+    
+    outline-offset: -2px;
+    border-radius: var(--brand-border-radius);
+}
+.PurchasesNew_cart {
+    grid-area: cart;
+    background-color: var(--primary-color-l-highest);
+    outline-offset: -2px;
+    border-radius: var(--brand-border-radius);
+}
+@media (max-width: 765px){
+    .PurchasesNew {
+        grid-template-areas:"providers" "filter" "cart";
+        grid-template-rows:  1fr;
+        grid-template-columns: 1fr;
+        overflow: auto;
+        border-radius: 0;
+    }
+    .PurchasesNew_providers {
+        border-radius: 0;
+    }
+
 }

@@ -1,8 +1,7 @@
-import {useState} from 'react';
 import './Item.css';
 interface ItemProps{
-    children:React.ReactNode;
-    selectProviderProduct:(product:Product)=>void;
+    isSelected: Boolean;
+    product: Product;
 };
 type Product = {
     id:number,
@@ -10,17 +9,25 @@ type Product = {
     stock:number,
     unitPrice:number,
     description:string,
-    size:string,
-    color:string
+    size: Array<string>,
+    color:Array<string>
 };
-const Item: React.FC <ItemProps>=({children, selectProviderProduct})=>{
-    const [isSelected, setIsSelected] = useState(false)
-    const handleOnClick = ()=>{
-        setIsSelected(prev=>!prev);
-    } 
-    return isSelected
-    ?<li className="selected" onClick={handleOnClick}>{children}</li>
-    :<li onClick={handleOnClick}>{children}</li>
+const Item: React.FC <ItemProps>=({product, isSelected})=>{
+
+    return (
+        <div className={ `Item ${isSelected ? "--selected" : ""}`}>
+          <span className='Item_span'>
+          {product.name}
+          </span>
+          <span className='Item_span'>
+          ${product.unitPrice}
+          </span>
+          <span className='Item_span'>
+          {product.description}
+          </span>
+          
+        </div>
+    );
 };
 
 export default Item;

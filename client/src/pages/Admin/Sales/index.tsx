@@ -1,4 +1,5 @@
 import "./Sales.css";
+import dropdown from "./dropDown";
 
 interface SalesProps {
 };
@@ -6,8 +7,9 @@ interface SalesProps {
 const Sales: React.FC<SalesProps> = ({ }) => {
 
     return (
-
+        
         <div className="main-container">
+            
 
             <h1 className="Titulo">VENTAS</h1>
 
@@ -15,7 +17,7 @@ const Sales: React.FC<SalesProps> = ({ }) => {
 
                 <div className="containerDer">
                     <input type="date" className="Inputs" placeholder="Fecha" />
-                    <input type="text" className="Inputs" placeholder="Razon Social" />
+                       
                     <input type="text" className="Inputs" placeholder="Nombre y Apellido" />
                     <input type="text" className="Inputs" placeholder="Localidad" />
                     <input type="text" className="Inputs" placeholder="Descripcion" />

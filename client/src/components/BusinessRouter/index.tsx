@@ -3,9 +3,11 @@ import { useAdminSystem } from '../../providers/AdminSystem';
 
 import ProtectedRoute from './ProtectedRoute';
 import Admin from '../../pages/Admin';
-import Home from '../../pages/Admin/Home';
 import Login from '../../pages/Admin/Login';
 import Sales from '../../pages/Admin/Sales';
+import Home from '../../pages/Admin/Home';
+import Purchases from '../../pages/Admin/Purchases';
+import PurchasesNew from '../../pages/Admin/Purchases/PurchasesNew';
 import Accounts from '../../pages/Admin/Accounts';
 
 interface BusinessRouterProps {};
@@ -28,8 +30,8 @@ const BusinessRouter: React.FC<BusinessRouterProps> = () => {
 
                     {/* Route for Purchases page */}
                     <Route path='purchases'>
-                        <Route index element={<div>Where the purchases history should go</div>} />
-                        <Route path='new' element={<div>Where new purchases should be made</div>}/>
+                        <Route index element={<Purchases />} />
+                        <Route path='new' element={<PurchasesNew />}/>
                     </Route>
 
                     {/* Route for Accounting Entries */}

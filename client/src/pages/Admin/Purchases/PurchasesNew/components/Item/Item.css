@@ -1,0 +1,20 @@
+
+.Item {
+    display: flex;
+    
+}
+.Item_span {
+    color: var(--secondary-color-l-base);
+    outline: var(--secondary-color-l-base) 1px solid;
+    padding-left: 5px;
+    padding-right: 5px;
+    outline-offset: -1px;
+    flex: 0 0 33%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.Item.--selected > .Item_span {
+    background-color:var(--brand-color-l-higher);
+}

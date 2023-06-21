@@ -1,0 +1,9 @@
+.Purchases {
+    background-color: var(--primary-color-l-high);
+    max-width: 1000px;
+    width: 90vw;
+    
+    
+    border-radius: var(--brand-border-radius);
+    
+}

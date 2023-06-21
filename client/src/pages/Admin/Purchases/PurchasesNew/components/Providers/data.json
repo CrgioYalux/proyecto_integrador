@@ -132,7 +132,400 @@
                     "size":["s", "m", "l", "xl"],
                     "color":["black", "white", "red", "blue"]
                   }
+              
             ]
+        },
+        {
+          "id": 2,
+          "name": "Mock Provider 2",
+          "cuit": 987654321,
+          "address": "456 Mock Avenue",
+          "products": [
+            {
+              "id": 1,
+              "name": "T-Shirt",
+              "stock": 30,
+              "unitPrice": 19.99,
+              "description": "A comfortable and stylish t-shirt.",
+              "size": ["S", "M", "L"],
+              "color": ["Red", "Blue", "White"]
+            },
+            {
+              "id": 2,
+              "name": "Jeans",
+              "stock": 40,
+              "unitPrice": 49.99,
+              "description": "Classic denim jeans for everyday wear.",
+              "size": ["30Wx32L", "32Wx32L", "34Wx32L"],
+              "color": ["Blue"]
+            },
+            {
+              "id": 3,
+              "name": "Sweatshirt",
+              "stock": 25,
+              "unitPrice": 29.99,
+              "description": "A cozy sweatshirt for casual outings.",
+              "size": ["S", "M", "L"],
+              "color": ["Gray", "Black", "Navy"]
+            },
+            {
+              "id": 4,
+              "name": "Shorts",
+              "stock": 35,
+              "unitPrice": 24.99,
+              "description": "Comfortable shorts for warm weather.",
+              "size": ["S", "M", "L"],
+              "color": ["Khaki", "Black", "Navy"]
+            },
+            {
+              "id": 5,
+              "name": "Dress",
+              "stock": 20,
+              "unitPrice": 59.99,
+              "description": "An elegant dress for special occasions.",
+              "size": ["S", "M", "L"],
+              "color": ["Black", "White", "Red"]
+            },
+            {
+              "id": 6,
+              "name": "Jacket",
+              "stock": 15,
+              "unitPrice": 79.99,
+              "description": "A stylish jacket to keep you warm.",
+              "size": ["S", "M", "L"],
+              "color": ["Black", "Brown"]
+            },
+            {
+              "id": 7,
+              "name": "Blouse",
+              "stock": 30,
+              "unitPrice": 34.99,
+              "description": "A fashionable blouse for women.",
+              "size": ["S", "M", "L"],
+              "color": ["White", "Blue", "Pink"]
+            },
+            {
+              "id": 8,
+              "name": "Pants",
+              "stock": 20,
+              "unitPrice": 44.99,
+              "description": "Versatile pants for everyday wear.",
+              "size": ["30Wx32L", "32Wx32L", "34Wx32L"],
+              "color": ["Black", "Gray"]
+            },
+            {
+              "id": 9,
+              "name": "Skirt",
+              "stock": 25,
+              "unitPrice": 39.99,
+              "description": "A trendy skirt for any occasion.",
+              "size": ["S", "M", "L"],
+              "color": ["Red", "Black", "Navy"]
+            },
+            {
+              "id": 10,
+              "name": "Sweater",
+              "stock": 30,
+              "unitPrice": 49.99,
+              "description": "A cozy sweater for chilly days.",
+              "size": ["S", "M", "L"],
+              "color": ["Gray", "Black"]
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Mock Provider 3",
+          "cuit": 567890123,
+          "address": "789 Mock Road",
+          "products": [
+            {
+              "id": 1,
+              "name": "Dress",
+              "stock": 15,
+              "unitPrice": 59.99,
+              "description": "An elegant dress for special occasions.",
+              "size": ["S", "M", "L"],
+              "color": ["Black", "White"]
+            },
+            {
+              "id": 2,
+              "name": "Blazer",
+              "stock": 10,
+              "unitPrice": 79.99,
+              "description": "A sophisticated blazer for formal events.",
+              "size": ["S", "M", "L"],
+              "color": ["Navy", "Black"]
+            },
+            {
+              "id": 3,
+              "name": "Pants",
+              "stock": 20,
+              "unitPrice": 44.99,
+              "description": "Versatile pants for everyday wear.",
+              "size": ["30Wx32L", "32Wx32L", "34Wx32L"],
+              "color": ["Black", "Gray"]
+            },
+            {
+              "id": 4,
+              "name": "Skirt",
+              "stock": 25,
+              "unitPrice": 39.99,
+              "description": "A trendy skirt for any occasion.",
+              "size": ["S", "M", "L"],
+              "color": ["Red", "Black", "Navy"]
+            },
+            {
+              "id": 5,
+              "name": "Blouse",
+              "stock": 30,
+              "unitPrice": 34.99,
+              "description": "A fashionable blouse for women.",
+              "size": ["S", "M", "L"],
+              "color": ["White", "Blue", "Pink"]
+            },
+            {
+              "id": 6,
+              "name": "Jumpsuit",
+              "stock": 15,
+              "unitPrice": 69.99,
+              "description": "A trendy jumpsuit for a stylish look.",
+              "size": ["S", "M", "L"],
+              "color": ["Black", "Red"]
+            },
+            {
+              "id": 7,
+              "name": "Sweater",
+              "stock": 20,
+              "unitPrice": 49.99,
+              "description": "A cozy sweater for chilly days.",
+              "size": ["S", "M", "L"],
+              "color": ["Gray", "Black"]
+            },
+            {
+              "id": 8,
+              "name": "Shirt",
+              "stock": 25,
+              "unitPrice": 24.99,
+              "description": "A classic shirt for a polished look.",
+              "size": ["S", "M", "L"],
+              "color": ["White", "Blue", "Pink"]
+            },
+            {
+              "id": 9,
+              "name": "Coat",
+              "stock": 10,
+              "unitPrice": 89.99,
+              "description": "A warm and stylish coat for winter.",
+              "size": ["S", "M", "L"],
+              "color": ["Black", "Gray"]
+            },
+            {
+              "id": 10,
+              "name": "Jeans",
+              "stock": 30,
+              "unitPrice": 59.99,
+              "description": "Classic denim jeans for everyday wear.",
+              "size": ["30Wx32L", "32Wx32L", "34Wx32L"],
+              "color": ["Blue"]
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Mock Provider 4",
+          "cuit": 321098765,
+          "address": "987 Mock Lane",
+          "products": [
+            {
+              "id": 1,
+              "name": "Sweater",
+              "stock": 30,
+              "unitPrice": 39.99,
+              "description": "A cozy sweater for chilly days.",
+              "size": ["S", "M", "L"],
+              "color": ["Gray", "Black"]
+            },
+            {
+              "id": 2,
+              "name": "T-Shirt",
+              "stock": 20,
+              "unitPrice": 19.99,
+              "description": "A comfortable and stylish t-shirt.",
+              "size": ["S", "M", "L"],
+              "color": ["Red", "Blue", "White"]
+            },
+            {
+              "id": 3,
+              "name": "Jeans",
+              "stock": 25,
+              "unitPrice": 49.99,
+              "description": "Classic denim jeans for everyday wear.",
+              "size": ["30Wx32L", "32Wx32L", "34Wx32L"],
+              "color": ["Blue"]
+            },
+            {
+              "id": 4,
+              "name": "Shorts",
+              "stock": 15,
+              "unitPrice": 24.99,
+              "description": "Comfortable shorts for warm weather.",
+              "size": ["S", "M", "L"],
+              "color": ["Khaki", "Black", "Navy"]
+            },
+            {
+              "id": 5,
+              "name": "Dress",
+              "stock": 20,
+              "unitPrice": 59.99,
+              "description": "An elegant dress for special occasions.",
+              "size": ["S", "M", "L"],
+              "color": ["Black", "White", "Red"]
+            },
+            {
+              "id": 6,
+              "name": "Jacket",
+              "stock": 10,
+              "unitPrice": 79.99,
+              "description": "A stylish jacket to keep you warm.",
+              "size": ["S", "M", "L"],
+              "color": ["Black", "Brown"]
+            },
+            {
+              "id": 7,
+              "name": "Blouse",
+              "stock": 25,
+              "unitPrice": 34.99,
+              "description": "A fashionable blouse for women.",
+              "size": ["S", "M", "L"],
+              "color": ["White", "Blue", "Pink"]
+            },
+            {
+              "id": 8,
+              "name": "Pants",
+              "stock": 20,
+              "unitPrice": 44.99,
+              "description": "Versatile pants for everyday wear.",
+              "size": ["30Wx32L", "32Wx32L", "34Wx32L"],
+              "color": ["Black", "Gray"]
+            },
+            {
+              "id": 9,
+              "name": "Skirt",
+              "stock": 15,
+              "unitPrice": 39.99,
+              "description": "A trendy skirt for any occasion.",
+              "size": ["S", "M", "L"],
+              "color": ["Red", "Black", "Navy"]
+            },
+            {
+              "id": 10,
+              "name": "Sweatshirt",
+              "stock": 30,
+              "unitPrice": 29.99,
+              "description": "A cozy sweatshirt for casual outings.",
+              "size": ["S", "M", "L"],
+              "color": ["Gray", "Black", "Navy"]
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "Mock Provider 5",
+          "cuit": 123456789,
+          "address": "123 Mock Street",
+          "products": [
+            {
+              "id": 1,
+              "name": "T-Shirt",
+              "stock": 50,
+              "unitPrice": 19.99,
+              "description": "A comfortable and stylish t-shirt.",
+              "size": ["S", "M", "L"],
+              "color": ["Red", "Blue", "White"]
+            },
+            {
+              "id": 2,
+              "name": "Jeans",
+              "stock": 20,
+              "unitPrice": 49.99,
+              "description": "Classic denim jeans for everyday wear.",
+              "size": ["30Wx32L", "32Wx32L", "34Wx32L"],
+              "color": ["Blue"]
+            },
+            {
+              "id": 3,
+              "name": "Sweatshirt",
+              "stock": 30,
+              "unitPrice": 29.99,
+              "description": "A cozy sweatshirt for casual outings.",
+              "size": ["S", "M", "L"],
+              "color": ["Gray", "Black", "Navy"]
+            },
+            {
+              "id": 4,
+              "name": "Shorts",
+              "stock": 15,
+              "unitPrice": 24.99,
+              "description": "Comfortable shorts for warm weather.",
+              "size": ["S", "M", "L"],
+              "color": ["Khaki", "Black", "Navy"]
+            },
+            {
+              "id": 5,
+              "name": "Dress",
+              "stock": 10,
+              "unitPrice": 59.99,
+              "description": "An elegant dress for special occasions.",
+              "size": ["S", "M", "L"],
+              "color": ["Black", "White", "Red"]
+            },
+            {
+              "id": 6,
+              "name": "Jacket",
+              "stock": 25,
+              "unitPrice": 79.99,
+              "description": "A stylish jacket to keep you warm.",
+              "size": ["S", "M", "L"],
+              "color": ["Black", "Brown"]
+            },
+            {
+              "id": 7,
+              "name": "Blouse",
+              "stock": 20,
+              "unitPrice": 34.99,
+              "description": "A fashionable blouse for women.",
+              "size": ["S", "M", "L"],
+              "color": ["White", "Blue", "Pink"]
+            },
+            {
+              "id": 8,
+              "name": "Pants",
+              "stock": 25,
+              "unitPrice": 44.99,
+              "description": "Versatile pants for everyday wear.",
+              "size": ["30Wx32L", "32Wx32L", "34Wx32L"],
+              "color": ["Black", "Gray"]
+            },
+            {
+              "id": 9,
+              "name": "Skirt",
+              "stock": 15,
+              "unitPrice": 39.99,
+              "description": "A trendy skirt for any occasion.",
+              "size": ["S", "M", "L"],
+              "color": ["Red", "Black", "Navy"]
+            },
+            {
+              "id": 10,
+              "name": "Sweater",
+              "stock": 20,
+              "unitPrice": 49.99,
+              "description": "A cozy sweater for chilly days.",
+              "size": ["S", "M", "L"],
+              "color": ["Gray", "Black"]
+            }
+          ]
         }
 ]}
 

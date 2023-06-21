@@ -4,6 +4,10 @@ type Account = {
     accounts?: Account[];
 };
 
+type AccountInClient = Account & {
+    code: string;
+};
+
 type AccountingPlan = Account[];
 
-export type { Account, AccountingPlan };
+export type { Account, AccountInClient, AccountingPlan };

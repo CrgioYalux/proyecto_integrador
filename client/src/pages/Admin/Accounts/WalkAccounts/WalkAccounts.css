@@ -68,3 +68,7 @@
     width: 75%;
     height: 75%;
 }
+
+.WalkAccounts-list__item.--selected > div > .WalkAccounts-list-item__select-bt > .WalkAccounts-list-item-bt__icon {
+    fill: var(--brand-color-l-base);
+}

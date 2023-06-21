@@ -36,7 +36,7 @@ const Providers: React.FC<ProvidersProps>= ({selectedProviderId})=>{
 
                             {provider.products.map(product =>{
                                 return(
-                                    <label className='Providers_product_label' htmlFor={`item${product.id}`} >
+                                    <label key={product.id} className='Providers_product_label' htmlFor={`item${product.id}`} >
                                         <input 
                                         key={product.id}
                                         type='radio'

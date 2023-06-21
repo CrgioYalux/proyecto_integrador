@@ -9,10 +9,13 @@
     padding-left: 5px;
     padding-right: 5px;
     outline-offset: -1px;
-    flex: 0 0 33%;
+    flex: 0 0 40%;
     display: grid;
     justify-content: center;
     align-items: center;
+}
+.Item_span-middle {
+    flex: 0 0 20%;
 }
 
 .Item.--selected > .Item_span {

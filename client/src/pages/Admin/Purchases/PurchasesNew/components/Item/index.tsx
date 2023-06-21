@@ -19,7 +19,7 @@ const Item: React.FC <ItemProps>=({product, isSelected})=>{
           <span className='Item_span'>
           {product.name}
           </span>
-          <span className='Item_span'>
+          <span className='Item_span Item_span-middle'>
           ${product.unitPrice}
           </span>
           <span className='Item_span'>

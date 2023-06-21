@@ -3,7 +3,8 @@ import {useState} from 'react';
 import data from './data.json';
 import Item from '../Item';
 interface ProvidersProps{
-    selectedProviderId:number;
+    selectedProduct:Product|null;
+    selectProduct:(product:Product|null)=>void;
 }
 type Product = {
     id:number,
@@ -14,21 +15,36 @@ type Product = {
     size:Array<string>,
     color:Array<string>
 };
-
-
-
-const Providers: React.FC<ProvidersProps>= ({selectedProviderId})=>{
+const Providers: React.FC<ProvidersProps>= ({selectedProduct, selectProduct})=>{
     
-    const [selectedProduct, setSelectedProduct] = useState<Product|null>(null);
+    
     const handleSelecProduct = (product:Product)=>{
-        setSelectedProduct(product)
+        selectProduct(product)
     };
-    const handleOnClick = ()=>{
-        setSelectedProduct(null)
+    const handleOnClick = ()=> {
+        selectProduct(null)
     }
+    const [selectedProviderId, setSelectedProviderId] = useState<number>(1)
+    const handleOnChange = (e:React.SyntheticEvent)=> {
+        const selectElement = e.target as HTMLSelectElement;
+        setSelectedProviderId(Number(selectElement.value))
+    }
+    
     return(
         <div className="Providers">
+            <select name='provider_select' onChange={handleOnChange}>
+                {data.providers.map(provider =>{
+                    return (
+                        <option 
+                        value={provider.id}
+                        >
+                            {provider.name}
+                        </option>
+                    );
+                })}
+            </select>
             {data.providers.map(provider =>{
+                
                 if(provider.id === selectedProviderId){
                     return(
                         <div key={provider.id} className='Providers_provider'>           

@@ -13,3 +13,18 @@
     border-radius: var(--brand-border-radius);
     background-color: var(--primary-color-l-base);
 }
+
+.Admin > .Admin__previous-page-bt {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    border-radius: calc(var(--brand-border-radius) - 5px);
+    
+    background-color: var(--secondary-color-l-base);
+    color: var(--primary-color-l-base);
+}
+
+
+.Admin > .Admin__previous-page-bt:hover {
+    background-color: var(--secondary-color-l-low);
+}

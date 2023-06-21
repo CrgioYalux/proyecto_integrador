@@ -1,0 +1,27 @@
+.Button {
+    font-family: var(--primary-font);
+    font-size: 1em;
+    font-weight: 600;
+    padding: .25em .75em;
+
+    color: var(--primary-color-l-base);
+    background-color: var(--secondary-color-l-lowest);
+
+    border-radius: var(--brand-border-radius);
+
+    border: 0;
+    outline: 0;
+
+    cursor: pointer;
+
+    transition: background-color .15s;
+}
+
+.Button:hover {
+    background-color: var(--primary-color-l-highest);
+}
+
+.Button:focus {
+    outline: 1px solid var(--secondary-color-l-base);
+    outline-offset: 2px;
+}

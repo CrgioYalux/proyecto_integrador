@@ -1,0 +1,46 @@
+.ClothingFilter {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    padding: 1em;
+
+    background: var(--secondary-color-l-low);
+    border-radius: var(--brand-border-radius);
+    
+}
+.ClothingFilter_p {
+    color: var(--primary-color-l-base);
+    background-color: var(--secondary-color-l-lowest);
+    border-radius: .5em;
+    padding-left: 1em;
+
+    
+}
+.ClothingFilter_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
+    
+.ClothingFilter_radio {
+    appearance: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+  
+    border: 2px solid var(--secondary-color-l-lowest);
+    transition: 0.2s all linear;
+    margin-right: 5px;
+  
+    position: relative;
+    top: 4px;
+}
+
+.ClothingFilter_radio:checked {
+    border: 6px solid var(--primary-color-l-base);
+}
+
+.ClothingFilter_box > div > label {
+    color: var(--primary-color-l-base);
+}

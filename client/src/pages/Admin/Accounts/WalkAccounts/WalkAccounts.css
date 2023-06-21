@@ -1,0 +1,74 @@
+.WalkAccounts-list {
+    --WalkAccounts-list-spacing: 5px;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--WalkAccounts-list-spacing);
+
+    background-color: transparent;
+
+    transition: height .25s;
+}
+
+.WalkAccounts-list__item { 
+    border: 2px solid var(--secondary-color-l-low);
+    border-bottom: 0;
+    border-right: 0;
+
+    padding: var(--WalkAccounts-list-spacing);
+    padding-right: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--WalkAccounts-list-spacing);
+
+    list-style: none;
+}
+
+.WalkAccounts-list__item > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--WalkAccounts-list-spacing);
+}
+
+.WalkAccounts-list-item__text,
+.WalkAccounts-list-item-bt__icon {
+    color: var(--secondary-color-l-low);
+    fill: var(--secondary-color-l-low);
+}
+
+.WalkAccounts-list-item__bt {
+    flex: 0 0 7.5%;
+
+    height: 100%;
+    min-width: 25px;
+
+    aspect-ratio: 1;
+    border-radius: 3px;
+
+    display: grid;
+    place-items: center;
+    
+    font-weight: 800;
+
+    border: 0;
+    outline: 0;
+
+    cursor: pointer;
+
+    background-color: var(--primary-color-l-higher);
+}
+
+.WalkAccounts-list-item__expand-bt {
+    margin-left: auto;
+}
+
+.WalkAccounts-list-item-bt__icon {
+    width: 75%;
+    height: 75%;
+}
+
+.WalkAccounts-list__item.--selected > div > .WalkAccounts-list-item__select-bt > .WalkAccounts-list-item-bt__icon {
+    fill: var(--brand-color-l-base);
+}

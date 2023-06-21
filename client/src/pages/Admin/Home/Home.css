@@ -1,12 +1,64 @@
 .Home {
-    width: 100%;
-    height: 100%;
+    --Home-spacing: 10px;
+
+    max-width: 750px;
+    width: 90vw;
+    
+    background: var(--secondary-color-l-low);
+    border-radius: var(--brand-border-radius);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: var(--Home-spacing);
+}
+
+.Home > h1 {
+    color: var(--brand-color-l-base);
+    text-align: center;
+}
+
+.Home_container {
+    width: 75%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    gap: var(--Home-spacing);
+    padding: var(--Home-spacing);
+}
+
+.Home_linkButton {
+    flex: 0 0 calc(100% / 3 - var(--Home-spacing));
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+}
+
+.Home_linkButton:focus {
+    outline: 1px solid var(--primary-color-l-base);
+    outline-offset: 2px;
+}
+
+.Home_linkButton > span {
+    display: block;
+    width: 10ch;
+}
+
+@media screen and (max-width: 670px) {
+    .Home_linkButton {
+        flex: 1 1 calc(100% / 2 - var(--Home-spacing));
+        aspect-ratio: 2/1;
+    }
 }
 
 .Home_logo {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 5px;
+    right: 5px;
 
     max-width: 100px;
     aspect-ratio: 1;
@@ -22,6 +74,8 @@
     width: 100%;
 }
 
-.Home ul {
-    list-style: none;
+.Home_logOutButton {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
 }

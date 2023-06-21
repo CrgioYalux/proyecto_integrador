@@ -1,0 +1,46 @@
+.Accounts {
+    width: 90vw;
+    max-width: 900px;
+
+    background-color: var(--primary-color-l-high);
+    border-radius: var(--brand-border-radius);
+}
+
+.Accounts > h1 {
+    text-align: center;
+    color: var(--secondary-color-l-base);
+}
+
+.Accounts__content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-top: 0;
+    gap: 10px; 
+}
+
+.Accounts-content__WalkAccounts {
+    flex: 1 1 auto;
+}
+
+.Accounts-content__PostingAccount {
+    flex: 1 0 60vh;
+}
+
+@media screen and (min-width: 650px) {
+    .Accounts__content {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .Accounts-content__WalkAccounts {
+        flex: 0 0 40%;
+        margin-right: auto;
+    }
+
+    .Accounts-content__PostingAccount {
+        flex: 1 0 auto;
+        margin-left: auto;
+    }
+}

@@ -4,7 +4,7 @@
     max-width: 750px;
     width: 90vw;
     
-    background: var(--secondary-color-l-low);
+    background-color: var(--primary-color-l-high);
     border-radius: var(--brand-border-radius);
 
     display: flex;
@@ -16,7 +16,7 @@
 }
 
 .Home > h1 {
-    color: var(--brand-color-l-base);
+    color: var(--secondary-color-l-base);
     text-align: center;
 }
 

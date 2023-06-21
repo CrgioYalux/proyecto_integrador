@@ -1,8 +1,12 @@
 import './WalkAccounts.css';
 
-import type { Account } from "../utils";
+import { useState } from 'react';
 
 import OpenEye from "../../../../components/Icons/OpenEye";
+import Plus from '../../../../components/Icons/Plus';
+import Minus from '../../../../components/Icons/Minus';
+
+import type { Account } from "../utils";
 
 interface WalkAccountsProps {
     className?: string;
@@ -22,6 +26,7 @@ const WalkAccounts: React.FC<WalkAccountsProps> = ({
             {accounts.map((acc) => {
                 const code = [...ids, acc.id];
                 const text = `${code.join('.')} - ${acc.name}`;
+                const [expanded, setExpanded] = useState<boolean>(true);
                 return (
                     <li
                         className='WalkAccounts-list__item'
@@ -29,10 +34,19 @@ const WalkAccounts: React.FC<WalkAccountsProps> = ({
                         style={{ marginLeft: offset.omitFirst ? '0' : `${offset.increment}px` }}
                     >
                         <div>
-                            <OpenEye className='WalkAccounts-list-item__icon' />
+                            <button className='WalkAccounts-list-item__bt WalkAccounts-list-item__select-bt'>
+                                <OpenEye className='WalkAccounts-list-item-bt__icon' />
+                            </button>
                             <span className='WalkAccounts-list-item__text'>{text}</span>
+                            {acc.accounts && 
+                            <button
+                            className='WalkAccounts-list-item__bt WalkAccounts-list-item__expand-bt'
+                            onClick={() => setExpanded(prev => !prev)}
+                            >
+                                {expanded ? <Minus className='WalkAccounts-list-item-bt__icon'/> : <Plus className='WalkAccounts-list-item-bt__icon' />}
+                            </button>}
                         </div>
-                        {acc.accounts &&
+                        {(acc.accounts && expanded) &&
                         <WalkAccounts 
                             className=''
                             accounts={acc.accounts}

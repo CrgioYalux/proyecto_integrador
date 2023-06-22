@@ -4,7 +4,16 @@ import data from './data.json';
 import Item from '../Item';
 interface ProvidersProps{
     selectedProduct:Product|null;
-    selectProduct:(product:Product|null)=>void;
+    selectProduct:(product:Product|null)=> void;
+    selectedProvider:(Provider|null);
+    selectProvider:(provider:Provider|null)=> void;
+}
+type  Provider = {
+    id: number;
+    name: string;
+    cuit: number;
+    address: string;
+    products:Array<Product>;
 }
 type Product = {
     id:number,
@@ -15,28 +24,33 @@ type Product = {
     size:Array<string>,
     color:Array<string>
 };
-const Providers: React.FC<ProvidersProps>= ({selectedProduct, selectProduct})=>{
-    
+const Providers: React.FC<ProvidersProps>= ({selectedProduct, selectProduct, selectProvider})=>{
     
     const handleSelecProduct = (product:Product)=>{
         selectProduct(product)
     };
     const handleOnClick = ()=> {
         selectProduct(null)
-    }
+    };
+    
     const [selectedProviderId, setSelectedProviderId] = useState<number>(1)
+    
     const handleOnChange = (e:React.SyntheticEvent)=> {
         const selectElement = e.target as HTMLSelectElement;
-        setSelectedProviderId(Number(selectElement.value))
+        setSelectedProviderId(Number(selectElement.value)+1)
+        const {products, ...providerWoP} = data.providers[Number(selectElement.value)]
+        const providers1 = providerWoP as Provider;
+        selectProvider({...providers1,products:[]})
     }
+    
     
     return(
         <div className="Providers">
             <select name='provider_select' onChange={handleOnChange}>
-                {data.providers.map(provider =>{
+                {data.providers.map((provider, index) =>{
                     return (
-                        <option 
-                        value={provider.id}
+                        <option
+                        value={index}
                         >
                             {provider.name}
                         </option>

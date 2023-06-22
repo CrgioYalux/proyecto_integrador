@@ -36,6 +36,7 @@ const Providers: React.FC<ProvidersProps>= ({selectedProduct, selectProduct, sel
     const [selectedProviderId, setSelectedProviderId] = useState<number>(1)
     
     const handleOnChange = (e:React.SyntheticEvent)=> {
+        selectProduct(null)
         const selectElement = e.target as HTMLSelectElement;
         setSelectedProviderId(Number(selectElement.value)+1)
         const {products, ...providerWoP} = data.providers[Number(selectElement.value)]

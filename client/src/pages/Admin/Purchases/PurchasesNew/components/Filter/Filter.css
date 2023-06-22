@@ -1,0 +1,41 @@
+.Filter {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
+.Filter_sc {
+    outline: 1px red solid;
+}
+.Filter_size {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 33%;
+}
+.Filter h1 {
+    outline: 2px solid var(--primary-color-l-highest);
+    padding: 5px;
+}
+.Filter_color {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 33%;
+}
+.Filter_label {
+    color: var(--secondary-color-l-lower);
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+.Filter_radio {
+    cursor: pointer;
+}
+.--selected {
+    color: var(--brand-color-l-base);
+}
+
+.Filter_radio:checked + span {
+    color: var(--brand-color-l-base);
+}

@@ -1,5 +1,5 @@
 import './PurchasesNew.css';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import Providers from './components/Providers';
 import Filter from './components/Filter';
 interface PurchasesNewProps{}
@@ -23,10 +23,17 @@ type  Provider = {
 const PurchasesNew :React.FC<PurchasesNewProps>= ({})=>{
     const [selectedProduct, setSelectedProduct] = useState<Product|null>(null);
     const [selectedProvider, setSelectedProvider] = useState<Provider|null>(null);
-   
+    const [sizeValue, setSizeValue]= useState<number>(-1);
+    const [colorValue, setColorValue]= useState<number>(-1);
+
+    useEffect(()=>{
+        
+        setSizeValue(-1)
+        setColorValue(-1)
+
+    }, [selectedProduct, selectedProvider])
     return(
         <div className='PurchasesNew'>
-            <h1>New purchases</h1>
             <div className="PurchasesNew_providers">
                 <Providers 
                 selectProvider={(provider)=>setSelectedProvider(provider)} 
@@ -39,7 +46,7 @@ const PurchasesNew :React.FC<PurchasesNewProps>= ({})=>{
                 <h1>hola1</h1>
             </div>
             <div className="PurchasesNew_filterNprice">
-                <Filter selectedProduct={selectedProduct} />
+                <Filter selectedProduct={selectedProduct} setColorValue={(colorValue)=>setColorValue(colorValue)} colorValue={colorValue} setSizeValue={(sizeValue)=>setSizeValue(sizeValue)} sizeValue={sizeValue}/>
             </div>
         </div>
    );

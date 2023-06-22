@@ -1,8 +1,12 @@
 import './Filter.css';
-import {useState} from 'react';
+
 
 interface FilterNpriceProps {
-    selectedProduct:Product|null;   
+    selectedProduct:Product|null; 
+    sizeValue:number;
+    colorValue:number;
+    setSizeValue:((sizeValue:number)=>void);
+    setColorValue:((colorValue:number)=>void);
 }
 type Product = {
     id:number,
@@ -14,11 +18,10 @@ type Product = {
     color:Array<string>
 };
 
-const FilterNprice:React.FC<FilterNpriceProps> = ({selectedProduct})=>{
+const FilterNprice:React.FC<FilterNpriceProps> = ({selectedProduct, setColorValue, colorValue, setSizeValue, sizeValue})=>{
     const sizeArray = selectedProduct?.size;
     const colorArray = selectedProduct?.color;
-    const [sizeValue, setSizeValue]= useState<number|null>(null);
-    const [colorValue, setColorValue]= useState<number|null>(null);
+ 
 
     const selectSize = ((sizeIndex:number)=>{
         setSizeValue(sizeIndex)
@@ -29,40 +32,41 @@ const FilterNprice:React.FC<FilterNpriceProps> = ({selectedProduct})=>{
     })
     return(
         <div className='Filter'>
-            <div className="Filter_sc">
-                <h1>Size</h1>
+            <div className="Filter_size">
+                <h1 >Size</h1>
                 {sizeArray?.map((s, i)=>{
-
                     return (
-                        <>
-                        <input
-                        type='radio'
-                        key={`size${i+1}`}
-                        className='Filter_radio'
-                        name='size'
-                        onChange={()=>selectSize(i)}                  
-                        />
-                        <label htmlFor={`size${i+1}`}>{s}</label>
-                        </>
+                        <label htmlFor={`size${i+1}`} id={`size${i}`} className='Filter_label'>                                                     
+                            <input
+                            key={`size${i+1}`} 
+                            type='radio'
+                            id={`size${i+1}`}  
+                            className='Filter_radio'
+                            name='size'
+                            onChange={()=>selectSize(i)}
+                            checked={i === sizeValue}                  
+                            />  
+                            <span>{s}</span>
+                        </label>
                     )
                 })}
             </div>
-            <div className="Filter_sc">
+            <div className="Filter_color">
                 <h1>Color</h1>
                 {colorArray?.map((c, i)=>{
                     return (
-                        <>
+                        <label htmlFor={`color${i+1}`} id={`color${i}`} className='Filter_label'>
                             <input
-                            key={`color${i}`}
+                            key={`color${i+1}`}
                             type='radio'
-                            id={`color${i}`}
+                            id={`color${i+1}`}
                             className='Filter_radio'
                             name='color'
-                            onChange={()=>selectColor(i)}
-               
+                            onChange={()=>selectColor(i)}  
+                            checked={i === colorValue}                   
                             />
-                            <label htmlFor={`color${i}`} id={`color${i}`}>{c}</label>
-                        </>
+                            <span>{c}</span>
+                        </label>
                     )
                 })}
             </div>

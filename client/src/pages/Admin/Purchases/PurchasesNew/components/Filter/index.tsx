@@ -2,11 +2,15 @@ import './Filter.css';
 
 
 interface FilterNpriceProps {
-    selectedProduct:Product|null; 
-    sizeValue:number;
+    selectedProduct: Product|null; 
+    sizeValue: number;
+    setSizeValue: ((sizeValue:number)=>void);
     colorValue:number;
-    setSizeValue:((sizeValue:number)=>void);
-    setColorValue:((colorValue:number)=>void);
+    setColorValue: ((colorValue:number)=>void);
+    totalPrice: number|null;
+    setTotalPrice: ((totalPrice:number|null)=>void)
+    unitPrice: number|null;
+    setUnitPrice: ((unitPrice:number|null)=>void)
 }
 type Product = {
     id:number,
@@ -18,7 +22,7 @@ type Product = {
     color:Array<string>
 };
 
-const FilterNprice:React.FC<FilterNpriceProps> = ({selectedProduct, setColorValue, colorValue, setSizeValue, sizeValue})=>{
+const FilterNprice:React.FC<FilterNpriceProps> = ({selectedProduct, setColorValue, colorValue, setSizeValue, sizeValue, unitPrice, setUnitPrice, totalPrice, setTotalPrice})=>{
     const sizeArray = selectedProduct?.size;
     const colorArray = selectedProduct?.color;
  
@@ -70,7 +74,17 @@ const FilterNprice:React.FC<FilterNpriceProps> = ({selectedProduct, setColorValu
                     )
                 })}
             </div>
-            <div className="price"></div>
+            <div className="Filter_price">
+                <div className="Filter_input-price">
+                    <label htmlFor="amount">amount:</label>
+                    <input
+                    type="text" 
+                    id='amount' 
+                    // onChange={}
+                    />
+                </div>
+                <span>total price: {} </span>
+            </div>
         </div>
     )
 }

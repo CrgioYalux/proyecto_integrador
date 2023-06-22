@@ -25,6 +25,8 @@ const PurchasesNew :React.FC<PurchasesNewProps>= ({})=>{
     const [selectedProvider, setSelectedProvider] = useState<Provider|null>(null);
     const [sizeValue, setSizeValue]= useState<number>(-1);
     const [colorValue, setColorValue]= useState<number>(-1);
+    const [unitPrice, setUnitPrice]= useState<number|null>(null);
+    const [totalPrice, setTotalPrice]= useState<number|null>(null);
 
     useEffect(()=>{
         
@@ -46,7 +48,19 @@ const PurchasesNew :React.FC<PurchasesNewProps>= ({})=>{
                 <h1>hola1</h1>
             </div>
             <div className="PurchasesNew_filterNprice">
-                <Filter selectedProduct={selectedProduct} setColorValue={(colorValue)=>setColorValue(colorValue)} colorValue={colorValue} setSizeValue={(sizeValue)=>setSizeValue(sizeValue)} sizeValue={sizeValue}/>
+                <Filter 
+                selectedProduct={selectedProduct} 
+                setColorValue={(cValue)=>setColorValue(cValue)} 
+                colorValue={colorValue} 
+                setSizeValue={(sValue)=>setSizeValue(sValue)} 
+                sizeValue={sizeValue}
+                setTotalPrice={(tPrice)=>setTotalPrice(tPrice)}
+                totalPrice={totalPrice}
+                setUnitPrice={(uPrice)=>setUnitPrice(uPrice)}
+                unitPrice={unitPrice}
+                />
+
+                
             </div>
         </div>
    );

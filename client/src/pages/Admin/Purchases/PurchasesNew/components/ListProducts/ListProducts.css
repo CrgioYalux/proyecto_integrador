@@ -1,0 +1,8 @@
+.ListProducts__RadioListInput {
+    list-style: none;
+}
+
+
+.ListProducts__RadioListInput input {
+    display: none;
+}

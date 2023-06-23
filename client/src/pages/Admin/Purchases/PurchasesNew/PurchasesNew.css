@@ -32,10 +32,24 @@
 .PurchasesNew_filterNprice {
     grid-area: filter;
     background-color: var(--primary-color-l-higher);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     
     outline-offset: -2px;
     border-radius: var(--brand-border-radius);
 }
+
+.PurchasesNew_filterNprice .PurchasesNew__Filter {
+    flex: 0 0 60%;
+}
+
+.PurchasesNew_filterNprice .PurchasesNew__CalculatedPrice {
+    flex: 0 0 30%;
+}
+
 .PurchasesNew_cart {
     grid-area: cart;
     background-color: var(--primary-color-l-higher);

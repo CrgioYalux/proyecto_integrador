@@ -12,8 +12,8 @@
                     "stock":200,
                     "unitPrice":100,
                     "description":"simple tshirt",
-                    "size":["s", "m", "l", "xl"],
-                    "color":["black", "white", "red", "blue"]
+                    "sizes":["s", "m", "l", "xl"],
+                    "colors":["black", "white", "red", "blue"]
                 },
                 {
                     "id":2,
@@ -21,8 +21,8 @@
                     "stock":200,
                     "unitPrice":150,
                     "description":"simple joggins",
-                    "size":["s", "m", "l", "xl"],
-                    "color":["black", "white", "red", "blue"]
+                    "sizes":["s", "m", "l", "xl"],
+                    "colors":["black", "white", "red", "blue"]
                 },
                 {
                     "id":3,
@@ -30,8 +30,8 @@
                     "stock":200,
                     "unitPrice":100,
                     "description":"simple jeans",
-                    "size":["s", "m", "l", "xl"],
-                    "color":["black", "white", "red", "blue"]
+                    "sizes":["s", "m", "l", "xl"],
+                    "colors":["black", "white", "red", "blue"]
                 },
                 {
                     "id": 4,
@@ -39,8 +39,8 @@
                     "stock": 15,
                     "unitPrice": 79.99,
                     "description": "Classic denim jeans for men.",
-                    "size": ["30W x 32L", "32W x 32L", "34W x 32L", "36W x 32L"],
-                    "color": ["Blue", "Black"]
+                    "sizes": ["30W x 32L", "32W x 32L", "34W x 32L", "36W x 32L"],
+                    "colors": ["Blue", "Black"]
                 },
                 {
                     "id": 5,
@@ -48,8 +48,8 @@
                     "stock": 8,
                     "unitPrice": 39.99,
                     "description": "A stylish blouse for women.",
-                    "size": ["XS", "S", "M", "L"],
-                    "color": ["White", "Pink", "Purple"]
+                    "sizes": ["XS", "S", "M", "L"],
+                    "colors": ["White", "Pink", "Purple"]
                 },
                 {
                     "id": 6,
@@ -57,8 +57,8 @@
                     "stock": 12,
                     "unitPrice": 34.99,
                     "description": "Comfortable sweatpants suitable for both men and women.",
-                    "size": ["S", "M", "L", "XL"],
-                    "color": ["Gray", "Navy", "Black"]
+                    "sizes": ["S", "M", "L", "XL"],
+                    "colors": ["Gray", "Navy", "Black"]
                 },
                 {
                     "id": 7,
@@ -66,8 +66,8 @@
                     "stock": 20,
                     "unitPrice": 49.99,
                     "description": "A classic polo shirt for men.",
-                    "size": ["S", "M", "L", "XL"],
-                    "color": ["Blue", "Green", "White"]
+                    "sizes": ["S", "M", "L", "XL"],
+                    "colors": ["Blue", "Green", "White"]
                 },
                   {
                     "id": 8,
@@ -75,8 +75,8 @@
                     "stock": 6,
                     "unitPrice": 59.99,
                     "description": "A fashionable skirt for women.",
-                    "size": ["XS", "S", "M", "L"],
-                    "color": ["Black", "Red", "Yellow"]
+                    "sizes": ["XS", "S", "M", "L"],
+                    "colors": ["Black", "Red", "Yellow"]
                   },
                   {
                     "id": 9,
@@ -84,8 +84,8 @@
                     "stock": 9,
                     "unitPrice": 89.99,
                     "description": "Versatile sneakers suitable for both men and women.",
-                    "size": ["US 7", "US 8", "US 9", "US 10"],
-                    "color": ["White", "Black", "Gray"]
+                    "sizes": ["US 7", "US 8", "US 9", "US 10"],
+                    "colors": ["White", "Black", "Gray"]
                   },
                   {
                     "id": 10,
@@ -93,8 +93,8 @@
                     "stock": 18,
                     "unitPrice": 29.99,
                     "description": "Casual shorts for men.",
-                    "size": ["S", "M", "L", "XL"],
-                    "color": ["Khaki", "Navy", "Gray"]
+                    "sizes": ["S", "M", "L", "XL"],
+                    "colors": ["Khaki", "Navy", "Gray"]
                   },
                   {
                     "id": 11,
@@ -102,8 +102,8 @@
                     "stock": 11,
                     "unitPrice": 49.99,
                     "description": "A cozy cardigan for women.",
-                    "size": ["S", "M", "L"],
-                    "color": ["Beige", "Pink", "Gray"]
+                    "sizes": ["S", "M", "L"],
+                    "colors": ["Beige", "Pink", "Gray"]
                   },
                   {
                     "id": 12,
@@ -111,8 +111,8 @@
                     "stock": 14,
                     "unitPrice": 19.99,
                     "description": "A warm beanie hat suitable for both men and women.",
-                    "size": ["One Size"],
-                    "color": ["Black", "Navy", "Gray"]
+                    "sizes": ["One Size"],
+                    "colors": ["Black", "Navy", "Gray"]
                   },
                   {
                     "id": 13,
@@ -120,8 +120,8 @@
                     "stock": 16,
                     "unitPrice": 54.99,
                     "description": "A formal dress shirt for men.",
-                    "size": ["S", "M", "L", "XL"],
-                    "color": ["White"]
+                    "sizes": ["S", "M", "L", "XL"],
+                    "colors": ["White"]
                   },
                   {
                     "id":14,
@@ -129,8 +129,8 @@
                     "stock":200,
                     "unitPrice":100,
                     "description":"simple striped tshirt",
-                    "size":["s", "m", "l", "xl"],
-                    "color":["black", "white", "red", "blue"]
+                    "sizes":["s", "m", "l", "xl"],
+                    "colors":["black", "white", "red", "blue"]
                   }
               
             ]
@@ -147,8 +147,8 @@
               "stock": 30,
               "unitPrice": 19.99,
               "description": "A comfortable and stylish t-shirt.",
-              "size": ["S", "M", "L"],
-              "color": ["Red", "Blue", "White"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Red", "Blue", "White"]
             },
             {
               "id": 2,
@@ -156,8 +156,8 @@
               "stock": 40,
               "unitPrice": 49.99,
               "description": "Classic denim jeans for everyday wear.",
-              "size": ["30Wx32L", "32Wx32L", "34Wx32L"],
-              "color": ["Blue"]
+              "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
+              "colors": ["Blue"]
             },
             {
               "id": 3,
@@ -165,8 +165,8 @@
               "stock": 25,
               "unitPrice": 29.99,
               "description": "A cozy sweatshirt for casual outings.",
-              "size": ["S", "M", "L"],
-              "color": ["Gray", "Black", "Navy"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Gray", "Black", "Navy"]
             },
             {
               "id": 4,
@@ -174,8 +174,8 @@
               "stock": 35,
               "unitPrice": 24.99,
               "description": "Comfortable shorts for warm weather.",
-              "size": ["S", "M", "L"],
-              "color": ["Khaki", "Black", "Navy"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Khaki", "Black", "Navy"]
             },
             {
               "id": 5,
@@ -183,8 +183,8 @@
               "stock": 20,
               "unitPrice": 59.99,
               "description": "An elegant dress for special occasions.",
-              "size": ["S", "M", "L"],
-              "color": ["Black", "White", "Red"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Black", "White", "Red"]
             },
             {
               "id": 6,
@@ -192,8 +192,8 @@
               "stock": 15,
               "unitPrice": 79.99,
               "description": "A stylish jacket to keep you warm.",
-              "size": ["S", "M", "L"],
-              "color": ["Black", "Brown"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Black", "Brown"]
             },
             {
               "id": 7,
@@ -201,8 +201,8 @@
               "stock": 30,
               "unitPrice": 34.99,
               "description": "A fashionable blouse for women.",
-              "size": ["S", "M", "L"],
-              "color": ["White", "Blue", "Pink"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["White", "Blue", "Pink"]
             },
             {
               "id": 8,
@@ -210,8 +210,8 @@
               "stock": 20,
               "unitPrice": 44.99,
               "description": "Versatile pants for everyday wear.",
-              "size": ["30Wx32L", "32Wx32L", "34Wx32L"],
-              "color": ["Black", "Gray"]
+              "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
+              "colors": ["Black", "Gray"]
             },
             {
               "id": 9,
@@ -219,8 +219,8 @@
               "stock": 25,
               "unitPrice": 39.99,
               "description": "A trendy skirt for any occasion.",
-              "size": ["S", "M", "L"],
-              "color": ["Red", "Black", "Navy"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Red", "Black", "Navy"]
             },
             {
               "id": 10,
@@ -228,8 +228,8 @@
               "stock": 30,
               "unitPrice": 49.99,
               "description": "A cozy sweater for chilly days.",
-              "size": ["S", "M", "L"],
-              "color": ["Gray", "Black"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Gray", "Black"]
             }
           ]
         },
@@ -245,8 +245,8 @@
               "stock": 15,
               "unitPrice": 59.99,
               "description": "An elegant dress for special occasions.",
-              "size": ["S", "M", "L"],
-              "color": ["Black", "White"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Black", "White"]
             },
             {
               "id": 2,
@@ -254,8 +254,8 @@
               "stock": 10,
               "unitPrice": 79.99,
               "description": "A sophisticated blazer for formal events.",
-              "size": ["S", "M", "L"],
-              "color": ["Navy", "Black"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Navy", "Black"]
             },
             {
               "id": 3,
@@ -263,8 +263,8 @@
               "stock": 20,
               "unitPrice": 44.99,
               "description": "Versatile pants for everyday wear.",
-              "size": ["30Wx32L", "32Wx32L", "34Wx32L"],
-              "color": ["Black", "Gray"]
+              "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
+              "colors": ["Black", "Gray"]
             },
             {
               "id": 4,
@@ -272,8 +272,8 @@
               "stock": 25,
               "unitPrice": 39.99,
               "description": "A trendy skirt for any occasion.",
-              "size": ["S", "M", "L"],
-              "color": ["Red", "Black", "Navy"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Red", "Black", "Navy"]
             },
             {
               "id": 5,
@@ -281,8 +281,8 @@
               "stock": 30,
               "unitPrice": 34.99,
               "description": "A fashionable blouse for women.",
-              "size": ["S", "M", "L"],
-              "color": ["White", "Blue", "Pink"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["White", "Blue", "Pink"]
             },
             {
               "id": 6,
@@ -290,8 +290,8 @@
               "stock": 15,
               "unitPrice": 69.99,
               "description": "A trendy jumpsuit for a stylish look.",
-              "size": ["S", "M", "L"],
-              "color": ["Black", "Red"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Black", "Red"]
             },
             {
               "id": 7,
@@ -299,8 +299,8 @@
               "stock": 20,
               "unitPrice": 49.99,
               "description": "A cozy sweater for chilly days.",
-              "size": ["S", "M", "L"],
-              "color": ["Gray", "Black"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Gray", "Black"]
             },
             {
               "id": 8,
@@ -308,8 +308,8 @@
               "stock": 25,
               "unitPrice": 24.99,
               "description": "A classic shirt for a polished look.",
-              "size": ["S", "M", "L"],
-              "color": ["White", "Blue", "Pink"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["White", "Blue", "Pink"]
             },
             {
               "id": 9,
@@ -317,8 +317,8 @@
               "stock": 10,
               "unitPrice": 89.99,
               "description": "A warm and stylish coat for winter.",
-              "size": ["S", "M", "L"],
-              "color": ["Black", "Gray"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Black", "Gray"]
             },
             {
               "id": 10,
@@ -326,8 +326,8 @@
               "stock": 30,
               "unitPrice": 59.99,
               "description": "Classic denim jeans for everyday wear.",
-              "size": ["30Wx32L", "32Wx32L", "34Wx32L"],
-              "color": ["Blue"]
+              "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
+              "colors": ["Blue"]
             }
           ]
         },
@@ -343,8 +343,8 @@
               "stock": 30,
               "unitPrice": 39.99,
               "description": "A cozy sweater for chilly days.",
-              "size": ["S", "M", "L"],
-              "color": ["Gray", "Black"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Gray", "Black"]
             },
             {
               "id": 2,
@@ -352,8 +352,8 @@
               "stock": 20,
               "unitPrice": 19.99,
               "description": "A comfortable and stylish t-shirt.",
-              "size": ["S", "M", "L"],
-              "color": ["Red", "Blue", "White"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Red", "Blue", "White"]
             },
             {
               "id": 3,
@@ -361,8 +361,8 @@
               "stock": 25,
               "unitPrice": 49.99,
               "description": "Classic denim jeans for everyday wear.",
-              "size": ["30Wx32L", "32Wx32L", "34Wx32L"],
-              "color": ["Blue"]
+              "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
+              "colors": ["Blue"]
             },
             {
               "id": 4,
@@ -370,8 +370,8 @@
               "stock": 15,
               "unitPrice": 24.99,
               "description": "Comfortable shorts for warm weather.",
-              "size": ["S", "M", "L"],
-              "color": ["Khaki", "Black", "Navy"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Khaki", "Black", "Navy"]
             },
             {
               "id": 5,
@@ -379,8 +379,8 @@
               "stock": 20,
               "unitPrice": 59.99,
               "description": "An elegant dress for special occasions.",
-              "size": ["S", "M", "L"],
-              "color": ["Black", "White", "Red"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Black", "White", "Red"]
             },
             {
               "id": 6,
@@ -388,8 +388,8 @@
               "stock": 10,
               "unitPrice": 79.99,
               "description": "A stylish jacket to keep you warm.",
-              "size": ["S", "M", "L"],
-              "color": ["Black", "Brown"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Black", "Brown"]
             },
             {
               "id": 7,
@@ -397,8 +397,8 @@
               "stock": 25,
               "unitPrice": 34.99,
               "description": "A fashionable blouse for women.",
-              "size": ["S", "M", "L"],
-              "color": ["White", "Blue", "Pink"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["White", "Blue", "Pink"]
             },
             {
               "id": 8,
@@ -406,8 +406,8 @@
               "stock": 20,
               "unitPrice": 44.99,
               "description": "Versatile pants for everyday wear.",
-              "size": ["30Wx32L", "32Wx32L", "34Wx32L"],
-              "color": ["Black", "Gray"]
+              "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
+              "colors": ["Black", "Gray"]
             },
             {
               "id": 9,
@@ -415,8 +415,8 @@
               "stock": 15,
               "unitPrice": 39.99,
               "description": "A trendy skirt for any occasion.",
-              "size": ["S", "M", "L"],
-              "color": ["Red", "Black", "Navy"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Red", "Black", "Navy"]
             },
             {
               "id": 10,
@@ -424,8 +424,8 @@
               "stock": 30,
               "unitPrice": 29.99,
               "description": "A cozy sweatshirt for casual outings.",
-              "size": ["S", "M", "L"],
-              "color": ["Gray", "Black", "Navy"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Gray", "Black", "Navy"]
             }
           ]
         },
@@ -441,8 +441,8 @@
               "stock": 50,
               "unitPrice": 19.99,
               "description": "A comfortable and stylish t-shirt.",
-              "size": ["S", "M", "L"],
-              "color": ["Red", "Blue", "White"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Red", "Blue", "White"]
             },
             {
               "id": 2,
@@ -450,8 +450,8 @@
               "stock": 20,
               "unitPrice": 49.99,
               "description": "Classic denim jeans for everyday wear.",
-              "size": ["30Wx32L", "32Wx32L", "34Wx32L"],
-              "color": ["Blue"]
+              "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
+              "colors": ["Blue"]
             },
             {
               "id": 3,
@@ -459,8 +459,8 @@
               "stock": 30,
               "unitPrice": 29.99,
               "description": "A cozy sweatshirt for casual outings.",
-              "size": ["S", "M", "L"],
-              "color": ["Gray", "Black", "Navy"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Gray", "Black", "Navy"]
             },
             {
               "id": 4,
@@ -468,8 +468,8 @@
               "stock": 15,
               "unitPrice": 24.99,
               "description": "Comfortable shorts for warm weather.",
-              "size": ["S", "M", "L"],
-              "color": ["Khaki", "Black", "Navy"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Khaki", "Black", "Navy"]
             },
             {
               "id": 5,
@@ -477,8 +477,8 @@
               "stock": 10,
               "unitPrice": 59.99,
               "description": "An elegant dress for special occasions.",
-              "size": ["S", "M", "L"],
-              "color": ["Black", "White", "Red"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Black", "White", "Red"]
             },
             {
               "id": 6,
@@ -486,8 +486,8 @@
               "stock": 25,
               "unitPrice": 79.99,
               "description": "A stylish jacket to keep you warm.",
-              "size": ["S", "M", "L"],
-              "color": ["Black", "Brown"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Black", "Brown"]
             },
             {
               "id": 7,
@@ -495,8 +495,8 @@
               "stock": 20,
               "unitPrice": 34.99,
               "description": "A fashionable blouse for women.",
-              "size": ["S", "M", "L"],
-              "color": ["White", "Blue", "Pink"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["White", "Blue", "Pink"]
             },
             {
               "id": 8,
@@ -504,8 +504,8 @@
               "stock": 25,
               "unitPrice": 44.99,
               "description": "Versatile pants for everyday wear.",
-              "size": ["30Wx32L", "32Wx32L", "34Wx32L"],
-              "color": ["Black", "Gray"]
+              "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
+              "colors": ["Black", "Gray"]
             },
             {
               "id": 9,
@@ -513,8 +513,8 @@
               "stock": 15,
               "unitPrice": 39.99,
               "description": "A trendy skirt for any occasion.",
-              "size": ["S", "M", "L"],
-              "color": ["Red", "Black", "Navy"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Red", "Black", "Navy"]
             },
             {
               "id": 10,
@@ -522,8 +522,8 @@
               "stock": 20,
               "unitPrice": 49.99,
               "description": "A cozy sweater for chilly days.",
-              "size": ["S", "M", "L"],
-              "color": ["Gray", "Black"]
+              "sizes": ["S", "M", "L"],
+              "colors": ["Gray", "Black"]
             }
           ]
         }

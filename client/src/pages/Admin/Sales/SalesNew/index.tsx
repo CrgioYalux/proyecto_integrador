@@ -30,7 +30,7 @@ const SalesNew: React.FC<SalesNewProps> = ({ }) => {
             <form className="FormContainer" onSubmit={event=> event.preventDefault()}>
 
                 <div className='ProviderContainer'>
-                    <Providers selectedProviderId={1}/>
+                    
                 </div>
 
                 <div className="containerDer">

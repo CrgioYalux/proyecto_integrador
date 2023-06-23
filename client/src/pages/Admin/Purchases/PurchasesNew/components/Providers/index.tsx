@@ -3,7 +3,17 @@ import {useState} from 'react';
 import data from './data.json';
 import Item from '../Item';
 interface ProvidersProps{
-    selectedProviderId:number;
+    selectedProduct:Product|null;
+    selectProduct:(product:Product|null)=> void;
+    selectedProvider:(Provider|null);
+    selectProvider:(provider:Provider|null)=> void;
+}
+type  Provider = {
+    id: number;
+    name: string;
+    cuit: number;
+    address: string;
+    products:Array<Product>;
 }
 type Product = {
     id:number,
@@ -14,21 +24,42 @@ type Product = {
     size:Array<string>,
     color:Array<string>
 };
-
-
-
-const Providers: React.FC<ProvidersProps>= ({selectedProviderId})=>{
+const Providers: React.FC<ProvidersProps>= ({selectedProduct, selectProduct, selectProvider})=>{
     
-    const [selectedProduct, setSelectedProduct] = useState<Product|null>(null);
     const handleSelecProduct = (product:Product)=>{
-        setSelectedProduct(product)
+        selectProduct(product)
     };
-    const handleOnClick = ()=>{
-        setSelectedProduct(null)
+    const handleOnClick = ()=> {
+        selectProduct(null)
+    };
+    
+    const [selectedProviderId, setSelectedProviderId] = useState<number>(1)
+    
+    const handleOnChange = (e:React.SyntheticEvent)=> {
+        selectProduct(null)
+        const selectElement = e.target as HTMLSelectElement;
+        setSelectedProviderId(Number(selectElement.value)+1)
+        const {products, ...providerWoP} = data.providers[Number(selectElement.value)]
+        const providers1 = providerWoP as Provider;
+        selectProvider({...providers1,products:[]})
     }
+    
+    
     return(
         <div className="Providers">
+            <select name='provider_select' onChange={handleOnChange}>
+                {data.providers.map((provider, index) =>{
+                    return (
+                        <option
+                        value={index}
+                        >
+                            {provider.name}
+                        </option>
+                    );
+                })}
+            </select>
             {data.providers.map(provider =>{
+                
                 if(provider.id === selectedProviderId){
                     return(
                         <div key={provider.id} className='Providers_provider'>           

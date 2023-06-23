@@ -1,7 +1,7 @@
 {
     "clothes": [
         {
-            "id": "0001",
+            "id": "0003",
             "type": "t-shirt",
             "price": 200,
             "colour": "pink",
@@ -10,7 +10,7 @@
         },
         {
             "id": "0002",
-            "type": "t-shirt",
+            "type": "shirt",
             "price": 400,
             "colour": "blue",
             "size": "m",

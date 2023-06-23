@@ -7,6 +7,9 @@ import Login from '../../pages/Admin/Login';
 import Sales from '../../pages/Admin/Sales';
 import Home from '../../pages/Admin/Home';
 import Inventory from '../../pages/Admin/Inventory'
+import Purchases from '../../pages/Admin/Purchases';
+import PurchasesNew from '../../pages/Admin/Purchases/PurchasesNew';
+import Accounts from '../../pages/Admin/Accounts';
 
 interface BusinessRouterProps {};
 
@@ -28,14 +31,20 @@ const BusinessRouter: React.FC<BusinessRouterProps> = () => {
 
                     {/* Route for Purchases page */}
                     <Route path='purchases'>
-                        <Route index element={<div>Where the purchases history should go</div>} />
-                        <Route path='new' element={<div>Where new purchases should be made</div>}/>
+                        <Route index element={<Purchases />} />
+                        <Route path='new' element={<PurchasesNew />}/>
                     </Route>
 
                     {/* Route for Accounting Entries */}
                     <Route path='accounting_entries'>
                         <Route index element={<div>Where the accounting entries history should go</div>} /> 
                         <Route path=':id' element={<div>Where a specific accounting entry should be shown</div>} />
+                    </Route>
+
+                    {/* Route for Accounts */}
+                    <Route path='accounts'>
+                        <Route index element={<Accounts />} /> 
+                        <Route path=':id' element={<div>Where a specific account should be shown</div>} />
                     </Route>
 
                     {/* Route for Inventory page */}

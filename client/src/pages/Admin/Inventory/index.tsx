@@ -1,46 +1,84 @@
-import './Inventory.css'
+import './Inventory.css';
 
-import Button from '../../../components/Button';
-//import { Navigate } from 'react-router-dom';
-//import Button from '../../../components/Button';
+import data from './tests.json';
+import {useState} from 'react';
 
 function Inventory() {
+
+    const [input, setInput] = useState<string>('');
+    const filteredList = data.clothes.filter(clothe => clothe.type.includes(input))
+
+    const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setInput(event.target.value)
+    }
+    
 
     return (
         <>
         <div className='Title'>
             <h1>Inventario</h1>
         </div>
-        <div className='Button-back'>
-            <button>{<Button className='Button' children='Volver'/>}</button>
-        </div>
         <div className='Search-box'>
-            <input type="text" placeholder='Buscar en inventario'/>
-            <button type='submit'>Buscar</button>
+            <input type='text' onChange={handleOnChange} placeholder='Buscar en inventario' value={input}/>
         </div>
-        <div>
-            <table>
-                <tr>
-                    <td>000</td>
-                    <td>tshirt</td>
-                    <td>$100</td>
-                    <td>pink</td>
-                    <td>xl</td>
-                    <td>20</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
+        <div className='Table'>
+            {
+            filteredList.map(clothe => {
+            return(
+            <>
+                <span className='Item-span'>{clothe.id}</span>
+                <span className='Item-span'>{clothe.type}</span>
+                <span className='Item-span'>{clothe.price}</span>
+                <span className='Item-span'>{clothe.colour}</span>
+                <span className='Item-span'>{clothe.size}</span>
+                <span className='Item-span'>{clothe.amount}</span>
+                <br />
+            </>
+            )
+        })
+            }
         </div>
         </>
         
     )
 }
+/*
+<div className='Table'>
+{
+    data.clothes.map(clothe => {
+        return(
+            <>
+            
+            <span className='Item-span'>{clothe.id}</span>
+            <span className='Item-span'>{clothe.type}</span>
+            <span className='Item-span'>{clothe.price}</span>
+            <span className='Item-span'>{clothe.colour}</span>
+            <span className='Item-span'>{clothe.size}</span>
+            <span className='Item-span'>{clothe.amount}</span>
+            <br />
+            </>
+        )
+    })
+}
+*/
+
+
+/*
+    function handleOnClick() {
+    const filtered = data.clothes.filter(
+        clothe => clothe.type === input
+        )
+        filtered.map(clothe => {
+            return(
+                <>
+                <span>{clothe.id}</span>
+                </>
+            )
+        })
+    }
+
+
+onClick={handleOnClick}
+*/
 
 export default Inventory;

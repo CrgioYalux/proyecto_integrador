@@ -1,0 +1,8 @@
+.PostingAccount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--primary-color-l-higher);
+    border-radius: var(--brand-border-radius);
+}

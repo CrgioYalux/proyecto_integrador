@@ -1,0 +1,9 @@
+.Providers {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    overflow: auto;
+}
+.Providers_product_label {
+    cursor: pointer;
+} 

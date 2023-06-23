@@ -1,36 +1,43 @@
 .Title {
     text-align: center;
     position: fixed;
-    top: 40px;
+    top: 60px;
 }
 
-.Button-back button{
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 15px;
-    right: 200px;
+.Search-box {
+    position: fixed;
+    top: 140px;
+    left: 25px;
 }
 
-.Search-box{
-    width: 300px;
+.Search-box input {
+    width: 200px;
+    padding: 5px;
+    border-radius: 8px;
+}
 
-    padding: 10px;
+@media screen and  (max-width: 168px){
+    .Search-box {
+        position: static;
+    }
+};
+
+.Table {
     display: flex;
-
-    border-radius: 10px;
-
-    position: relative;
-    left: 450px;
-    bottom: 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
 }
 
-.Search-box input{
-    padding: 5px 10px;
-    border-radius: 15px;
-}
 
-.Search-box button{ 
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 15px;
+.Item-span {
+    font-size: 20px;
+    color: var(--secondary-color-l-base);
+    outline: var(--secondary-color-l-base) 1px solid;
+    padding-left: 10px;
+    padding-right: 10px;
+    outline-offset: -1px;
+    flex: 0 0 50%;
+    justify-content: center;
+    align-items: center;
 }

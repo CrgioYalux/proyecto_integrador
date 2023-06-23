@@ -1,13 +1,13 @@
 import './SidePanel.css';
 
 import { useState } from 'react';
-import { useAdminSystem } from '../../providers/AdminSystem';
+import { useAdminSystem } from '../../../providers/AdminSystem';
 
-import Button from "../Button";
-import SwitchThemeBT from "../SwitchThemeBT";
-import HamburgerMenu from '../Icons/HamburgerMenu';
+import Button from "../../../components/Button";
+import SwitchThemeBT from "../../../components/SwitchThemeBT";
+import HamburgerMenu from '../../../components/Icons/HamburgerMenu';
 
-import logoImgUrl from '../../assets/TrendStyle.png';
+import logoImgUrl from '../../../assets/TrendStyle.png';
 
 interface SidePanelProps {
     className?: string;

@@ -3,17 +3,16 @@
     margin: 10px;
 }
 .main-container{
-    background-color: #ffffff;
-    padding: 10px;
-    height: 500px;
-    width: 800px;
+    background-color: var(--primary-color-l-base);
+    height: 600px;
+    width: 1000px;
     border-radius: 1rem;
 }
 .containerDer{
     margin: 10px;
     padding: 10px;
-    border-style: solid;
-    border-color: #cfcfcf;
+    
+    
     border-radius: 10px;
     width: 600px;
     
@@ -24,7 +23,6 @@
     width: 100%;
     border-radius: 5px;
     border-style: hidden;
-    
     font-size: 20px;
     padding: 5px;
 }
@@ -36,7 +34,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border-style: solid;
+    
     border-color: #cfcfcf;
     
     
@@ -74,4 +72,37 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+.ProviderContainer{
+    margin: 10px;
+    overflow-x: hidden;
+}
+.ButtonBill{
+    color: var(--primary-color-l-high);
+    background-color: var(--secondary-color-l-low);
+    border-style: hidden;
+    cursor: pointer;
+    font-size: bold;
+    margin: 10px;
+    border-radius: 5px;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+.ButtonBill:hover{
+    background-color: var(--secondary-color-l-lowest);
+}
+.containerBill{
+    
+}
+.tituloVenta{
+    padding-left: 90px;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--secondary-color-l-base);
+}
+.containerCheckBox{
+    background-color: aquamarine;
+    height: 250px;
 }

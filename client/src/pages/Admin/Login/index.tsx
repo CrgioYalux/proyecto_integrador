@@ -1,8 +1,11 @@
 import './Login.css';
-import { useState, useRef } from 'react';
+
+import { useState, useRef, createRef } from 'react';
 import { useAdminSystem } from "../../../providers/AdminSystem";
+
 import OpenEye from '../../../components/Icons/OpenEye';
 import ClosedEye from '../../../components/Icons/ClosedEye';
+import Button from '../../../components/Button';
 
 interface LoginProps { };
 
@@ -10,7 +13,7 @@ const Login: React.FC<LoginProps> = ({ }) => {
     const [_, actions] = useAdminSystem();
     const [passwordInputType, setPassworInputType] = useState<'password'|'text'>('password');
     const formTipSpanRef = useRef<HTMLSpanElement | null>(null);
-    const submitButtonRef = useRef<HTMLButtonElement | null>(null);
+    const submitButtonRef = createRef<HTMLButtonElement>();
 
     const handleSubmit = (event: React.SyntheticEvent): void => {
         event.preventDefault();
@@ -23,6 +26,11 @@ const Login: React.FC<LoginProps> = ({ }) => {
 
         if (submitButtonRef.current) {
             submitButtonRef.current.textContent = '...';
+        }
+
+        form.classList.remove('--login-failed');
+        if (formTipSpanRef.current) {
+            formTipSpanRef.current.textContent = '';
         }
 
         actions.userSession.logIn({ username: form.username.value, password: form.password. value })
@@ -44,32 +52,39 @@ const Login: React.FC<LoginProps> = ({ }) => {
 
     return (
         <form className='Login' onSubmit={handleSubmit}>
-            <strong>Login</strong>
-            <label htmlFor='username'>
-                <input 
-                type='text'
-                placeholder='username'
-                id='username'
-                name='username'
-                required
-                autoFocus
-                />
+            <label className='Login__label' htmlFor='username'>
+                <strong className='Login-label__text'>Username</strong>
+                <div className='Login-label__input'>
+                    <input 
+                    type='text'
+                    id='username'
+                    name='username'
+                    required
+                    autoFocus
+                    />
+                </div>
             </label>
-            <label htmlFor='password'>
-                <input 
-                type={passwordInputType}
-                placeholder='password'
-                id='password'
-                name='password'
-                required
-                />
-                <button
-                type='button'
-                onClick={() => setPassworInputType(prev => prev === 'password' ? 'text' : 'password' )}
-                >{passwordInputType === 'password' ? <OpenEye /> : <ClosedEye />}</button>
+            <label className='Login__label' htmlFor='password'>
+                <strong className='Login-label__text'>Password</strong>
+                <div className='Login-label__input'>
+                    <input 
+                    type={passwordInputType}
+                    id='password'
+                    name='password'
+                    required
+                    />
+                    <button
+                    type='button'
+                    onClick={() => setPassworInputType(prev => prev === 'password' ? 'text' : 'password' )}
+                    >{
+                        passwordInputType === 'password' 
+                        ? <OpenEye className='Login-label-input__icon' />
+                        : <ClosedEye className='Login-label-input__icon' />
+                    }</button>
+                </div>
             </label>
-            <span ref={formTipSpanRef}></span>
-            <button type='submit' ref={submitButtonRef}>ENTER</button>
+            <span className='Login__state' ref={formTipSpanRef}></span>
+            <Button className='Login__submit-bt' type='submit' ref={submitButtonRef}>ENTER</Button>
         </form>
     );
 };

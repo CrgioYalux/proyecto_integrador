@@ -10,6 +10,7 @@ import ListProducts from './components/ListProducts';
 import CalculatedPrice from './components/CalculatedPrice';
 
 import type { ProductVariety, Product, Provider } from './utils';
+import Button from '../../../../components/Button';
 
 interface PurchasesNewProps {};
 
@@ -61,40 +62,44 @@ const PurchasesNew: React.FC<PurchasesNewProps> = ({}) => {
 
     return (
         <div className='PurchasesNew'>
-            <div className="PurchasesNew_providers">
+            <div className='PurchasesNew__form'>
                 <ListProviders
+                className='PurchasesNew__section PurchasesNew-form__providers'
                 providers={providers}
                 selectedProvider={selectedProvider} 
                 selectProvider={selectProvider} 
-                >
+                />
+                <div className='PurchasesNew__section PurchasesNew-form__products'>
                     <ListProducts
                     products={providerProducts}
                     selectedProduct={selectedProduct}
                     selectProduct={selectProduct}
                     />
-                </ListProviders>
+                </div>
+                <div className='PurchasesNew__section PurchasesNew-form__filter-n-price'>
+                    {selectedProduct ? <>
+                        <Filter
+                        className='PurchasesNew__Filter'
+                        sizes={productSizes}
+                        colors={productColors}
+                        selectedSize={selectedProductSize}
+                        selectedColor={selectedProductcolor}
+                        selectSize={setSelectedProductSize}
+                        selectColor={setSelectedProductColor}
+                        />
+                        <CalculatedPrice
+                        className='PurchasesNew__CalculatedPrice'
+                        units={units}
+                        setUnits={setUnits}
+                        unitPrice={selectedProduct.unitPrice}
+                        >
+                            <Button className='PurchasesNew__add-button'>Add</Button>
+                        </CalculatedPrice>
+                    </> : <span>Select a product</span>}
+                </div>
             </div>
-            <div className="PurchasesNew_cart">
+            <div className='PurchasesNew__section PurchasesNew__cart'>
                 <h1>Cart</h1>
-            </div>
-            <div className="PurchasesNew_filterNprice">
-            {selectedProduct && <>
-                <Filter
-                className='PurchasesNew__Filter'
-                sizes={productSizes}
-                colors={productColors}
-                selectedSize={selectedProductSize}
-                selectedColor={selectedProductcolor}
-                selectSize={setSelectedProductSize}
-                selectColor={setSelectedProductColor}
-                />
-                <CalculatedPrice
-                className='PurchasesNew__CalculatedPrice'
-                units={units}
-                setUnits={setUnits}
-                unitPrice={selectedProduct.unitPrice}
-                />
-            </>}
             </div>
         </div>
    );

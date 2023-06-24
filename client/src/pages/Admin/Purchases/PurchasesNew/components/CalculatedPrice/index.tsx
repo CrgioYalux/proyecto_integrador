@@ -2,6 +2,7 @@ import './CalculatedPrice.css';
 
 interface CalculatedPriceProps {
     className?: string;
+    children?: React.ReactNode;
 
     unitPrice: number;
     units: number;
@@ -11,6 +12,7 @@ interface CalculatedPriceProps {
 
 const CalculatedPrice: React.FC<CalculatedPriceProps> = ({
     className = '',
+    children,
     unitPrice,
     units,
     setUnits,
@@ -27,7 +29,7 @@ const CalculatedPrice: React.FC<CalculatedPriceProps> = ({
     return (
         <div className={`CalculatedPrice ${className}`}>
             <label className='CalculatedPrice__label' htmlFor='units'>
-                <span>Units</span>
+                <strong>Units</strong>
                 <input 
                 type='text'
                 id='units'
@@ -35,7 +37,8 @@ const CalculatedPrice: React.FC<CalculatedPriceProps> = ({
                 onChange={handleOnChange}
                 />
             </label>
-            <span>Total price: {(unitPrice * units).toFixed(2)}</span>
+            <span className='CalculatedPrice__price'>Total price: ${(unitPrice * units).toFixed(2)}</span>
+            {children}
         </div>
     );
 };

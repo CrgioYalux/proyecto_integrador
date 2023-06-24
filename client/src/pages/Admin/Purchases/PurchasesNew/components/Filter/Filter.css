@@ -2,21 +2,82 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .Filter__size,
 .Filter__color {
-    flex: 0 0 30%;
+    flex: 1 1 auto;
+
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 2.5px;
 }
 
-.Filter-color__RadioListInput,
-.Filter-size__RadioListInput {
+.Filter__size > strong,
+.Filter__color > strong {
+    color: var(--secondary-color-l-base);
+}
+
+.Filter .Filter-color__RadioListInput {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 7.5px;
+}
+
+.Filter .Filter-size__RadioListInput {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2.5px;
+}
+
+.Filter .Filter__RadioListInput input {
+    display: none;
+}
+
+.Filter .Filter-size__RadioListInput {
+    font-size: .85em;
+}
+
+.Filter-RadioListInput__box {
+    flex: 0 0 2.5ch;
+    height: 2.5ch;
+    aspect-ratio: 1;
+
+    cursor: pointer;
+}
+
+.Filter-size__box {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+
+    background-color: var(--primary-color-l-high);
+    color: var(--secondary-color-l-low);
+
+    font-size: 1em;
+    font-weight: 600;
+
+    border: 1px solid var(--secondary-color-l-low);
+
+    display: grid;
+    place-items: center;
+}
+
+.Filter-size__box.--selected {
+    background-color: var(--secondary-color-l-low);
+    color: var(--primary-color-l-high);
+}
+
+.Filter-color__box {
+    border: 0;
+    border-radius: 50%;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.Filter-color__box.--selected {
+    outline-color: var(--success-color);
 }

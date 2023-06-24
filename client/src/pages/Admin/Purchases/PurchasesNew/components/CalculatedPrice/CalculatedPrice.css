@@ -1,0 +1,35 @@
+.CalculatedPrice {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+
+    background-color: var(--brand-color-l-lower);
+    border-radius: var(--brand-border-radius);
+    color: var(--primary-color-l-base);
+}
+
+.CalculatedPrice__label {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    gap: 5px;
+}
+
+.CalculatedPrice__label > input {
+    max-width: 6ch;
+    margin: 0 auto;
+
+    font-family: var(--primary-font);
+    font-size: 1em;
+    padding: .15em 0;
+
+    outline: 0;
+    border: 0;
+    border-radius: calc(var(--brand-border-radius) - 5px);
+    text-align: center;
+}
+
+.CalculatedPrice__price {
+    text-align: center;
+}

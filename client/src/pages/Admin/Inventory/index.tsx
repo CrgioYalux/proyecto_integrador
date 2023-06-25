@@ -11,7 +11,6 @@ function Inventory() {
     const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setInput(event.target.value)
     }
-    
 
     return (
         <>
@@ -26,12 +25,31 @@ function Inventory() {
             filteredList.map(clothe => {
             return(
             <>
-                <span className='Item-span'>{clothe.id}</span>
-                <span className='Item-span'>{clothe.type}</span>
-                <span className='Item-span'>{clothe.price}</span>
-                <span className='Item-span'>{clothe.colour}</span>
-                <span className='Item-span'>{clothe.size}</span>
-                <span className='Item-span'>{clothe.amount}</span>
+                <span 
+                className={
+                    clothe.amount === 0 ? 'Item-span-no-stock' : 
+                    (clothe.amount < 10 ? 'Item-span-little-stock' : 'Item-span')
+                    }>{clothe.id}</span>
+                <span className={
+                    clothe.amount === 0 ? 'Item-span-no-stock' : 
+                    (clothe.amount < 10 ? 'Item-span-little-stock' : 'Item-span')
+                    }>{clothe.type}</span>
+                <span className=
+                {clothe.amount === 0 ? 'Item-span-no-stock' : 
+                (clothe.amount < 10 ? 'Item-span-little-stock' : 'Item-span')
+                }>{clothe.price}</span>
+                <span className={
+                    clothe.amount === 0 ? 'Item-span-no-stock' : 
+                (clothe.amount < 10 ? 'Item-span-little-stock' : 'Item-span')
+                }>{clothe.colour}</span>
+                <span className={
+                    clothe.amount === 0 ? 'Item-span-no-stock' : 
+                    (clothe.amount < 10 ? 'Item-span-little-stock' : 'Item-span')
+                    }>{clothe.size}</span>
+                <span className={
+                    clothe.amount === 0 ? 'Item-span-no-stock' : 
+                    (clothe.amount < 10 ? 'Item-span-little-stock' : 'Item-span')
+                    }>{clothe.amount}</span>
                 <br />
             </>
             )

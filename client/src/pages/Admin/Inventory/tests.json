@@ -14,7 +14,15 @@
             "price": 400,
             "colour": "blue",
             "size": "m",
-            "amount": 5
+            "amount": 6
+        },
+        {
+            "id": "0003",
+            "type": "jacket",
+            "price": 700,
+            "colour": "black",
+            "size": "s",
+            "amount": 0
         }
     ]
 }

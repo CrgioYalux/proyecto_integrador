@@ -8,11 +8,6 @@
     "server"
   ],
   "scripts": {
-    "bak_dev:client": "yarn workspace client run dev",
-    "bak_dev:server": "yarn workspace server run dev",
-    "bak_build": "yarn workspace server run build && yarn workspace client run build",
-    "bak_start": "yarn run build && yarn workspace server run start",
-
     "dev:client": "yarn --cwd client dev",
     "dev:server": "yarn --cwd server dev",
     "dev:both": "npm-run-all --parallel dev:server dev:client",

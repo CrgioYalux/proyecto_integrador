@@ -1,58 +1,77 @@
 .PurchasesNew {
+    --PurchasesNew-spacing: 7.5px;
+
+    width: 80vw;
     max-width: 1000px;
-    width: 90vw;
-    height: 80vh;
-    padding: 20px;
-    display: grid;
-    gap: 10px ;
-    grid-template-areas:"providers cart" "filter cart";
-    grid-template-rows: 70% 1fr;
-    grid-template-columns: 60% 1fr;
-    
+    min-height: 80vh;
+
+    padding: var(--PurchasesNew-spacing);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--PurchasesNew-spacing);
+
+    background-color: var(--primary-color-l-higher);
+    border-radius: var(--brand-border-radius);
+}
+
+.PurchasesNew__form {
+    flex: 1 0 65%;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--PurchasesNew-spacing);
+}
+
+.PurchasesNew__section {
+    padding: var(--PurchasesNew-spacing);
     background-color: var(--primary-color-l-high);
-    border-radius: var(--brand-border-radius);
+    border-radius: calc(var(--brand-border-radius) - var(--PurchasesNew-spacing));
 }
-.PurchasesNew > h1 {
-    grid-area: title;
-    text-align: center;
+
+.PurchasesNew-form__providers {
+    display: grid;
+    place-items: center;
 }
-.PurchasesNew_providers {
+
+.PurchasesNew-form__products {
+    flex: 0 0 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    overflow-x: auto;
+}
+
+.PurchasesNew-form__filter-n-price {
+    flex: 1 0 25%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--PurchasesNew-spacing);
+}
+
+.PurchasesNew__Filter {
+    flex: 1 0 65%;
+}
+
+.PurchasesNew__CalculatedPrice {
     margin-left: auto;
-    margin-right: auto;
-    grid-area: providers;
-    max-width: 600px;
-    padding: 10px;
-    overflow: auto;
-    border-radius: var(--brand-border-radius);
+    flex: 1 0 30%;
+    display: flex;
+    flex-direction: column;
+}
 
-    background-color: var(--primary-color-l-higher);
-    
-    outline-offset: -2px;
+.PurchasesNew__CalculatedPrice > .PurchasesNew__add-button {
+    margin-top: auto;
+    background-color: var(--success-color);
 }
-.PurchasesNew_filterNprice {
-    grid-area: filter;
-    background-color: var(--primary-color-l-higher);
-    
-    outline-offset: -2px;
-    border-radius: var(--brand-border-radius);
-}
-.PurchasesNew_cart {
-    grid-area: cart;
-    background-color: var(--primary-color-l-higher);
-    outline-offset: -2px;
-    border-radius: var(--brand-border-radius);
-}
-@media (max-width: 765px){
-    .PurchasesNew {
-        grid-template-areas:"title" "providers" "filter" "cart";
-        grid-template-rows:  50px 3fr 1fr 2fr;
-        grid-template-columns: 1fr;
-        border-radius: 0;
-        height: 100%;
-    }
-    .PurchasesNew > h1 {
-        font-size: 25px;
-        text-align: center;
-    }
 
+.PurchasesNew__cart {
+    flex: 1 0 30%;
+    display: grid;
+    place-items: center;
 }
+

@@ -1,0 +1,7 @@
+.ListProducts__RadioListInput > label {
+    flex: 1 0 100%;
+}
+
+.ListProducts__RadioListInput input {
+    display: none;
+}

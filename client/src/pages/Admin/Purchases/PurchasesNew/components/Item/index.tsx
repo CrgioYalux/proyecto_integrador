@@ -1,31 +1,25 @@
 import './Item.css';
-interface ItemProps{
+
+import type { Product } from '../../utils'; 
+
+interface ItemProps {
     isSelected: Boolean;
     product: Product;
 };
-type Product = {
-    id:number,
-    name:string,
-    stock:number,
-    unitPrice:number,
-    description:string,
-    size: Array<string>,
-    color:Array<string>
-};
-const Item: React.FC <ItemProps>=({product, isSelected})=>{
+
+const Item: React.FC<ItemProps> = ({ product, isSelected }) => {
 
     return (
-        <div className={ `Item ${isSelected ? "--selected" : ""}`}>
-          <span className='Item_span'>
-          {product.name}
-          </span>
-          <span className='Item_span Item_span-middle'>
-          ${product.unitPrice}
-          </span>
-          <span className='Item_span'>
-          {product.description}
-          </span>
-          
+        <div className={`Item ${isSelected ? "--selected" : ""}`}>
+            <span className='Item__span Item-span__name'>
+            {product.name}
+            </span>
+            <span className='Item__span Item-span__price'>
+            ${product.unitPrice}
+            </span>
+            <span className='Item__span Item-span__name'>
+            {product.description}
+            </span>
         </div>
     );
 };

@@ -5,14 +5,14 @@ import { useState } from 'react';
 import WalkAccounts from './WalkAccounts';
 import PostingAccount from './PostingAccount';
 
-import type { Account, AccountInClient, AccountingPlan } from './utils';
+import type { AccountInClient, AccountingPlan } from './utils';
 
 import mock from './accounts.json';
 
 interface AccountsProps { };
 
 const Accounts: React.FC<AccountsProps> = ({}) => {
-    const [accountingPlan, setAccountingPlan] = useState<AccountingPlan>(() => mock.accounts as AccountingPlan);
+    const [accountingPlan, _setAccountingPlan] = useState<AccountingPlan>(() => mock.accounts as AccountingPlan);
     const [selectedAccount, setSelectedAccount] = useState<AccountInClient>(() => ({ ...accountingPlan[0], code: `${accountingPlan[0].id}` }));
 
     return (

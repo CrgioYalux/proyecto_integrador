@@ -5,6 +5,7 @@ import ProtectedRoute from './ProtectedRoute';
 import Admin from '../../pages/Admin';
 import Login from '../../pages/Admin/Login';
 import Sales from '../../pages/Admin/Sales';
+import SalesNew from '../../pages/Admin/Sales/SalesNew';
 import Home from '../../pages/Admin/Home';
 import Inventory from '../../pages/Admin/Inventory'
 import Purchases from '../../pages/Admin/Purchases';
@@ -25,8 +26,8 @@ const BusinessRouter: React.FC<BusinessRouterProps> = () => {
 
                     {/* Route for Sales page */}
                     <Route path='sales'>
-                        <Route index element={<div>Where the sales history should go</div>} />
-                        <Route path='new' element={<Sales />} />
+                        <Route index element= {<Sales />} />
+                        <Route path='new' element={<SalesNew />} />
                     </Route>
 
                     {/* Route for Purchases page */}

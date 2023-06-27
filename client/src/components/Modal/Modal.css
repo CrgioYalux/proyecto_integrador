@@ -37,9 +37,9 @@
     margin-top: 5%;
 
 }
-.btn-Aceptar{
+.btn-cerrar{
     color: #ffff;
-    background-color: #82CD47;
+    background-color: #cd4747;
     font-size: 20px;
     font-weight: 100;
     cursor: pointer;
@@ -48,11 +48,11 @@
     width: 100px;
     border-radius: 5px;
     transition: transform 0.3s ease, background-color 0.3s;
-    margin-left: 85%;
+    margin-left: 5%;
     
 }
-.btn-Aceptar:hover{
-background-color: #93e951;
+.btn-cerrar:hover{
+background-color: #fc6767;
 }
 
 .InputsModal{

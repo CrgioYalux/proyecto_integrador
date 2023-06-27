@@ -35,7 +35,7 @@ return(
                     <div className="overlay">
                         <div className="modalContent">
                         {children}
-                        <button className='btn-Aceptar' onClick={toggleModal}>{nameBtn}</button>
+                        <button className='btn-cerrar' onClick={toggleModal}>{nameBtn}</button>
                         </div>
                     </div>
                     

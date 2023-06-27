@@ -116,9 +116,68 @@
     margin-left: 10px;
 }
 .line{
-    margin-top: 20px;
+    margin-top: 2px;
     margin-bottom: 20px;
     height: 2px;
     background-color: #4b4b4b4d;
     border-radius: 1px;
+}
+.container__Detalle{
+    display: flex;
+    flex-wrap: wrap;
+    height: 80%;
+}
+.Container__Detalle_Ropa{
+    width: 60%;
+    height: 40%;
+}
+.Container__Importe{
+    width: 40%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-right: 35px;
+}
+.labells__inputs{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: end;
+    margin: 5px;
+}
+.labells__inputs__input{
+    width: 100px;
+    border-radius: 2px;
+    border-style: hidden;
+    background-color: #f0f0f0;
+}
+.labells__inputs__label{
+    margin-right: 5px;
+    margin-top: 5px;
+    font-size: 12px;
+}
+.containerBill{
+    width: 50px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+.btn__vender{
+    color: #ffff;
+    background-color: #8bdf5b;
+    font-size: 20px;
+    font-weight: 100;
+    cursor: pointer;
+    border-style: hidden;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s;
+    margin-left: 35%;
+    margin-top: 20px;
+}
+.btn__vender:hover{
+    background-color: #5fd33c;
 }

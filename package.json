@@ -8,15 +8,20 @@
     "server"
   ],
   "scripts": {
-    "dev:client": "yarn workspace client run dev",
-    "dev:server": "yarn workspace server run dev",
-    "build": "yarn workspace server run build && yarn workspace client run build",
-    "start": "yarn run build && yarn workspace server run start"
+    "dev:client": "yarn --cwd client dev",
+    "dev:server": "yarn --cwd server dev",
+    "dev:both": "npm-run-all --parallel dev:server dev:client",
+    "build:client": "yarn --cwd client build",
+    "build:server": "yarn --cwd server build",
+    "build:both": "npm-run-all build:server build:client",
+    "start:server": "yarn --cwd server start",
+    "start": "npm-run-all build:both start:server"
   },
   "dependencies": {
     "cross-env": "^7.0.3"
   },
   "devDependencies": {
+    "npm-run-all": "^4.1.5",
     "typescript": "^5.1.3"
   }
 }

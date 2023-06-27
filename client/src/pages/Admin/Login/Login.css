@@ -1,67 +1,65 @@
 .Login {
     --Login-form-spacing: 5px;
-    --Login-accent-color: var(--brand-color-l-lower);
 
-    width: 30vw;
-    min-width: 300px;
-    aspect-ratio: 1;
+    width: 90vw;
+    max-width: 400px;
+    height: fit-content;
 
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 
     gap: calc(var(--Login-form-spacing) * 2);
     padding: calc(var(--Login-form-spacing) * 2);
 
-    color: var(--primary-color-l-high);
     font-size: 1em;
 
-    background-color: var(--secondary-color-l-low);
-    box-shadow: var(--Login-form-spacing) var(--Login-form-spacing) 0 var(--secondary-color-l-lowest);
+    color: var(--secondary-color-l-low);
+    background-color: var(--primary-color-l-high);
 
-    border: 2px solid currentColor;
     border-radius: var(--brand-border-radius);
 }
 
-.Login.--login-failed {
-    --Login-accent-color: var(--unsuccess-color);
+.Login strong,
+.Login span {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.Login > span {
-    margin: 0 auto;
+.Login.--login-failed > .Login__state {
     color: var(--unsuccess-color);
+    font-weight: 600;
+    animation: shake-in-x .25s;
 }
 
-.Login > strong {
-    margin: auto;
-
-    font-size: 1.4em;
-    line-height: 1;
-    letter-spacing: 2px;
-    font-weight: 700;
-
-    color: var(--primary-color-l-high);
-}
-
-.Login > label {
+.Login > .Login__label {
     width: 100%;
-    position: relative;
 
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
 
     color: inherit;
     font-size: 1em;
 
-    border: 2px solid currentColor;
-    border-radius: calc(var(--brand-border-radius) - var(--Login-form-spacing));
-
     overflow: hidden;
 }
 
-.Login > label > input {
+.Login > .Login__label > .Login-label__text {
+    letter-spacing: 1px;
+}
+
+.Login > .Login__label > .Login-label__input {
     width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    border: 2px solid currentColor;
+    border-radius: calc(var(--brand-border-radius) - var(--Login-form-spacing));
+}
+
+.Login > .Login__label > .Login-label__input > input {
+    flex: 1 1 auto;
     background-color: transparent;
     color: inherit;
 
@@ -70,90 +68,52 @@
 
     border: 0;
     border-left: 10px solid transparent;
-    border-radius: 0;
+    border-radius: calc(var(--brand-border-radius) - var(--Login-form-spacing));
+
     outline: 0;
-
-    transition: border-color .25s;
 }
 
-.Login > label > input:focus {
-    border-color: var(--primary-color-l-high);
+.Login > .Login__label > .Login-label__input > input::selection {
+    color: var(--primary-color-l-high);
+    background-color: var(--secondary-color-l-low);
 }
 
-.Login > label > input:not(:placeholder-shown) {
-    border-color: var(--Login-accent-color);
-}
-
-.Login > label:nth-child(2) > input {
-    max-width: 85%;
-}
-
-.Login > label:nth-child(1) > input {
-    max-width: 100%;
-}
-
-.Login > label > button {
-    position: absolute;
-    right: 0;
-
-    height: 100%;
+.Login > .Login__label > .Login-label__input > button {
+    flex: 0 0 10%;
     aspect-ratio: 1;
 
     display: grid;
     place-items: center;
 
     background-color: transparent;
-
     border: 0;
-    border-radius: 50%;
-    outline: 0;
 
-    cursor: pointer;
+    cursor: pointer
 }
 
-.Login > label > button > * {
-    height: 60%;
-    aspect-ratio: 1;
-    fill: var(--Login-accent-color);
+.Login > .Login__label > .Login-label__input > button > .Login-label-input__icon {
+    width: 70%;
+    height: 70%;
+    fill: var(--secondary-color-l-low);
 }
 
-.Login > button {
+.Login > .Login__submit-bt {
+    flex: 0 1 auto;
+    min-width: 8ch;
+    max-width: 8ch;
     margin-top: auto;
-    margin-bottom: var(--Login-form-spacing);
-    margin-left: auto;
-    margin-right: var(--Login-form-spacing);
+    width: fit-content;
+    align-self: flex-end;
 
-    font-size: .85em;
-    font-weight: 600;
-    padding: .35em 1em;
-
-    color: var(--secondary-color-l-low);
-    background-color: var(--primary-color-l-high);
-    box-shadow: calc(var(--Login-form-spacing) / 2) calc(var(--Login-form-spacing) / 2) 0 var(--primary-color-l-highest);
-
-    border: 2px solid currentColor;
-    border-radius: calc(var(--brand-border-radius) - var(--Login-form-spacing));
-
-    cursor: pointer;
+    background-color: var(--brand-color-l-low);
+    color: white;
 }
 
-.Login > button:focus {
-    outline: 2px solid var(--Login-accent-color);
+@keyframes shake-in-x {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
 }
 
-.Login > label > input:placeholder-shown {
-    color: var(--primary-color-l-highest);
-}
-
-.Login > label > input:first-child {
-    margin-top: auto;
-}
-
-.Login > label > button:focus {
-    outline: 2px solid var(--Login-accent-color);
-    outline-offset: -5px;
-}
-
-.Login > label:first-child {
-    margin-top: auto;
-}

@@ -1,0 +1,16 @@
+.RadioListInput {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.RadioListInput__label {
+    display: flex;
+    flex-direction: row;
+
+    gap: 5px;
+}
+
+.RadioListInput-label__span {
+    color: var(--secondary-color-l-base);
+}

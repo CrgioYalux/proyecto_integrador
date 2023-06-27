@@ -11,13 +11,13 @@ const Item: React.FC<ItemProps> = ({ product, isSelected }) => {
 
     return (
         <div className={`Item ${isSelected ? "--selected" : ""}`}>
-            <span className='Item_span'>
+            <span className='Item__span Item-span__name'>
             {product.name}
             </span>
-            <span className='Item_span Item_span-middle'>
+            <span className='Item__span Item-span__price'>
             ${product.unitPrice}
             </span>
-            <span className='Item_span'>
+            <span className='Item__span Item-span__name'>
             {product.description}
             </span>
         </div>

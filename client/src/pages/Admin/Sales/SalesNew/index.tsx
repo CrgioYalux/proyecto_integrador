@@ -9,15 +9,6 @@ const SalesNew: React.FC<SalesNewProps> = ({ }) => {
 
     const[typeBill, setTypeBill] = useState<'A' | 'B'>("B");
 
-    const selectBillA = ()=>{
-
-        setTypeBill("A")
-    }
-    const selectBillB = ()=>{
-        
-        setTypeBill("B")
-    }
-
     const handleChange = (event:React.SyntheticEvent) =>{
         
         const selectElement = event.target as HTMLSelectElement;

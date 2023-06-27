@@ -8,9 +8,9 @@ import Filter from './components/Filter';
 import ListProviders from './components/ListProviders';
 import ListProducts from './components/ListProducts';
 import CalculatedPrice from './components/CalculatedPrice';
+import Button from '../../../../components/Button';
 
 import type { ProductVariety, Product, Provider } from './utils';
-import Button from '../../../../components/Button';
 
 interface PurchasesNewProps {};
 
@@ -29,6 +29,31 @@ const PurchasesNew: React.FC<PurchasesNewProps> = ({}) => {
 
     const [units, setUnits] = useState<number>(0);
 
+    const [cart, setCart] = useState<Product[]>([]);
+
+    const clearSelectedProduct = (): void => {
+        setSelectedProduct(null);
+        setSelectedProductSize(null);
+        setSelectedProductColor(null);
+    };
+
+    const addToCart = (): void => {
+        if (selectedProduct && selectedProductSize && selectedProductcolor) {
+            setCart(prev => [...prev, {
+                ...selectedProduct,
+                colors: [selectedProductcolor.name],
+                sizes: [selectedProductSize.name],
+                stock: units,
+            }]);
+
+            clearSelectedProduct();
+        }
+    };
+
+    // const deleteFromCart = (id: number): void => {
+    //     setCart(prev => prev.filter(product => product.id !== id));
+    // };
+
     useEffect(() => {
         // this simulates the get request bringing the providers from the API
         
@@ -40,20 +65,16 @@ const PurchasesNew: React.FC<PurchasesNewProps> = ({}) => {
     const selectProvider = (provider: Provider) => {
         setSelectedProvider(provider);
         setProviderProducts(provider.products);
-        setSelectedProduct(null);
-        setSelectedProductSize(null);
-        setSelectedProductColor(null);
+        clearSelectedProduct();
     };
 
     const selectProduct = (product: Product | null) => {
-        setSelectedProduct(product);
-
         if (!product) {
-            setSelectedProductSize(null);
-            setSelectedProductColor(null);
+            clearSelectedProduct();
             return;
         }
 
+        setSelectedProduct(product);
         setProductSizes(product.sizes.map((size, index) => ({ name: size, id: index })));
         setProductColors(product.colors.map((color, index) => ({ name: color, id: index })));
         setSelectedProductSize({ name: product.sizes[0], id: 0 });
@@ -93,13 +114,13 @@ const PurchasesNew: React.FC<PurchasesNewProps> = ({}) => {
                         setUnits={setUnits}
                         unitPrice={selectedProduct.unitPrice}
                         >
-                            <Button className='PurchasesNew__add-button'>Add</Button>
+                            <Button className='PurchasesNew__add-button' onClick={addToCart}>Add</Button>
                         </CalculatedPrice>
                     </> : <span>Select a product</span>}
                 </div>
             </div>
             <div className='PurchasesNew__section PurchasesNew__cart'>
-                <h1>Cart</h1>
+                <strong>{JSON.stringify(cart, null, 2)}</strong>
             </div>
         </div>
    );

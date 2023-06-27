@@ -7,6 +7,7 @@ import Login from '../../pages/Admin/Login';
 import Sales from '../../pages/Admin/Sales';
 import SalesNew from '../../pages/Admin/Sales/SalesNew';
 import Home from '../../pages/Admin/Home';
+import Inventory from '../../pages/Admin/Inventory'
 import Purchases from '../../pages/Admin/Purchases';
 import PurchasesNew from '../../pages/Admin/Purchases/PurchasesNew';
 import Accounts from '../../pages/Admin/Accounts';
@@ -48,7 +49,7 @@ const BusinessRouter: React.FC<BusinessRouterProps> = () => {
                     </Route>
 
                     {/* Route for Inventory page */}
-                    <Route path='inventory' element={<div>Where the inventory should go</div>} />
+                    <Route path='inventory' element={<Inventory />} />
                 </Route>
 
                 {/* Route for Login page */}

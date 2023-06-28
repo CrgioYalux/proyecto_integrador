@@ -4,13 +4,16 @@ import { useEffect, useState } from 'react';
 
 import data from './data.json';
 
+import { MAX_QUANTITY_TO_BUY } from './const';
+
 import Filter from './components/Filter';
 import ListProviders from './components/ListProviders';
 import ListProducts from './components/ListProducts';
 import CalculatedPrice from './components/CalculatedPrice';
 import Button from '../../../../components/Button';
+import Cart from './components/Cart';
 
-import type { ProductVariety, Product, Provider } from './utils';
+import type { ProductVariety, Product, CartCustomProduct, Provider } from './utils';
 
 interface PurchasesNewProps {};
 
@@ -26,33 +29,9 @@ const PurchasesNew: React.FC<PurchasesNewProps> = ({}) => {
 
     const [selectedProductSize, setSelectedProductSize] = useState<ProductVariety | null>(null);
     const [selectedProductcolor, setSelectedProductColor] = useState<ProductVariety | null>(null);
-
     const [units, setUnits] = useState<number>(0);
 
-    const [cart, setCart] = useState<Product[]>([]);
-
-    const clearSelectedProduct = (): void => {
-        setSelectedProduct(null);
-        setSelectedProductSize(null);
-        setSelectedProductColor(null);
-    };
-
-    const addToCart = (): void => {
-        if (selectedProduct && selectedProductSize && selectedProductcolor) {
-            setCart(prev => [...prev, {
-                ...selectedProduct,
-                colors: [selectedProductcolor.name],
-                sizes: [selectedProductSize.name],
-                stock: units,
-            }]);
-
-            clearSelectedProduct();
-        }
-    };
-
-    // const deleteFromCart = (id: number): void => {
-    //     setCart(prev => prev.filter(product => product.id !== id));
-    // };
+    const [cart, setCart] = useState<CartCustomProduct[]>([]);
 
     useEffect(() => {
         // this simulates the get request bringing the providers from the API
@@ -61,6 +40,32 @@ const PurchasesNew: React.FC<PurchasesNewProps> = ({}) => {
         setSelectedProvider(data.providers[0] as Provider);
         setProviderProducts(data.providers[0].products as Product[]);
     }, []);
+
+    const clearSelectedProduct = (): void => {
+        setSelectedProduct(null);
+        setSelectedProductSize(null);
+        setSelectedProductColor(null);
+    };
+
+    const addToCart = (): void => {
+        if (selectedProduct && selectedProductSize && selectedProductcolor && selectedProvider && units !== 0 && units <= MAX_QUANTITY_TO_BUY) {
+            const { sizes, colors, stock, ...rest } = selectedProduct;
+            setCart(prev => [...prev, {
+                ...rest,
+                units: units,
+                size: selectedProductSize.name,
+                color: selectedProductcolor.name,
+                brand: selectedProvider.name,
+            }]);
+
+            clearSelectedProduct();
+        }
+    };
+
+    const deleteFromCart = (id: number): void => {
+        setCart(prev => prev.filter(product => product.id !== id));
+    };
+
 
     const selectProvider = (provider: Provider) => {
         setSelectedProvider(provider);
@@ -98,29 +103,37 @@ const PurchasesNew: React.FC<PurchasesNewProps> = ({}) => {
                     />
                 </div>
                 <div className='PurchasesNew__section PurchasesNew-form__filter-n-price'>
-                    {selectedProduct ? <>
-                        <Filter
-                        className='PurchasesNew__Filter'
-                        sizes={productSizes}
-                        colors={productColors}
-                        selectedSize={selectedProductSize}
-                        selectedColor={selectedProductcolor}
-                        selectSize={setSelectedProductSize}
-                        selectColor={setSelectedProductColor}
-                        />
-                        <CalculatedPrice
-                        className='PurchasesNew__CalculatedPrice'
-                        units={units}
-                        setUnits={setUnits}
-                        unitPrice={selectedProduct.unitPrice}
-                        >
-                            <Button className='PurchasesNew__add-button' onClick={addToCart}>Add</Button>
-                        </CalculatedPrice>
-                    </> : <span>Select a product</span>}
+                    {selectedProduct 
+                        ? <>
+                            <Filter
+                            className='PurchasesNew__Filter'
+                            sizes={productSizes}
+                            colors={productColors}
+                            selectedSize={selectedProductSize}
+                            selectedColor={selectedProductcolor}
+                            selectSize={setSelectedProductSize}
+                            selectColor={setSelectedProductColor}
+                            />
+                            <CalculatedPrice
+                            className='PurchasesNew__CalculatedPrice'
+                            units={units}
+                            setUnits={setUnits}
+                            unitPrice={selectedProduct.unitPrice}
+                            >
+                                <Button 
+                                className='PurchasesNew__add-button'
+                                onClick={addToCart}
+                                disabled={!selectedProduct || !selectedProductSize || !selectedProductcolor || !selectedProvider || units === 0 || units > MAX_QUANTITY_TO_BUY}
+                                >Add</Button>
+                            </CalculatedPrice>
+                        </>
+                        : <span>Select a product</span>}
                 </div>
             </div>
             <div className='PurchasesNew__section PurchasesNew__cart'>
-                <strong>{JSON.stringify(cart, null, 2)}</strong>
+                {!cart.length 
+                    ? <span>Add products</span>
+                    : <Cart products={cart} deleteFromCart={deleteFromCart} />}
             </div>
         </div>
    );

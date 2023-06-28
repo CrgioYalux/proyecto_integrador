@@ -67,6 +67,12 @@
 .PurchasesNew__CalculatedPrice > .PurchasesNew__add-button {
     margin-top: auto;
     background-color: var(--success-color);
+    cursor: pointer;
+}
+
+.PurchasesNew__CalculatedPrice > .PurchasesNew__add-button:disabled {
+    opacity: .5;
+    cursor: default;
 }
 
 .PurchasesNew__cart {

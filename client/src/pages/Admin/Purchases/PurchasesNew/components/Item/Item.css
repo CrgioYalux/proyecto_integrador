@@ -12,10 +12,10 @@
     flex: 1 0 33%;
 
     font-size: .85em;
-    padding: .2em 0;
+    padding: .15em 0;
 
-    color: var(--secondary-color-l-lower);
-    outline: var(--secondary-color-l-lowest) 1px solid;
+    color: var(--secondary-color-l-low);
+    border: 1px solid var(--secondary-color-l-low);
     
     box-sizing: content-box;
 

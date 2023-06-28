@@ -13,6 +13,13 @@ type Product = {
     colors: string[];
 };
 
+type CartCustomProduct = Omit<Product, 'stock' | 'sizes' | 'colors'> & {
+    units: number,
+    size: string,
+    color: string,
+    brand: string,
+};
+
 type Provider = {
     id: number;
     name: string;
@@ -21,4 +28,4 @@ type Provider = {
     products: Product[];
 };
 
-export type { ProductVariety, Product, Provider };
+export type { ProductVariety, Product, CartCustomProduct, Provider };

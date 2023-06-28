@@ -2,11 +2,7 @@ import './Purchases.css';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../../components/Button';
 
-
-interface PurchasesProps{
-
-}
-
+interface PurchasesProps {};
 
 const Purchases :React.FC<PurchasesProps>= ({})=>{
     const navigate = useNavigate();

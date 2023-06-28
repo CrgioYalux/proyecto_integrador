@@ -1,6 +1,8 @@
 import './SalesNew.css'
 import {useState} from 'react';
 import BtnModal from '../../../../components/Modal';
+import DropDown from '../../../../components/DropDown';
+
 
 interface SalesNewProps {
 };
@@ -16,15 +18,18 @@ const SalesNew: React.FC<SalesNewProps> = ({ }) => {
         setTypeBill(selectElement.value as "A" | "B")
     }
 
+    
+
     return (
         
         
 
         <div className="main-container">
-            
+            <h1>VENTAS</h1>
 
             <form className="FormContainer" onSubmit={event=> event.preventDefault()}>
-                    
+                
+               
                         <div className="containerVender">    
                             <BtnModal nameBtn = "Cerrar" btnModalName = "Venta">
 
@@ -46,10 +51,8 @@ const SalesNew: React.FC<SalesNewProps> = ({ }) => {
                                             <label htmlFor="fecha" className='TextLabel'>Fecha</label>
                                                 <input type="date" className='Inputs' id='fecha' name='nfecha' />
                                             <label htmlFor="pago__metodo" className='TextLabel'>Metodo de pago</label><br />
-                                            <select name="npago" id="pago__metodo" className='Inputs'>
-                                                <option value="efectivo">Efectivo</option>
-                                                <option value="transf">Transferencia</option>
-                                            </select>
+                                            <DropDown dpbName='Elegir' options={["Efectivo", "Transferencia", "cuenta Corriente","Tarjeta de Credito"]}></DropDown>
+
                                             
                                             <h2>Detalle</h2>
                                             <div className="line"></div>

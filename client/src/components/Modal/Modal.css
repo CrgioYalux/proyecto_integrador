@@ -30,11 +30,14 @@
 }
 .modalContent{
     background-color: #fff;
-    width: 700px;
-    height: 800px;
+
+    width: 80vw;
+    max-width: 700px;
+    min-height: 80vh;
+
     border-radius: 5px;
-    margin-left: 32%;
-    margin-top: 5%;
+    margin: 0 auto;
+    margin-top: 60px;
 
 }
 .btn-cerrar{
@@ -49,6 +52,7 @@
     border-radius: 5px;
     transition: transform 0.3s ease, background-color 0.3s;
     margin-left: 5%;
+    margin-bottom: 5%;
     
 }
 .btn-cerrar:hover{
@@ -67,5 +71,11 @@ background-color: #fc6767;
     font-family:'Rubik', sans-serif;
     font-size: 15px;
     
+}
+.select__option{
+    font-size: medium;
+    width: 100px;
+    cursor: pointer;
+
 }
 

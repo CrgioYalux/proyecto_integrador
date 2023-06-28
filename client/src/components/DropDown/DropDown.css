@@ -1,0 +1,28 @@
+.dropdown{
+    width: 200px;
+}
+.dropdown__btn{
+    background-color: #ececec;
+    width: auto;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+.dropdown__btn:hover{
+    background-color: #e6e6e6;
+}
+.dropdown__content{
+position: fixed;
+width: 200px;
+background-color: #f0f0f0;
+border-radius: 5px;
+}
+.dropdown__item{
+    padding: 5px;
+    cursor: pointer;
+}
+.dropdown__item:hover{
+    background-color: #e7e7e7;
+}

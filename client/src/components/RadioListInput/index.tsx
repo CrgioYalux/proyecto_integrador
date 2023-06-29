@@ -2,7 +2,7 @@ import './RadioListInput.css';
 
 type MinimumItemProps = {
     id: number;
-    name: string;
+    name?: string;
 } & Record<string, unknown>;
 
 interface RadioListInputProps {
@@ -38,7 +38,7 @@ const RadioListInput: React.FC<RadioListInputProps> = ({
                     onClick={() => allowToDeselect && select(null)}
                     checked={selected?.id === item.id}
                     />
-                    {!RenderAs ? <span className='RadioListInput-label__span'>{item.name}</span> : RenderAs(item)}
+                    {!RenderAs ? <span className='RadioListInput-label__span'>{item?.name}</span> : RenderAs(item)}
                 </label>
             ))}
         </div>

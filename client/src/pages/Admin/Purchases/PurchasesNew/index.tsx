@@ -49,12 +49,11 @@ const PurchasesNew: React.FC<PurchasesNewProps> = ({}) => {
 
     const addToCart = (): void => {
         if (selectedProduct && selectedProductSize && selectedProductcolor && selectedProvider && units !== 0 && units <= MAX_QUANTITY_TO_BUY) {
-            const { sizes, colors, stock, ...rest } = selectedProduct;
-            setCart(prev => [...prev, {
+            const { sizes, colors, ...rest } = selectedProduct;
+            setCart((prev) => [...prev, {
                 ...rest,
-                units: units,
-                size: selectedProductSize.name,
-                color: selectedProductcolor.name,
+                size: selectedProductSize.name as string,
+                color: selectedProductcolor.name as string,
                 brand: selectedProvider.name,
             }]);
 

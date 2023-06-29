@@ -1,6 +1,6 @@
 type ProductVariety = {
     id: number;
-    name: string;
+    name?: string;
 };
 
 type Product = {
@@ -27,7 +27,7 @@ type PurchasesCustomProduct = Omit<Product, 'sizes' | 'colors'> & {
 type Provider = {
     id: number;
     name: string;
-    cuit: number;
+    cuit: string;
     address: string;
     products: Product[];
 };

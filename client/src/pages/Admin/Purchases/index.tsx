@@ -1,13 +1,12 @@
 import './Purchases.css';
 
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import data from './data.json';
 
-import { useNavigate } from 'react-router-dom';
-
 import Button from '../../../components/Button';
-import RadioListInput from '../../../components/RadioListInput';
+import ListPurchases from './components/ListPurchases';
 
 import type { Purchase } from './utils';
 
@@ -15,7 +14,6 @@ interface PurchasesProps {};
 
 const Purchases :React.FC<PurchasesProps> = ({}) => {
     const [purchases, setPurchases] = useState<Purchase[]>([]);
-    const [selected, setSelected] = useState<Purchase | null>(null);
 
     const navigate = useNavigate();
 
@@ -25,9 +23,11 @@ const Purchases :React.FC<PurchasesProps> = ({}) => {
 
     return (
         <div className='Purchases'>
-            <RadioListInput list={[]} htmlFor='purchases' select={} selected={} />
-            <Button onClick={() => navigate('/admin/purchases/new')}></Button>
+            <div className='Purchases__content'>
+                <ListPurchases purchases={purchases} />
+            </div>
+            <Button className='Purchase__new-bt' onClick={() => navigate('/admin/purchases/new')}>New</Button>
         </div>
-   );
+    );
 };
 export default Purchases;

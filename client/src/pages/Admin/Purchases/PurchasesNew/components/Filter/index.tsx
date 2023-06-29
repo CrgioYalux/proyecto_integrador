@@ -45,7 +45,7 @@ const Filter: React.FC<FilterProps> = ({
                         <div
                         title={item.name}
                         className={`Filter-RadioListInput__box Filter-size__box ${selectedSize?.id === item.id ? '--selected' : '--not-selected'}`}
-                        >{item.name.toUpperCase()}</div>
+                        >{item.name?.toUpperCase()}</div>
                     );
                 }}
                 />

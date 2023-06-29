@@ -1,0 +1,80 @@
+.ListPurchases {
+    --ListPurchases-spacing: 5px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    gap: var(--ListPurchases-spacing);
+
+    color: var(--secondary-color-l-low);
+}
+
+.ListPurchases input {
+    display: none;
+}
+
+.ListPurchases label {
+    width: 100%;
+}
+
+.ListPurchases .ListPurchases__item {
+    width: 100%;
+    flex: 1 1 auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--ListPurchases-spacing);
+
+    font-size: .85em;
+    padding: var(--Purchases-spacing);
+
+    background-color: var(--primary-color-l-highest);
+}
+
+.ListPurchases .ListPurchases__item > .ListPurchases-item__content {
+    flex: 1 1 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--ListPurchases-spacing) / 2);
+
+    overflow: hidden;
+}
+
+.ListPurchases .ListPurchases__item > button {
+    flex: 0 0 7.5%;
+    height: 100%;
+    aspect-ratio: 1;
+
+    background-color: transparent;
+    border: var(--ListPurchases-spacing) solid var(--primary-color-l-high);
+    cursor: pointer;
+}
+
+.ListPurchases .ListPurchases__item > button > .ListPurchases-item__expand-bt {
+    width: 55%;
+    height: 55%;
+
+    fill: var(--primary-color-l-high);
+}
+
+.ListPurchases .ListPurchases__item > .ListPurchases-item__content > span {
+    flex: 1 0 fit-content;
+
+    font-size: 1em;
+    padding: .15em;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    background-color: var(--primary-color-l-high);
+}
+
+.ListPurchases .ListPurchases__item > .ListPurchases-item__content > span::selection,
+.ListPurchases .ListPurchases__item > .ListPurchases-item__content > span > strong::selection {
+    background-color: var(--secondary-color-l-low);
+    color: var(--primary-color-l-high);
+}

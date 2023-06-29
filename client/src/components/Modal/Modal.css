@@ -28,18 +28,7 @@
     
     
 }
-.modalContent{
-    background-color: #fff;
 
-    width: 80vw;
-    max-width: 700px;
-    min-height: 80vh;
-
-    border-radius: 5px;
-    margin: 0 auto;
-    margin-top: 60px;
-
-}
 .btn-cerrar{
     color: #ffff;
     background-color: #cd4747;

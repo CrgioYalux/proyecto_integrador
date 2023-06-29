@@ -1,6 +1,9 @@
 
 import './Modal.css';
 import {useState} from 'react';
+import Button from '../Button';
+import { useNavigate } from 'react-router-dom';
+
 
 
 type modalProps = {
@@ -15,17 +18,18 @@ type modalProps = {
 
 
 
-const BtnModal: React.FC<modalProps> = ({ children, nameBtn, btnModalName }) =>{
+const BtnModal: React.FC<modalProps> = ({ children, nameBtn, btnModalName, className}) =>{
 
     const [modal, setModal] = useState(false)
 
     const toggleModal = () => {
         setModal(!modal)
     }
+    const navigate = useNavigate();
 
 return(
     <>
-        <button className='bnt-Modal' onClick={toggleModal}>
+        <button type='submit' className='bnt-Modal' onClick={toggleModal}>
             {btnModalName}
         </button>
 
@@ -33,9 +37,9 @@ return(
             <>
                 <div className="containerModal">
                     <div className="overlay">
-                        <div className="modalContent">
+                        <div className={className}>
                         {children}
-                        <button className='btn-cerrar' onClick={toggleModal}>{nameBtn}</button>
+                        <Button className='btn-cerrar' onClick={() => navigate('/admin/sales')}>{nameBtn}</Button>
                         </div>
                     </div>
                     

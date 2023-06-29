@@ -6,29 +6,6 @@
 }
 
 
-
-
-
-.Titulo{
-    text-align: center;
-    margin: 10px;
-}
-.main-container{
-    background-color: var(--primary-color-l-base);
-    width: 80vw;
-    max-width: 1000px;
-    min-height: 80vh;
-    border-radius: 1rem;
-}
-.containerDer{
-    margin: 10px;
-    padding: 10px;
-    
-    
-    border-radius: 10px;
-    width: 600px;
-    
-}
 .Inputs{
     margin: 5px;
     color: #4b4b4b;
@@ -41,14 +18,6 @@
     padding: 5px;
 }
 
-.FormContainer{
-    background-color: rgb(226, 226, 226);
-    height: 100%;
-    border-radius: 1rem;
-    box-shadow: 0 5px 10px -5px rgb(0 0 0  / 30%);
-    display: flex;
-    
-}
 .FormBoton{
     background-color: rgb(127, 158, 81);
     color:rgb(226, 226, 226);
@@ -63,20 +32,6 @@
 }
 .FormBoton:hover{
     background-color: rgb(153, 204, 77);
-}
-.containerVender{
-    width: 200px;
-    border-style: solid;
-    border-color: #cfcfcf;
-    padding: 10px;
-    border-radius: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.ProviderContainer{
-    margin: 10px;
-    overflow-x: hidden;
 }
 .ButtonBill{
     color: var(--primary-color-l-high);
@@ -127,7 +82,7 @@
     flex-wrap: wrap;
     height: 80%;
 }
-.Container__Detalle_Ropa{
+.Container__Detalle__Ropa{
     width: 60%;
     height: 40%;
 }
@@ -211,4 +166,67 @@ border-radius: 5px;
 }
 .dropdown__item:hover{
     background-color: #e7e7e7;
+}
+/*form datos venta*/
+.main__container{
+    --sales-new-spacing:7.5px;
+
+    background-color: var(--primary-color-l-base);
+    border-radius: var(--brand-border-radius);
+
+    width: 80vw;
+    max-width: 1000px;
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: var(--sales-new-spacing);
+    gap: var(--sales-new-spacing);
+}
+.sales__new__data{
+    
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 64%;
+    gap: var(--sales-new-spacing);
+}
+.sales__new__inventory{
+    flex: 0 0 5%;
+}
+.sales__new__table{
+    flex: 1 0 30%;
+}
+.cart{
+    flex-direction: column;
+    flex: 1 0 30%;
+}
+.sales__new__products{
+    flex: 1 0 10%;
+}
+.salesnew__section{
+    padding: var(--sales-new-spacing);
+    border-radius:calc(var(--brand-border-radius) - var(--sales-new-spacing));
+    background-color: var(--primary-color-l-high);
+}
+
+/*modal venta realizada con exito*/
+.modal__sale{
+    height: 100px;
+    width: 400px;
+    background-color: #e6e6e6;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-top: 10%;
+}
+.modalContent{
+    background-color: #fff;
+
+    width: 80vw;
+    max-width: 700px;
+    min-height: 80vh;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 60px;
+
 }

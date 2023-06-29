@@ -1,6 +1,6 @@
 import './Item.css';
 
-import type { Product } from '../../utils'; 
+import type { Product } from '../../../utils'; 
 
 interface ItemProps {
     isSelected: Boolean;

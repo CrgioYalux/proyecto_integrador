@@ -13,7 +13,7 @@ import CalculatedPrice from './components/CalculatedPrice';
 import Button from '../../../../components/Button';
 import Cart from './components/Cart';
 
-import type { ProductVariety, Product, CartCustomProduct, Provider } from './utils';
+import type { ProductVariety, Product, CartCustomProduct, Provider } from '../utils';
 
 interface PurchasesNewProps {};
 

@@ -1,17 +1,18 @@
-import './DropDown.css';
-import {useState} from 'react';
+import './DropDown.css'
+import {useState} from 'react'
 
 type dropDownProps = {
 
-    options: string[];
-    dpbName:string;
+    options: string[]
+    dpbName:string
     
 }
 
 
 const DropDown: React.FC<dropDownProps> = ({options, dpbName}) =>{
 
-    const [isActive, SetIsActive] = useState(false);
+    const [isActive, SetIsActive] = useState(false)
+
 
     const handleClickDropdown = () => {
         SetIsActive(!isActive)
@@ -22,7 +23,7 @@ const DropDown: React.FC<dropDownProps> = ({options, dpbName}) =>{
     return(
 
         <div className="dropdown">
-                <div className="dropdown__btn" onClick={(e) =>SetIsActive(!isActive)}>
+                <div className="dropdown__btn" onClick={handleClickDropdown}>
                     {dpbName} 
                 </div>
                 {isActive && (
@@ -42,4 +43,4 @@ const DropDown: React.FC<dropDownProps> = ({options, dpbName}) =>{
     )
 }
 
-export default DropDown;
+export default DropDown

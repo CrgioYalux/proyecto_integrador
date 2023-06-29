@@ -2,7 +2,8 @@ import './SalesNew.css'
 import {useState} from 'react';
 import BtnModal from '../../../../components/Modal';
 import DropDown from '../../../../components/DropDown';
-
+import { useNavigate } from 'react-router-dom';
+import Button from '../../../../components/Button';
 
 interface SalesNewProps {
 };
@@ -18,6 +19,7 @@ const SalesNew: React.FC<SalesNewProps> = ({ }) => {
         setTypeBill(selectElement.value as "A" | "B")
     }
     const[selected, setSelected] = useState('')
+    const navigate = useNavigate();
     
 
     return (
@@ -39,7 +41,7 @@ const SalesNew: React.FC<SalesNewProps> = ({ }) => {
                 
                
                 <div className="containerVender">    
-                    <BtnModal nameBtn = "Cerrar" btnModalName = "Ventas" className='modalContent'>
+                    <BtnModal nameBtn = "btncerrar" btnModalName = "Ventas" className='modalContent'>
 
                             <select onChange={handleChange} className='containerBill'>
                                 <option value="A" defaultChecked = {typeBill === "A"}>A</option>
@@ -60,7 +62,7 @@ const SalesNew: React.FC<SalesNewProps> = ({ }) => {
                                         <input type="date" className='Inputs' id='fecha' name='nfecha' />
                                     <label htmlFor="pago__metodo" className='TextLabel'>Metodo de pago</label><br />
                                     <DropDown select={(option) => {setSelected(option)}} selected={selected} dpbName='Elegir' options={options}></DropDown>
-
+                                    
                                     
                                     <h2>Detalle</h2>
                                     <div className="line"></div>
@@ -81,9 +83,25 @@ const SalesNew: React.FC<SalesNewProps> = ({ }) => {
                                            <div className="labells__inputs">
                                             <label htmlFor="importe" className='labells__inputs__label'>TOTAL FACTURA</label>
                                             <input type="text" id='importe' className='labells__inputs__input' disabled />
-                                           </div>
-                                           <BtnModal nameBtn='Cerrar' btnModalName='Vender' className='modal__sale'>
-                                            <h1>. Venta Realizada con Exito</h1>
+                                           </div> 
+                                           <BtnModal btnModalName='Vender' className='modal__sale' >
+            
+                                            <div className="sub__modal">
+                                                <div className="sub__modal__titulo">
+                                                    <h1>Venta Realizada con Exito</h1>
+                                                </div>
+                                                <div className="sub__modal__content">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                                                    elit. Omnis reprehenderit assumenda dolore officia
+                                                    totam eum autem odit possimus magni itaque eos provident
+                                                    dolorem veritatis, quibusdam similique optio culpa praesentium nemo?
+                                                </div>
+                                                <div className="sub__modal__buttons">
+                                                        <button className='btn__vender__modal-btnfactura'>Ver Factura</button>
+                                                        <Button className='btn__vender__modal-btncerrar' onClick={() => navigate('/admin/sales')}>Cerrar</Button>
+                                                </div>
+                                            </div>
+                                            
                                            </BtnModal>
                                            
                                               

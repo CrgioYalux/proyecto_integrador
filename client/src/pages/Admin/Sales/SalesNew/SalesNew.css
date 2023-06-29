@@ -212,21 +212,63 @@ border-radius: 5px;
 
 /*modal venta realizada con exito*/
 .modal__sale{
-    height: 100px;
-    width: 400px;
-    background-color: #e6e6e6;
-    margin: 0 auto;
+    background-color: #fff;
+    width: 80vw;
+    max-width: 400px;
     border-radius: 5px;
-    margin-top: 10%;
+    margin: 0 auto;
+    margin-top: 70px;
+    flex-wrap: wrap;
 }
 .modalContent{
     background-color: #fff;
-
     width: 80vw;
     max-width: 700px;
     min-height: 80vh;
     border-radius: 5px;
     margin: 0 auto;
     margin-top: 60px;
-
+    flex-wrap: wrap;
+}
+.sub__modal{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+.sub__modal__titulo{
+    text-align: center;
+    flex: 1 0 10%;
+}
+.sub__modal__content{
+    flex: 1 0 40%;
+    margin: 2%;
+}
+.sub__modal__buttons{
+    flex: 1 0 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+}
+.btn__vender__modal-btncerrar{
+    background-color: #e03838;
+    padding: 5px;
+    color: #ffff;
+    border-radius: 5px;
+    border-style: hidden;
+    font-size: 15px;  
+}
+.btn__vender__modal-btncerrar:hover{
+    background-color: #f84040;
+}
+.btn__vender__modal-btnfactura{
+    background-color:  #5fd33c;
+    padding: 5px;
+    color: #ffff;
+    border-radius: 5px;
+    border-style: hidden;
+    font-size: 15px;  
+}
+.btn__vender__modal-btnfactura:hover{
+    background-color: #8bdf5b;
 }

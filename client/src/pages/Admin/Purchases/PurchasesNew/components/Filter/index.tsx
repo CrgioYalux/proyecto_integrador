@@ -2,7 +2,7 @@ import './Filter.css';
 
 import RadioListInput from '../../../../../../components/RadioListInput';
 
-import type { ProductVariety } from '../../utils';
+import type { ProductVariety } from '../../../utils';
 
 interface FilterProps {
     className?: string;

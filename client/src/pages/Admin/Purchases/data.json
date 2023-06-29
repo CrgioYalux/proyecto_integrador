@@ -1,0 +1,118 @@
+{
+    "purchases": [
+        {
+            "id": 0,
+            "dateInMs": "1688059766661",
+            "provider": {
+                "id":1,
+                "name":"adidas",
+                "cuit":"20-345554120-2",
+                "adress":"av. soldati 2003"
+            },
+            "products":[
+                {
+                    "id":1,
+                    "name":"t-shirt",
+                    "units":200,
+                    "unitPrice":100,
+                    "description":"simple tshirt",
+                    "size": "s",
+                    "color": "black"
+                },
+                {
+                    "id":2,
+                    "name":"joggings",
+                    "units":200,
+                    "unitPrice":150,
+                    "description":"simple joggins",
+                    "size":"m",
+                    "color":"white"
+                },
+                {
+                    "id":3,
+                    "name":"jeans",
+                    "units":200,
+                    "unitPrice":100,
+                    "description":"simple jeans",
+                    "size":"l",
+                    "color":"red"
+                },
+                {
+                    "id": 4,
+                    "name": "men's jeans",
+                    "units": 15,
+                    "unitPrice": 79.99,
+                    "description": "classic denim jeans for men.",
+                    "size":"32w x 32l",
+                    "color":"blue"
+                },
+                {
+                    "id": 5,
+                    "name": "women's blouse",
+                    "units": 8,
+                    "unitPrice": 39.99,
+                    "description": "a stylish blouse for women.",
+                    "size": "s",
+                    "color": "pink"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "dateInMs": "1688059766668",
+            "provider": {
+                "id":1,
+                "name":"adidas",
+                "cuit":"20-345554120-2",
+                "adress":"av. soldati 2003"
+            },
+            "products":[
+                {
+                    "id":1,
+                    "name":"t-shirt",
+                    "units":10,
+                    "unitPrice":100,
+                    "description":"simple tshirt",
+                    "size": "s",
+                    "color": "blue"
+                },
+                {
+                    "id":2,
+                    "name":"joggings",
+                    "units":20,
+                    "unitPrice":150,
+                    "description":"simple joggins",
+                    "size":"m",
+                    "color":"white"
+                },
+                {
+                    "id":3,
+                    "name":"jeans",
+                    "units":2,
+                    "unitPrice":100,
+                    "description":"simple jeans",
+                    "size":"l",
+                    "color":"red"
+                },
+                {
+                    "id": 4,
+                    "name": "men's jeans",
+                    "units": 15,
+                    "unitPrice": 79.99,
+                    "description": "classic denim jeans for men.",
+                    "size":"32w x 32l",
+                    "color":"blue"
+                },
+                {
+                    "id": 5,
+                    "name": "women's blouse",
+                    "units": 8,
+                    "unitPrice": 39.99,
+                    "description": "a stylish blouse for women.",
+                    "size": "s",
+                    "color": "pink"
+                }
+            ]
+        }
+    ]
+}

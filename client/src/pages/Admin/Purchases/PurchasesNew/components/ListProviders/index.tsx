@@ -1,6 +1,6 @@
 import './ListProviders.css';
 
-import type { Provider } from '../../utils';
+import type { Provider } from '../../../utils';
 
 interface ListProvidersProps {
     className?: string;

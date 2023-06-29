@@ -2,7 +2,7 @@ import './Cart.css';
 
 import XMark from '../../../../../../components/Icons/XMark';
 
-import type { CartCustomProduct } from "../../utils";
+import type { CartCustomProduct } from "../../../utils";
 
 interface CartProps {
     className?: string;

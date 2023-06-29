@@ -1,16 +1,17 @@
 import { useReducer } from "react";
 
-export enum LocalStorageOperationType {
+enum LocalStorageOperationType {
     GetItem = 0,
     SetItem,
     RemoveItem
 };
 
-export interface LocalStorageOperation {
+interface LocalStorageOperation {
     GetItem: (key: string) => void; 
     SetItem: (key: string, value: string) => void;
     RemoveItem: (key: string) => void;
 };
+
 interface LocalStorageAction {
     type: LocalStorageOperationType;
     key?: string;
@@ -71,14 +72,14 @@ const reducer = <T,>(state: T, action: LocalStorageAction) => {
     }
 };
 
-export interface useLocalStorageReturns<T> {
+interface useLocalStorageReturns<T> {
     state: LocalStorageState<T>;
     operation: LocalStorageOperation;
 };
 
 type Reducer<S, A> = (state: S, action: A) => S;
 
-export const useLocalStorage = <T,>(initialState: T): useLocalStorageReturns<T> => {
+const useLocalStorage = <T,>(initialState: T): useLocalStorageReturns<T> => {
     const [state, dispatch] = useReducer<Reducer<LocalStorageState<T>, LocalStorageAction>>(reducer, initialState);
 
     const GetItem = (key: string) => {
@@ -103,3 +104,13 @@ export const useLocalStorage = <T,>(initialState: T): useLocalStorageReturns<T> 
     };
 };
 
+export type {
+    LocalStorageOperationType,
+    LocalStorageOperation,
+    LocalStorageAction,
+    LocalStorageState,
+    useLocalStorageReturns,
+    Reducer
+};
+
+export { useLocalStorage };

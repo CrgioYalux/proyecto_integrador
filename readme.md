@@ -43,7 +43,6 @@ $ git push -u origin my_branch
 - [Hook useState Docs](https://react.dev/reference/react/useState)
 - [Hook useEffect Docs](https://react.dev/reference/react/useEffect)
 
-
 ---
 
 ### How to write good commits mesages
@@ -68,3 +67,14 @@ $ git push -u origin my_branch
     - Do not think your code is self-explanatory
     - Follow the commit convention defined by your team
 
+--- 
+
+### About the API and the database
+- Needed a `.env` file in the `/server` folder with the following structure:
+    ```
+        DB_HOST="localhost"
+        DB_PORT=3306
+        DB_USER="user_name"
+        DB_PASS="user_password"
+        DB_NAME="database_name"
+    ```

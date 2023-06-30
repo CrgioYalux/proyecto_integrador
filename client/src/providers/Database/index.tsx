@@ -2,6 +2,8 @@ import { useEffect, useContext, createContext } from 'react';
 
 import { LOCAL_STORAGE_DATABASE_KEY } from './const';
 
+import data from './data.json';
+
 import { useLocalStorage } from '../../hooks/useLocalStorage';
 
 import type { 
@@ -48,11 +50,11 @@ interface ExecModeContextProviderProps {
 const DatabaseContextProvider: React.FC<ExecModeContextProviderProps> = ({ children }) => {
     const localStorage = useLocalStorage<DatabaseContextState>({
         products: [],
-        providers: [],
+        providers: data.providers as Provider[],
         transactions: [],
         accountingEntries: [],
         accounts: [],
-        purchases: [],
+        purchases: data.purchases as Purchase[],
         sales: [],
     });
 

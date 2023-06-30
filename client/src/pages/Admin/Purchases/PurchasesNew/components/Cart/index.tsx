@@ -13,12 +13,14 @@ interface CartProps {
     products: CartCustomProduct[];
 
     deleteFromCart: (id: number) => void;
+    confirmPurchase: () => void;
 };
 
 const Cart: React.FC<CartProps> = ({
     className = '',
     products,
     deleteFromCart,
+    confirmPurchase,
 }) => {
     const navigate = useNavigate();
 
@@ -29,7 +31,7 @@ const Cart: React.FC<CartProps> = ({
             <strong>Cart</strong>
             <div className='Cart__list'>
                 {products.map((product) => (
-                    <div className='Cart-list__item'>
+                    <div key={product.id} className='Cart-list__item'>
                         <div className='Cart-list-item__content'>
                             <span className='Cart-list-item-content__brand' title={product.name}>{product.brand}</span>
                             <span className='Cart-list-item-content__name' title={product.name}>{product.name}</span>
@@ -44,6 +46,7 @@ const Cart: React.FC<CartProps> = ({
             <strong className='Cart__total'>Total ${total}</strong>
             <Button onClick={() => {
                 alert('Purchased sucessfully');
+                confirmPurchase();
                 navigate('/admin/purchases');
             }}>Confirm</Button>
         </div>

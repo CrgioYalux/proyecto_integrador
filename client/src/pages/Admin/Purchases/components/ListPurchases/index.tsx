@@ -6,7 +6,8 @@ import RadioListInput from "../../../../../components/RadioListInput";
 import Expand from "../../../../../components/Icons/Expand";
 import Compress from "../../../../../components/Icons/Compress";
 
-import type { Purchase } from "../../utils";
+// import type { Purchase } from "../../utils";
+import type { Purchase } from '../../../../../providers/Database/utils';
 
 interface ListPurchasesProps {
     className?: string;
@@ -37,7 +38,7 @@ const ListPurchases: React.FC<ListPurchasesProps> = ({
                             FROM: <strong>{purchase.provider.name}</strong>
                         </span>
                         <span className='ListPurchases-item__info'>
-                            PURCHASED PRODUCTS: <strong>{purchase.products.reduce((acc, el) => acc + el.units, 0)}</strong>
+                            PURCHASED PRODUCTS: <strong>{purchase.cart.reduce((acc, el) => acc + el.units, 0)}</strong>
                         </span>
                         <span className='ListPurchases-item__info'>
                             DATE: <strong>{purchasedDate.toLocaleString()}</strong>

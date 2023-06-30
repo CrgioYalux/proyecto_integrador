@@ -3,8 +3,9 @@ import './PurchasesNew.css';
 import { useEffect, useState } from 'react';
 
 import { MAX_QUANTITY_TO_BUY } from './const';
+import { useDatabase } from '../../../../providers/Database';
 
-import data from './data.json';
+// import data from './data.json';
 
 import Filter from './components/Filter';
 import ListProviders from './components/ListProviders';
@@ -14,6 +15,7 @@ import Button from '../../../../components/Button';
 import Cart from './components/Cart';
 
 import type { ProductVariety, Product, CartCustomProduct, Provider } from '../utils';
+import type { Purchase } from '../../../../providers/Database/utils';
 
 interface PurchasesNewProps {};
 
@@ -32,13 +34,30 @@ const PurchasesNew: React.FC<PurchasesNewProps> = ({}) => {
     const [units, setUnits] = useState<number>(0);
 
     const [cart, setCart] = useState<CartCustomProduct[]>([]);
+    
+    const database = useDatabase();
+
+    const confirmPurchase = (): void => {
+        const highestId: number = database.actions.purchases.getAll().reduce((acc, el) => acc + el.id, 0);
+        if (selectedProvider && cart.length !== 0) {
+            const purchase: Purchase = {
+                id: highestId,
+                amount: cart.reduce((acc, el) => acc + el.units * el.unitPrice, 0),
+                provider: selectedProvider,
+                cart,
+                dateInMs: Date.now().toString(),
+            };
+            database.actions.purchases.post(purchase);
+            console.log('create');
+        }
+    };
 
     useEffect(() => {
         // this simulates the get request bringing the providers from the API
-        
-        setProviders(data.providers as Provider[]);
-        setSelectedProvider(data.providers[0] as Provider);
-        setProviderProducts(data.providers[0].products as Product[]);
+        const providers = database.actions.providers.getAll() as Provider[];
+        setProviders(providers);
+        setSelectedProvider(providers[0] as Provider);
+        setProviderProducts(providers[0].products as Product[]);
     }, []);
 
     const clearSelectedProduct = (): void => {
@@ -132,7 +151,7 @@ const PurchasesNew: React.FC<PurchasesNewProps> = ({}) => {
             <div className='PurchasesNew__section PurchasesNew__cart'>
                 {!cart.length 
                     ? <span>Add products</span>
-                    : <Cart products={cart} deleteFromCart={deleteFromCart} />}
+                    : <Cart products={cart} deleteFromCart={deleteFromCart} confirmPurchase={confirmPurchase} />}
             </div>
         </div>
    );

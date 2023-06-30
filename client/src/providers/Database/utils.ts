@@ -10,9 +10,9 @@ type Product = {
     id: number,
     name: string,
     description: string,
-    pricePerUnit: number,
+    unitPrice: number,
     units: number,
-    provider: Provider,
+    // provider: Provider,
     colors: string[],
     sizes: string[],
 };
@@ -46,8 +46,8 @@ type Sale = {
 type Purchase = {
     id: number,
     amount: number,
-    provider: Provider,
-    date: Date,
+    provider: Omit<Provider, 'products'>,
+    dateInMs: string,
     cart: BoughtProduct[],
 };
 

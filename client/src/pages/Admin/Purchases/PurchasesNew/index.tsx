@@ -20,6 +20,8 @@ import type { Purchase } from '../../../../providers/Database/utils';
 interface PurchasesNewProps {};
 
 const PurchasesNew: React.FC<PurchasesNewProps> = ({}) => {
+    const [fixedProvider, setFixedProvider] = useState<boolean>(false);
+
     const [providers, setProviders] = useState<Provider[]>([]);
     const [providerProducts, setProviderProducts] = useState<Product[]>([]);
 
@@ -48,7 +50,6 @@ const PurchasesNew: React.FC<PurchasesNewProps> = ({}) => {
                 dateInMs: Date.now().toString(),
             };
             database.actions.purchases.post(purchase);
-            console.log('create');
         }
     };
 
@@ -75,6 +76,7 @@ const PurchasesNew: React.FC<PurchasesNewProps> = ({}) => {
                 color: selectedProductcolor.name as string,
                 brand: selectedProvider.name,
             }]);
+            setFixedProvider(true);
 
             clearSelectedProduct();
         }
@@ -107,12 +109,14 @@ const PurchasesNew: React.FC<PurchasesNewProps> = ({}) => {
     return (
         <div className='PurchasesNew'>
             <div className='PurchasesNew__form'>
-                <ListProviders
+                {fixedProvider 
+                ? <strong>{selectedProvider?.name}</strong>
+                :<ListProviders
                 className='PurchasesNew__section PurchasesNew-form__providers'
                 providers={providers}
                 selectedProvider={selectedProvider} 
                 selectProvider={selectProvider} 
-                />
+                />}
                 <div className='PurchasesNew__section PurchasesNew-form__products'>
                     <ListProducts
                     products={providerProducts}

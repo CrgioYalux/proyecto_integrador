@@ -1,11 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 import Button from '../../../components/Button';
 
-
 interface SalesProps{
 
 }
-
 
 const Sales :React.FC<SalesProps>= ({})=>{
     const navigate = useNavigate();

@@ -1,823 +1,823 @@
 {
-    "products": [
-        {
-            "id":1,
-            "name":"T-Shirt",
-            "units":200,
-            "unitPrice":100,
-            "description":"simple tshirt",
-            "sizes":["s", "m", "l", "xl"],
-            "colors":["black", "white", "red", "blue"]
-        },
-        {
-            "id":2,
-            "name":"Joggings",
-            "units":200,
-            "unitPrice":150,
-            "description":"simple joggins",
-            "sizes":["s", "m", "l", "xl"],
-            "colors":["black", "white", "red", "blue"]
-        },
-        {
-            "id":3,
-            "name":"Jeans",
-            "units":200,
-            "unitPrice":100,
-            "description":"simple jeans",
-            "sizes":["s", "m", "l", "xl"],
-            "colors":["black", "white", "red", "blue"]
-        },
-        {
-            "id": 4,
-            "name": "Men's Jeans",
+  "products": [
+    {
+      "id":1,
+      "name":"T-Shirt",
+      "units":200,
+      "unitPrice":100,
+      "description":"simple tshirt",
+      "sizes":["s", "m", "l", "xl"],
+      "colors":["black", "white", "red", "blue"]
+    },
+    {
+      "id":2,
+      "name":"Joggings",
+      "units":200,
+      "unitPrice":150,
+      "description":"simple joggins",
+      "sizes":["s", "m", "l", "xl"],
+      "colors":["black", "white", "red", "blue"]
+    },
+    {
+        "id":3,
+        "name":"Jeans",
+        "units":200,
+        "unitPrice":100,
+        "description":"simple jeans",
+        "sizes":["s", "m", "l", "xl"],
+        "colors":["black", "white", "red", "blue"]
+    },
+    {
+        "id": 4,
+        "name": "Men's Jeans",
+        "units": 15,
+        "unitPrice": 79.99,
+        "description": "Classic denim jeans for men.",
+        "sizes": ["30W x 32L", "32W x 32L", "34W x 32L", "36W x 32L"],
+        "colors": ["Blue", "Black"]
+    },
+    {
+        "id": 5,
+        "name": "Women's Blouse",
+        "units": 8,
+        "unitPrice": 39.99,
+        "description": "A stylish blouse for women.",
+        "sizes": ["XS", "S", "M", "L"],
+        "colors": ["White", "Pink", "Purple"]
+    },
+    {
+        "id": 6,
+        "name": "Unisex Sweatpants",
+        "units": 12,
+        "unitPrice": 34.99,
+        "description": "Comfortable sweatpants suitable for both men and women.",
+        "sizes": ["S", "M", "L", "XL"],
+        "colors": ["Gray", "Navy", "Black"]
+    },
+    {
+        "id": 7,
+        "name": "Men's Polo Shirt",
+        "units": 20,
+        "unitPrice": 49.99,
+        "description": "A classic polo shirt for men.",
+        "sizes": ["S", "M", "L", "XL"],
+        "colors": ["Blue", "Green", "White"]
+    },
+    {
+        "id": 8,
+        "name": "Women's Skirt",
+        "units": 6,
+        "unitPrice": 59.99,
+        "description": "A fashionable skirt for women.",
+        "sizes": ["XS", "S", "M", "L"],
+        "colors": ["Black", "Red", "Yellow"]
+    },
+    {
+        "id": 9,
+        "name": "Unisex Sneakers",
+        "units": 9,
+        "unitPrice": 89.99,
+        "description": "Versatile sneakers suitable for both men and women.",
+        "sizes": ["US 7", "US 8", "US 9", "US 10"],
+        "colors": ["White", "Black", "Gray"]
+    },
+    {
+        "id": 10,
+        "name": "Men's Shorts",
+        "units": 18,
+        "unitPrice": 29.99,
+        "description": "Casual shorts for men.",
+        "sizes": ["S", "M", "L", "XL"],
+        "colors": ["Khaki", "Navy", "Gray"]
+    },
+    {
+        "id": 11,
+        "name": "Women's Cardigan",
+        "units": 11,
+        "unitPrice": 49.99,
+        "description": "A cozy cardigan for women.",
+        "sizes": ["S", "M", "L"],
+        "colors": ["Beige", "Pink", "Gray"]
+    },
+    {
+        "id": 12,
+        "name": "Unisex Beanie Hat",
+        "units": 14,
+        "unitPrice": 19.99,
+        "description": "A warm beanie hat suitable for both men and women.",
+        "sizes": ["One Size"],
+        "colors": ["Black", "Navy", "Gray"]
+    },
+    {
+        "id": 13,
+        "name": "Men's Dress Shirt",
+        "units": 16,
+        "unitPrice": 54.99,
+        "description": "A formal dress shirt for men.",
+        "sizes": ["S", "M", "L", "XL"],
+        "colors": ["White"]
+    },
+    {
+        "id":14,
+        "name":"Striped T-Shirt",
+        "units":200,
+        "unitPrice":100,
+        "description":"simple striped tshirt",
+        "sizes":["s", "m", "l", "xl"],
+        "colors":["black", "white", "red", "blue"]
+    },
+    {
+      "id": 15,
+      "name": "T-Shirt",
+      "units": 30,
+      "unitPrice": 19.99,
+      "description": "A comfortable and stylish t-shirt.",
+      "sizes": ["S", "M", "L"],
+      "colors": ["Red", "Blue", "White"]
+    },
+    {
+      "id": 16,
+      "name": "Jeans",
+      "units": 40,
+      "unitPrice": 49.99,
+      "description": "Classic denim jeans for everyday wear.",
+      "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
+      "colors": ["Blue"]
+    },
+    {
+      "id": 17,
+      "name": "Sweatshirt",
+      "units": 25,
+      "unitPrice": 29.99,
+      "description": "A cozy sweatshirt for casual outings.",
+      "sizes": ["S", "M", "L"],
+      "colors": ["Gray", "Black", "Navy"]
+    },
+    {
+      "id": 18,
+      "name": "Shorts",
+      "units": 35,
+      "unitPrice": 24.99,
+      "description": "Comfortable shorts for warm weather.",
+      "sizes": ["S", "M", "L"],
+      "colors": ["Khaki", "Black", "Navy"]
+    },
+    {
+      "id": 19,
+      "name": "Dress",
+      "units": 20,
+      "unitPrice": 59.99,
+      "description": "An elegant dress for special occasions.",
+      "sizes": ["S", "M", "L"],
+      "colors": ["Black", "White", "Red"]
+    },
+    {
+      "id": 20,
+      "name": "Jacket",
+      "units": 15,
+      "unitPrice": 79.99,
+      "description": "A stylish jacket to keep you warm.",
+      "sizes": ["S", "M", "L"],
+      "colors": ["Black", "Brown"]
+    },
+    {
+      "id": 21,
+      "name": "Blouse",
+      "units": 30,
+      "unitPrice": 34.99,
+      "description": "A fashionable blouse for women.",
+      "sizes": ["S", "M", "L"],
+      "colors": ["White", "Blue", "Pink"]
+    },
+    {
+      "id": 22,
+      "name": "Pants",
+      "units": 20,
+      "unitPrice": 44.99,
+      "description": "Versatile pants for everyday wear.",
+      "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
+      "colors": ["Black", "Gray"]
+    },
+    {
+      "id": 23,
+      "name": "Skirt",
+      "units": 25,
+      "unitPrice": 39.99,
+      "description": "A trendy skirt for any occasion.",
+      "sizes": ["S", "M", "L"],
+      "colors": ["Red", "Black", "Navy"]
+    },
+    {
+      "id": 24,
+      "name": "Sweater",
+      "units": 30,
+      "unitPrice": 49.99,
+      "description": "A cozy sweater for chilly days.",
+      "sizes": ["S", "M", "L"],
+      "colors": ["Gray", "Black"]
+    }
+  ],
+  "providers": [
+      {
+          "id":1,
+          "name":"adidas",
+          "cuit":"20-345554120-2",
+          "adress":"Av. Soldati 2003",
+      },
+      {
+        "id": 2,
+        "name": "Mock Provider 2",
+        "cuit": "987654321",
+        "address": "456 Mock Avenue",
+      },
+      {
+        "id": 3,
+        "name": "Mock Provider 3",
+        "cuit": "567890123",
+        "address": "789 Mock Road",
+        "products": [
+          {
+            "id": 1,
+            "name": "Dress",
             "units": 15,
+            "unitPrice": 59.99,
+            "description": "An elegant dress for special occasions.",
+            "sizes": ["S", "M", "L"],
+            "colors": ["Black", "White"]
+          },
+          {
+            "id": 2,
+            "name": "Blazer",
+            "units": 10,
             "unitPrice": 79.99,
-            "description": "Classic denim jeans for men.",
-            "sizes": ["30W x 32L", "32W x 32L", "34W x 32L", "36W x 32L"],
-            "colors": ["Blue", "Black"]
-        },
-        {
-            "id": 5,
-            "name": "Women's Blouse",
-            "units": 8,
+            "description": "A sophisticated blazer for formal events.",
+            "sizes": ["S", "M", "L"],
+            "colors": ["Navy", "Black"]
+          },
+          {
+            "id": 3,
+            "name": "Pants",
+            "units": 20,
+            "unitPrice": 44.99,
+            "description": "Versatile pants for everyday wear.",
+            "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
+            "colors": ["Black", "Gray"]
+          },
+          {
+            "id": 4,
+            "name": "Skirt",
+            "units": 25,
             "unitPrice": 39.99,
-            "description": "A stylish blouse for women.",
-            "sizes": ["XS", "S", "M", "L"],
-            "colors": ["White", "Pink", "Purple"]
-        },
-        {
-            "id": 6,
-            "name": "Unisex Sweatpants",
-            "units": 12,
+            "description": "A trendy skirt for any occasion.",
+            "sizes": ["S", "M", "L"],
+            "colors": ["Red", "Black", "Navy"]
+          },
+          {
+            "id": 5,
+            "name": "Blouse",
+            "units": 30,
             "unitPrice": 34.99,
-            "description": "Comfortable sweatpants suitable for both men and women.",
-            "sizes": ["S", "M", "L", "XL"],
-            "colors": ["Gray", "Navy", "Black"]
-        },
-        {
+            "description": "A fashionable blouse for women.",
+            "sizes": ["S", "M", "L"],
+            "colors": ["White", "Blue", "Pink"]
+          },
+          {
+            "id": 6,
+            "name": "Jumpsuit",
+            "units": 15,
+            "unitPrice": 69.99,
+            "description": "A trendy jumpsuit for a stylish look.",
+            "sizes": ["S", "M", "L"],
+            "colors": ["Black", "Red"]
+          },
+          {
             "id": 7,
-            "name": "Men's Polo Shirt",
+            "name": "Sweater",
             "units": 20,
             "unitPrice": 49.99,
-            "description": "A classic polo shirt for men.",
-            "sizes": ["S", "M", "L", "XL"],
-            "colors": ["Blue", "Green", "White"]
-        },
-        {
-            "id": 8,
-            "name": "Women's Skirt",
-            "units": 6,
-            "unitPrice": 59.99,
-            "description": "A fashionable skirt for women.",
-            "sizes": ["XS", "S", "M", "L"],
-            "colors": ["Black", "Red", "Yellow"]
-        },
-        {
-            "id": 9,
-            "name": "Unisex Sneakers",
-            "units": 9,
-            "unitPrice": 89.99,
-            "description": "Versatile sneakers suitable for both men and women.",
-            "sizes": ["US 7", "US 8", "US 9", "US 10"],
-            "colors": ["White", "Black", "Gray"]
-        },
-        {
-            "id": 10,
-            "name": "Men's Shorts",
-            "units": 18,
-            "unitPrice": 29.99,
-            "description": "Casual shorts for men.",
-            "sizes": ["S", "M", "L", "XL"],
-            "colors": ["Khaki", "Navy", "Gray"]
-        },
-        {
-            "id": 11,
-            "name": "Women's Cardigan",
-            "units": 11,
-            "unitPrice": 49.99,
-            "description": "A cozy cardigan for women.",
+            "description": "A cozy sweater for chilly days.",
             "sizes": ["S", "M", "L"],
-            "colors": ["Beige", "Pink", "Gray"]
-        },
-        {
-            "id": 12,
-            "name": "Unisex Beanie Hat",
-            "units": 14,
-            "unitPrice": 19.99,
-            "description": "A warm beanie hat suitable for both men and women.",
-            "sizes": ["One Size"],
-            "colors": ["Black", "Navy", "Gray"]
-        },
-        {
-            "id": 13,
-            "name": "Men's Dress Shirt",
-            "units": 16,
-            "unitPrice": 54.99,
-            "description": "A formal dress shirt for men.",
-            "sizes": ["S", "M", "L", "XL"],
-            "colors": ["White"]
-        },
-        {
-            "id":14,
-            "name":"Striped T-Shirt",
-            "units":200,
-            "unitPrice":100,
-            "description":"simple striped tshirt",
-            "sizes":["s", "m", "l", "xl"],
-            "colors":["black", "white", "red", "blue"]
-        },
-        {
-          "id": 15,
-          "name": "T-Shirt",
-          "units": 30,
-          "unitPrice": 19.99,
-          "description": "A comfortable and stylish t-shirt.",
-          "sizes": ["S", "M", "L"],
-          "colors": ["Red", "Blue", "White"]
-        },
-        {
-          "id": 16,
-          "name": "Jeans",
-          "units": 40,
-          "unitPrice": 49.99,
-          "description": "Classic denim jeans for everyday wear.",
-          "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
-          "colors": ["Blue"]
-        },
-        {
-          "id": 17,
-          "name": "Sweatshirt",
-          "units": 25,
-          "unitPrice": 29.99,
-          "description": "A cozy sweatshirt for casual outings.",
-          "sizes": ["S", "M", "L"],
-          "colors": ["Gray", "Black", "Navy"]
-        },
-        {
-          "id": 18,
-          "name": "Shorts",
-          "units": 35,
-          "unitPrice": 24.99,
-          "description": "Comfortable shorts for warm weather.",
-          "sizes": ["S", "M", "L"],
-          "colors": ["Khaki", "Black", "Navy"]
-        },
-        {
-          "id": 19,
-          "name": "Dress",
-          "units": 20,
-          "unitPrice": 59.99,
-          "description": "An elegant dress for special occasions.",
-          "sizes": ["S", "M", "L"],
-          "colors": ["Black", "White", "Red"]
-        },
-        {
-          "id": 20,
-          "name": "Jacket",
-          "units": 15,
-          "unitPrice": 79.99,
-          "description": "A stylish jacket to keep you warm.",
-          "sizes": ["S", "M", "L"],
-          "colors": ["Black", "Brown"]
-        },
-        {
-          "id": 21,
-          "name": "Blouse",
-          "units": 30,
-          "unitPrice": 34.99,
-          "description": "A fashionable blouse for women.",
-          "sizes": ["S", "M", "L"],
-          "colors": ["White", "Blue", "Pink"]
-        },
-        {
-          "id": 22,
-          "name": "Pants",
-          "units": 20,
-          "unitPrice": 44.99,
-          "description": "Versatile pants for everyday wear.",
-          "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
-          "colors": ["Black", "Gray"]
-        },
-        {
-          "id": 23,
-          "name": "Skirt",
-          "units": 25,
-          "unitPrice": 39.99,
-          "description": "A trendy skirt for any occasion.",
-          "sizes": ["S", "M", "L"],
-          "colors": ["Red", "Black", "Navy"]
-        },
-        {
-          "id": 24,
-          "name": "Sweater",
-          "units": 30,
-          "unitPrice": 49.99,
-          "description": "A cozy sweater for chilly days.",
-          "sizes": ["S", "M", "L"],
-          "colors": ["Gray", "Black"]
-        }
-    ],
-    "providers": [
-        {
-            "id":1,
-            "name":"adidas",
-            "cuit":"20-345554120-2",
-            "adress":"Av. Soldati 2003",
-        },
-        {
-          "id": 2,
-          "name": "Mock Provider 2",
-          "cuit": "987654321",
-          "address": "456 Mock Avenue",
-        },
-        {
-          "id": 3,
-          "name": "Mock Provider 3",
-          "cuit": "567890123",
-          "address": "789 Mock Road",
-          "products": [
-            {
-              "id": 1,
-              "name": "Dress",
-              "units": 15,
-              "unitPrice": 59.99,
-              "description": "An elegant dress for special occasions.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["Black", "White"]
-            },
-            {
-              "id": 2,
-              "name": "Blazer",
-              "units": 10,
-              "unitPrice": 79.99,
-              "description": "A sophisticated blazer for formal events.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["Navy", "Black"]
-            },
-            {
-              "id": 3,
-              "name": "Pants",
-              "units": 20,
-              "unitPrice": 44.99,
-              "description": "Versatile pants for everyday wear.",
-              "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
-              "colors": ["Black", "Gray"]
-            },
-            {
-              "id": 4,
-              "name": "Skirt",
-              "units": 25,
-              "unitPrice": 39.99,
-              "description": "A trendy skirt for any occasion.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["Red", "Black", "Navy"]
-            },
-            {
-              "id": 5,
-              "name": "Blouse",
-              "units": 30,
-              "unitPrice": 34.99,
-              "description": "A fashionable blouse for women.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["White", "Blue", "Pink"]
-            },
-            {
-              "id": 6,
-              "name": "Jumpsuit",
-              "units": 15,
-              "unitPrice": 69.99,
-              "description": "A trendy jumpsuit for a stylish look.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["Black", "Red"]
-            },
-            {
-              "id": 7,
-              "name": "Sweater",
-              "units": 20,
-              "unitPrice": 49.99,
-              "description": "A cozy sweater for chilly days.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["Gray", "Black"]
-            },
-            {
-              "id": 8,
-              "name": "Shirt",
-              "units": 25,
-              "unitPrice": 24.99,
-              "description": "A classic shirt for a polished look.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["White", "Blue", "Pink"]
-            },
-            {
-              "id": 9,
-              "name": "Coat",
-              "units": 10,
-              "unitPrice": 89.99,
-              "description": "A warm and stylish coat for winter.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["Black", "Gray"]
-            },
-            {
-              "id": 10,
-              "name": "Jeans",
-              "units": 30,
-              "unitPrice": 59.99,
-              "description": "Classic denim jeans for everyday wear.",
-              "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
-              "colors": ["Blue"]
-            }
-          ]
-        },
-        {
-          "id": 4,
-          "name": "Mock Provider 4",
-          "cuit": "321098765",
-          "address": "987 Mock Lane",
-          "products": [
-            {
-              "id": 1,
-              "name": "Sweater",
-              "units": 30,
-              "unitPrice": 39.99,
-              "description": "A cozy sweater for chilly days.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["Gray", "Black"]
-            },
-            {
-              "id": 2,
-              "name": "T-Shirt",
-              "units": 20,
-              "unitPrice": 19.99,
-              "description": "A comfortable and stylish t-shirt.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["Red", "Blue", "White"]
-            },
-            {
-              "id": 3,
-              "name": "Jeans",
-              "units": 25,
-              "unitPrice": 49.99,
-              "description": "Classic denim jeans for everyday wear.",
-              "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
-              "colors": ["Blue"]
-            },
-            {
-              "id": 4,
-              "name": "Shorts",
-              "units": 15,
-              "unitPrice": 24.99,
-              "description": "Comfortable shorts for warm weather.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["Khaki", "Black", "Navy"]
-            },
-            {
-              "id": 5,
-              "name": "Dress",
-              "units": 20,
-              "unitPrice": 59.99,
-              "description": "An elegant dress for special occasions.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["Black", "White", "Red"]
-            },
-            {
-              "id": 6,
-              "name": "Jacket",
-              "units": 10,
-              "unitPrice": 79.99,
-              "description": "A stylish jacket to keep you warm.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["Black", "Brown"]
-            },
-            {
-              "id": 7,
-              "name": "Blouse",
-              "units": 25,
-              "unitPrice": 34.99,
-              "description": "A fashionable blouse for women.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["White", "Blue", "Pink"]
-            },
-            {
-              "id": 8,
-              "name": "Pants",
-              "units": 20,
-              "unitPrice": 44.99,
-              "description": "Versatile pants for everyday wear.",
-              "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
-              "colors": ["Black", "Gray"]
-            },
-            {
-              "id": 9,
-              "name": "Skirt",
-              "units": 15,
-              "unitPrice": 39.99,
-              "description": "A trendy skirt for any occasion.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["Red", "Black", "Navy"]
-            },
-            {
-              "id": 10,
-              "name": "Sweatshirt",
-              "units": 30,
-              "unitPrice": 29.99,
-              "description": "A cozy sweatshirt for casual outings.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["Gray", "Black", "Navy"]
-            }
-          ]
-        },
-        {
-          "id": 5,
-          "name": "Mock Provider 5",
-          "cuit": "123456789",
-          "address": "123 Mock Street",
-          "products": [
-            {
-              "id": 1,
-              "name": "T-Shirt",
-              "units": 50,
-              "unitPrice": 19.99,
-              "description": "A comfortable and stylish t-shirt.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["Red", "Blue", "White"]
-            },
-            {
-              "id": 2,
-              "name": "Jeans",
-              "units": 20,
-              "unitPrice": 49.99,
-              "description": "Classic denim jeans for everyday wear.",
-              "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
-              "colors": ["Blue"]
-            },
-            {
-              "id": 3,
-              "name": "Sweatshirt",
-              "units": 30,
-              "unitPrice": 29.99,
-              "description": "A cozy sweatshirt for casual outings.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["Gray", "Black", "Navy"]
-            },
-            {
-              "id": 4,
-              "name": "Shorts",
-              "units": 15,
-              "unitPrice": 24.99,
-              "description": "Comfortable shorts for warm weather.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["Khaki", "Black", "Navy"]
-            },
-            {
-              "id": 5,
-              "name": "Dress",
-              "units": 10,
-              "unitPrice": 59.99,
-              "description": "An elegant dress for special occasions.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["Black", "White", "Red"]
-            },
-            {
-              "id": 6,
-              "name": "Jacket",
-              "units": 25,
-              "unitPrice": 79.99,
-              "description": "A stylish jacket to keep you warm.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["Black", "Brown"]
-            },
-            {
-              "id": 7,
-              "name": "Blouse",
-              "units": 20,
-              "unitPrice": 34.99,
-              "description": "A fashionable blouse for women.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["White", "Blue", "Pink"]
-            },
-            {
-              "id": 8,
-              "name": "Pants",
-              "units": 25,
-              "unitPrice": 44.99,
-              "description": "Versatile pants for everyday wear.",
-              "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
-              "colors": ["Black", "Gray"]
-            },
-            {
-              "id": 9,
-              "name": "Skirt",
-              "units": 15,
-              "unitPrice": 39.99,
-              "description": "A trendy skirt for any occasion.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["Red", "Black", "Navy"]
-            },
-            {
-              "id": 10,
-              "name": "Sweater",
-              "units": 20,
-              "unitPrice": 49.99,
-              "description": "A cozy sweater for chilly days.",
-              "sizes": ["S", "M", "L"],
-              "colors": ["Gray", "Black"]
-            }
-          ]
-        }
-    ],
-    "transactions": [
-    ],
-    "accountingEntries": [
-    ],
-    "accounts": [
-    ],
-    "sales": [
-    ],
-    "purchases": [
-        {
-            "id": 0,
-            "dateInMs": "1688059766661",
-            "provider": {
-                "id":1,
-                "name":"adidas",
-                "cuit":"20-345554120-2",
-                "address":"av. soldati 2003"
-            },
-            "products": [
-                {
-                    "id":1,
-                    "name":"t-shirt",
-                    "units":200,
-                    "unitPrice":100,
-                    "description":"simple tshirt",
-                    "size": "s",
-                    "color": "black"
-                },
-                {
-                    "id":2,
-                    "name":"joggings",
-                    "units":200,
-                    "unitPrice":150,
-                    "description":"simple joggins",
-                    "size":"m",
-                    "color":"white"
-                },
-                {
-                    "id":3,
-                    "name":"jeans",
-                    "units":200,
-                    "unitPrice":100,
-                    "description":"simple jeans",
-                    "size":"l",
-                    "color":"red"
-                },
-                {
-                    "id": 4,
-                    "name": "men's jeans",
-                    "units": 15,
-                    "unitPrice": 79.99,
-                    "description": "classic denim jeans for men.",
-                    "size":"32w x 32l",
-                    "color":"blue"
-                },
-                {
-                    "id": 5,
-                    "name": "women's blouse",
-                    "units": 8,
-                    "unitPrice": 39.99,
-                    "description": "a stylish blouse for women.",
-                    "size": "s",
-                    "color": "pink"
-                }
-            ]
-        },
-        {
+            "colors": ["Gray", "Black"]
+          },
+          {
+            "id": 8,
+            "name": "Shirt",
+            "units": 25,
+            "unitPrice": 24.99,
+            "description": "A classic shirt for a polished look.",
+            "sizes": ["S", "M", "L"],
+            "colors": ["White", "Blue", "Pink"]
+          },
+          {
+            "id": 9,
+            "name": "Coat",
+            "units": 10,
+            "unitPrice": 89.99,
+            "description": "A warm and stylish coat for winter.",
+            "sizes": ["S", "M", "L"],
+            "colors": ["Black", "Gray"]
+          },
+          {
+            "id": 10,
+            "name": "Jeans",
+            "units": 30,
+            "unitPrice": 59.99,
+            "description": "Classic denim jeans for everyday wear.",
+            "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
+            "colors": ["Blue"]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Mock Provider 4",
+        "cuit": "321098765",
+        "address": "987 Mock Lane",
+        "products": [
+          {
             "id": 1,
-            "dateInMs": "1688059766668",
-            "provider": {
-                "id":1,
-                "name":"adidas",
-                "cuit":"20-345554120-2",
-                "address":"av. soldati 2003"
-            },
-            "products":[
-                {
-                    "id":1,
-                    "name":"t-shirt",
-                    "units":10,
-                    "unitPrice":100,
-                    "description":"simple tshirt",
-                    "size": "s",
-                    "color": "blue"
-                },
-                {
-                    "id":2,
-                    "name":"joggings",
-                    "units":20,
-                    "unitPrice":150,
-                    "description":"simple joggins",
-                    "size":"m",
-                    "color":"white"
-                },
-                {
-                    "id":3,
-                    "name":"jeans",
-                    "units":2,
-                    "unitPrice":100,
-                    "description":"simple jeans",
-                    "size":"l",
-                    "color":"red"
-                },
-                {
-                    "id": 4,
-                    "name": "men's jeans",
-                    "units": 15,
-                    "unitPrice": 79.99,
-                    "description": "classic denim jeans for men.",
-                    "size":"32w x 32l",
-                    "color":"blue"
-                },
-                {
-                    "id": 5,
-                    "name": "women's blouse",
-                    "units": 8,
-                    "unitPrice": 39.99,
-                    "description": "a stylish blouse for women.",
-                    "size": "s",
-                    "color": "pink"
-                }
-            ]
-        },
-        {
+            "name": "Sweater",
+            "units": 30,
+            "unitPrice": 39.99,
+            "description": "A cozy sweater for chilly days.",
+            "sizes": ["S", "M", "L"],
+            "colors": ["Gray", "Black"]
+          },
+          {
             "id": 2,
-            "dateInMs": "1688059766668",
-            "provider": {
-                "id":1,
-                "name":"adidas",
-                "cuit":"20-345554120-2",
-                "address":"av. soldati 2003"
-            },
-            "products":[
-                {
-                    "id":1,
-                    "name":"t-shirt",
-                    "units":10,
-                    "unitPrice":100,
-                    "description":"simple tshirt",
-                    "size": "s",
-                    "color": "blue"
-                },
-                {
-                    "id":2,
-                    "name":"joggings",
-                    "units":20,
-                    "unitPrice":150,
-                    "description":"simple joggins",
-                    "size":"m",
-                    "color":"white"
-                },
-                {
-                    "id":3,
-                    "name":"jeans",
-                    "units":2,
-                    "unitPrice":100,
-                    "description":"simple jeans",
-                    "size":"l",
-                    "color":"red"
-                },
-                {
-                    "id": 4,
-                    "name": "men's jeans",
-                    "units": 15,
-                    "unitPrice": 79.99,
-                    "description": "classic denim jeans for men.",
-                    "size":"32w x 32l",
-                    "color":"blue"
-                },
-                {
-                    "id": 5,
-                    "name": "women's blouse",
-                    "units": 8,
-                    "unitPrice": 39.99,
-                    "description": "a stylish blouse for women.",
-                    "size": "s",
-                    "color": "pink"
-                }
-            ]
-        },
-        {
+            "name": "T-Shirt",
+            "units": 20,
+            "unitPrice": 19.99,
+            "description": "A comfortable and stylish t-shirt.",
+            "sizes": ["S", "M", "L"],
+            "colors": ["Red", "Blue", "White"]
+          },
+          {
             "id": 3,
-            "dateInMs": "1688059766668",
-            "provider": {
-                "id":1,
-                "name":"adidas",
-                "cuit":"20-345554120-2",
-                "address":"av. soldati 2003"
-            },
-            "products":[
-                {
-                    "id":1,
-                    "name":"t-shirt",
-                    "units":10,
-                    "unitPrice":100,
-                    "description":"simple tshirt",
-                    "size": "s",
-                    "color": "blue"
-                },
-                {
-                    "id":2,
-                    "name":"joggings",
-                    "units":20,
-                    "unitPrice":150,
-                    "description":"simple joggins",
-                    "size":"m",
-                    "color":"white"
-                },
-                {
-                    "id":3,
-                    "name":"jeans",
-                    "units":2,
-                    "unitPrice":100,
-                    "description":"simple jeans",
-                    "size":"l",
-                    "color":"red"
-                },
-                {
-                    "id": 4,
-                    "name": "men's jeans",
-                    "units": 15,
-                    "unitPrice": 79.99,
-                    "description": "classic denim jeans for men.",
-                    "size":"32w x 32l",
-                    "color":"blue"
-                },
-                {
-                    "id": 5,
-                    "name": "women's blouse",
-                    "units": 8,
-                    "unitPrice": 39.99,
-                    "description": "a stylish blouse for women.",
-                    "size": "s",
-                    "color": "pink"
-                }
-            ]
-        },
-        {
+            "name": "Jeans",
+            "units": 25,
+            "unitPrice": 49.99,
+            "description": "Classic denim jeans for everyday wear.",
+            "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
+            "colors": ["Blue"]
+          },
+          {
             "id": 4,
-            "dateInMs": "1688059766661",
-            "provider": {
-                "id":1,
-                "name":"adidas",
-                "cuit":"20-345554120-2",
-                "address":"av. soldati 2003"
-            },
-            "products":[
-                {
-                    "id":1,
-                    "name":"t-shirt",
-                    "units":200,
-                    "unitPrice":100,
-                    "description":"simple tshirt",
-                    "size": "s",
-                    "color": "black"
-                },
-                {
-                    "id":2,
-                    "name":"joggings",
-                    "units":200,
-                    "unitPrice":150,
-                    "description":"simple joggins",
-                    "size":"m",
-                    "color":"white"
-                },
-                {
-                    "id":3,
-                    "name":"jeans",
-                    "units":200,
-                    "unitPrice":100,
-                    "description":"simple jeans",
-                    "size":"l",
-                    "color":"red"
-                },
-                {
-                    "id": 4,
-                    "name": "men's jeans",
-                    "units": 15,
-                    "unitPrice": 79.99,
-                    "description": "classic denim jeans for men.",
-                    "size":"32w x 32l",
-                    "color":"blue"
-                },
-                {
-                    "id": 5,
-                    "name": "women's blouse",
-                    "units": 8,
-                    "unitPrice": 39.99,
-                    "description": "a stylish blouse for women.",
-                    "size": "s",
-                    "color": "pink"
-                }
-            ]
-        }
-    ]
+            "name": "Shorts",
+            "units": 15,
+            "unitPrice": 24.99,
+            "description": "Comfortable shorts for warm weather.",
+            "sizes": ["S", "M", "L"],
+            "colors": ["Khaki", "Black", "Navy"]
+          },
+          {
+            "id": 5,
+            "name": "Dress",
+            "units": 20,
+            "unitPrice": 59.99,
+            "description": "An elegant dress for special occasions.",
+            "sizes": ["S", "M", "L"],
+            "colors": ["Black", "White", "Red"]
+          },
+          {
+            "id": 6,
+            "name": "Jacket",
+            "units": 10,
+            "unitPrice": 79.99,
+            "description": "A stylish jacket to keep you warm.",
+            "sizes": ["S", "M", "L"],
+            "colors": ["Black", "Brown"]
+          },
+          {
+            "id": 7,
+            "name": "Blouse",
+            "units": 25,
+            "unitPrice": 34.99,
+            "description": "A fashionable blouse for women.",
+            "sizes": ["S", "M", "L"],
+            "colors": ["White", "Blue", "Pink"]
+          },
+          {
+            "id": 8,
+            "name": "Pants",
+            "units": 20,
+            "unitPrice": 44.99,
+            "description": "Versatile pants for everyday wear.",
+            "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
+            "colors": ["Black", "Gray"]
+          },
+          {
+            "id": 9,
+            "name": "Skirt",
+            "units": 15,
+            "unitPrice": 39.99,
+            "description": "A trendy skirt for any occasion.",
+            "sizes": ["S", "M", "L"],
+            "colors": ["Red", "Black", "Navy"]
+          },
+          {
+            "id": 10,
+            "name": "Sweatshirt",
+            "units": 30,
+            "unitPrice": 29.99,
+            "description": "A cozy sweatshirt for casual outings.",
+            "sizes": ["S", "M", "L"],
+            "colors": ["Gray", "Black", "Navy"]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Mock Provider 5",
+        "cuit": "123456789",
+        "address": "123 Mock Street",
+        "products": [
+          {
+            "id": 1,
+            "name": "T-Shirt",
+            "units": 50,
+            "unitPrice": 19.99,
+            "description": "A comfortable and stylish t-shirt.",
+            "sizes": ["S", "M", "L"],
+            "colors": ["Red", "Blue", "White"]
+          },
+          {
+            "id": 2,
+            "name": "Jeans",
+            "units": 20,
+            "unitPrice": 49.99,
+            "description": "Classic denim jeans for everyday wear.",
+            "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
+            "colors": ["Blue"]
+          },
+          {
+            "id": 3,
+            "name": "Sweatshirt",
+            "units": 30,
+            "unitPrice": 29.99,
+            "description": "A cozy sweatshirt for casual outings.",
+            "sizes": ["S", "M", "L"],
+            "colors": ["Gray", "Black", "Navy"]
+          },
+          {
+            "id": 4,
+            "name": "Shorts",
+            "units": 15,
+            "unitPrice": 24.99,
+            "description": "Comfortable shorts for warm weather.",
+            "sizes": ["S", "M", "L"],
+            "colors": ["Khaki", "Black", "Navy"]
+          },
+          {
+            "id": 5,
+            "name": "Dress",
+            "units": 10,
+            "unitPrice": 59.99,
+            "description": "An elegant dress for special occasions.",
+            "sizes": ["S", "M", "L"],
+            "colors": ["Black", "White", "Red"]
+          },
+          {
+            "id": 6,
+            "name": "Jacket",
+            "units": 25,
+            "unitPrice": 79.99,
+            "description": "A stylish jacket to keep you warm.",
+            "sizes": ["S", "M", "L"],
+            "colors": ["Black", "Brown"]
+          },
+          {
+            "id": 7,
+            "name": "Blouse",
+            "units": 20,
+            "unitPrice": 34.99,
+            "description": "A fashionable blouse for women.",
+            "sizes": ["S", "M", "L"],
+            "colors": ["White", "Blue", "Pink"]
+          },
+          {
+            "id": 8,
+            "name": "Pants",
+            "units": 25,
+            "unitPrice": 44.99,
+            "description": "Versatile pants for everyday wear.",
+            "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
+            "colors": ["Black", "Gray"]
+          },
+          {
+            "id": 9,
+            "name": "Skirt",
+            "units": 15,
+            "unitPrice": 39.99,
+            "description": "A trendy skirt for any occasion.",
+            "sizes": ["S", "M", "L"],
+            "colors": ["Red", "Black", "Navy"]
+          },
+          {
+            "id": 10,
+            "name": "Sweater",
+            "units": 20,
+            "unitPrice": 49.99,
+            "description": "A cozy sweater for chilly days.",
+            "sizes": ["S", "M", "L"],
+            "colors": ["Gray", "Black"]
+          }
+        ]
+      }
+  ],
+  "transactions": [
+  ],
+  "accountingEntries": [
+  ],
+  "accounts": [
+  ],
+  "sales": [
+  ],
+  "purchases": [
+      {
+          "id": 0,
+          "dateInMs": "1688059766661",
+          "provider": {
+              "id":1,
+              "name":"adidas",
+              "cuit":"20-345554120-2",
+              "address":"av. soldati 2003"
+          },
+          "products": [
+              {
+                  "id":1,
+                  "name":"t-shirt",
+                  "units":200,
+                  "unitPrice":100,
+                  "description":"simple tshirt",
+                  "size": "s",
+                  "color": "black"
+              },
+              {
+                  "id":2,
+                  "name":"joggings",
+                  "units":200,
+                  "unitPrice":150,
+                  "description":"simple joggins",
+                  "size":"m",
+                  "color":"white"
+              },
+              {
+                  "id":3,
+                  "name":"jeans",
+                  "units":200,
+                  "unitPrice":100,
+                  "description":"simple jeans",
+                  "size":"l",
+                  "color":"red"
+              },
+              {
+                  "id": 4,
+                  "name": "men's jeans",
+                  "units": 15,
+                  "unitPrice": 79.99,
+                  "description": "classic denim jeans for men.",
+                  "size":"32w x 32l",
+                  "color":"blue"
+              },
+              {
+                  "id": 5,
+                  "name": "women's blouse",
+                  "units": 8,
+                  "unitPrice": 39.99,
+                  "description": "a stylish blouse for women.",
+                  "size": "s",
+                  "color": "pink"
+              }
+          ]
+      },
+      {
+          "id": 1,
+          "dateInMs": "1688059766668",
+          "provider": {
+              "id":1,
+              "name":"adidas",
+              "cuit":"20-345554120-2",
+              "address":"av. soldati 2003"
+          },
+          "products":[
+              {
+                  "id":1,
+                  "name":"t-shirt",
+                  "units":10,
+                  "unitPrice":100,
+                  "description":"simple tshirt",
+                  "size": "s",
+                  "color": "blue"
+              },
+              {
+                  "id":2,
+                  "name":"joggings",
+                  "units":20,
+                  "unitPrice":150,
+                  "description":"simple joggins",
+                  "size":"m",
+                  "color":"white"
+              },
+              {
+                  "id":3,
+                  "name":"jeans",
+                  "units":2,
+                  "unitPrice":100,
+                  "description":"simple jeans",
+                  "size":"l",
+                  "color":"red"
+              },
+              {
+                  "id": 4,
+                  "name": "men's jeans",
+                  "units": 15,
+                  "unitPrice": 79.99,
+                  "description": "classic denim jeans for men.",
+                  "size":"32w x 32l",
+                  "color":"blue"
+              },
+              {
+                  "id": 5,
+                  "name": "women's blouse",
+                  "units": 8,
+                  "unitPrice": 39.99,
+                  "description": "a stylish blouse for women.",
+                  "size": "s",
+                  "color": "pink"
+              }
+          ]
+      },
+      {
+          "id": 2,
+          "dateInMs": "1688059766668",
+          "provider": {
+              "id":1,
+              "name":"adidas",
+              "cuit":"20-345554120-2",
+              "address":"av. soldati 2003"
+          },
+          "products":[
+              {
+                  "id":1,
+                  "name":"t-shirt",
+                  "units":10,
+                  "unitPrice":100,
+                  "description":"simple tshirt",
+                  "size": "s",
+                  "color": "blue"
+              },
+              {
+                  "id":2,
+                  "name":"joggings",
+                  "units":20,
+                  "unitPrice":150,
+                  "description":"simple joggins",
+                  "size":"m",
+                  "color":"white"
+              },
+              {
+                  "id":3,
+                  "name":"jeans",
+                  "units":2,
+                  "unitPrice":100,
+                  "description":"simple jeans",
+                  "size":"l",
+                  "color":"red"
+              },
+              {
+                  "id": 4,
+                  "name": "men's jeans",
+                  "units": 15,
+                  "unitPrice": 79.99,
+                  "description": "classic denim jeans for men.",
+                  "size":"32w x 32l",
+                  "color":"blue"
+              },
+              {
+                  "id": 5,
+                  "name": "women's blouse",
+                  "units": 8,
+                  "unitPrice": 39.99,
+                  "description": "a stylish blouse for women.",
+                  "size": "s",
+                  "color": "pink"
+              }
+          ]
+      },
+      {
+          "id": 3,
+          "dateInMs": "1688059766668",
+          "provider": {
+              "id":1,
+              "name":"adidas",
+              "cuit":"20-345554120-2",
+              "address":"av. soldati 2003"
+          },
+          "products":[
+              {
+                  "id":1,
+                  "name":"t-shirt",
+                  "units":10,
+                  "unitPrice":100,
+                  "description":"simple tshirt",
+                  "size": "s",
+                  "color": "blue"
+              },
+              {
+                  "id":2,
+                  "name":"joggings",
+                  "units":20,
+                  "unitPrice":150,
+                  "description":"simple joggins",
+                  "size":"m",
+                  "color":"white"
+              },
+              {
+                  "id":3,
+                  "name":"jeans",
+                  "units":2,
+                  "unitPrice":100,
+                  "description":"simple jeans",
+                  "size":"l",
+                  "color":"red"
+              },
+              {
+                  "id": 4,
+                  "name": "men's jeans",
+                  "units": 15,
+                  "unitPrice": 79.99,
+                  "description": "classic denim jeans for men.",
+                  "size":"32w x 32l",
+                  "color":"blue"
+              },
+              {
+                  "id": 5,
+                  "name": "women's blouse",
+                  "units": 8,
+                  "unitPrice": 39.99,
+                  "description": "a stylish blouse for women.",
+                  "size": "s",
+                  "color": "pink"
+              }
+          ]
+      },
+      {
+          "id": 4,
+          "dateInMs": "1688059766661",
+          "provider": {
+              "id":1,
+              "name":"adidas",
+              "cuit":"20-345554120-2",
+              "address":"av. soldati 2003"
+          },
+          "products":[
+              {
+                  "id":1,
+                  "name":"t-shirt",
+                  "units":200,
+                  "unitPrice":100,
+                  "description":"simple tshirt",
+                  "size": "s",
+                  "color": "black"
+              },
+              {
+                  "id":2,
+                  "name":"joggings",
+                  "units":200,
+                  "unitPrice":150,
+                  "description":"simple joggins",
+                  "size":"m",
+                  "color":"white"
+              },
+              {
+                  "id":3,
+                  "name":"jeans",
+                  "units":200,
+                  "unitPrice":100,
+                  "description":"simple jeans",
+                  "size":"l",
+                  "color":"red"
+              },
+              {
+                  "id": 4,
+                  "name": "men's jeans",
+                  "units": 15,
+                  "unitPrice": 79.99,
+                  "description": "classic denim jeans for men.",
+                  "size":"32w x 32l",
+                  "color":"blue"
+              },
+              {
+                  "id": 5,
+                  "name": "women's blouse",
+                  "units": 8,
+                  "unitPrice": 39.99,
+                  "description": "a stylish blouse for women.",
+                  "size": "s",
+                  "color": "pink"
+              }
+          ]
+      }
+  ]
 }

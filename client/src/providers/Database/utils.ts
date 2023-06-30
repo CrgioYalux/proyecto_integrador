@@ -3,21 +3,28 @@ type Provider = {
     name: string,
     cuit: string,
     address: string,
+    products: Product[],
 };
 
 type Product = {
     id: number,
     name: string,
     description: string,
-    value: number,
-    quantity: number,
+    pricePerUnit: number,
+    units: number,
     provider: Provider,
     colors: string[],
     sizes: string[],
 };
 
-type BoughtProduct = Product;
-type SoldProduct = Omit<Product, 'provider'> & { brand: string };
+type BoughtProduct = Omit<Product, 'sizes' | 'colors'> & {
+    size: string,
+    color: string,
+};
+
+type SoldProduct = Omit<BoughtProduct, 'provider'> & {
+    brand: string,
+};
 
 type Client = {
     id: number,

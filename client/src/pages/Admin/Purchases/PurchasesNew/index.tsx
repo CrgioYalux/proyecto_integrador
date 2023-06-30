@@ -2,9 +2,9 @@ import './PurchasesNew.css';
 
 import { useEffect, useState } from 'react';
 
-import data from './data.json';
-
 import { MAX_QUANTITY_TO_BUY } from './const';
+
+import data from './data.json';
 
 import Filter from './components/Filter';
 import ListProviders from './components/ListProviders';

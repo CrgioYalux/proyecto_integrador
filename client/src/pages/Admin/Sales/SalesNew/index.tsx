@@ -7,7 +7,7 @@ import Button from '../../../../components/Button';
 
 interface SalesNewProps {
 };
-const options = ["Efectivo", "Transferencia", "cuenta Corriente","Tarjeta de Credito"]
+const options = ["Efectivo", "Transferencia", "Cuenta Corriente","Tarjeta de Credito"]
 const SalesNew: React.FC<SalesNewProps> = ({ }) => {
 
     const[typeBill, setTypeBill] = useState<'A' | 'B'>("B");
@@ -41,14 +41,12 @@ const SalesNew: React.FC<SalesNewProps> = ({ }) => {
                 
                
                 <div className="containerVender">    
-                    <BtnModal nameBtn = "btncerrar" btnModalName = "Ventas" className='modalContent'>
+                    <BtnModal btnCerrar='si' btnCerrarClassname='btn__cerrar' btnVenderClassName='btn__vender' nameBtn = "Cerrar" btnModalName = "Ventas" className='modalContent'>
 
                             <select onChange={handleChange} className='containerBill'>
-                                <option value="A" defaultChecked = {typeBill === "A"}>A</option>
-                                <option value="B" defaultChecked = {typeBill === "B"}>B</option>
+                                <option value="A" defaultChecked = {typeBill === "A"}>Factura A</option>
+                                <option value="B" defaultChecked = {typeBill === "B"}>Factura B</option>
                             </select>
-
-                            <span>Factura {typeBill}</span>
                             <div className="containerInputModal">
                                     <h2>Cliente</h2>
                                     <div className="line"></div>
@@ -62,8 +60,7 @@ const SalesNew: React.FC<SalesNewProps> = ({ }) => {
                                         <input type="date" className='Inputs' id='fecha' name='nfecha' />
                                     <label htmlFor="pago__metodo" className='TextLabel'>Metodo de pago</label><br />
                                     <DropDown select={(option) => {setSelected(option)}} selected={selected} dpbName='Elegir' options={options}></DropDown>
-                                    
-                                    
+ 
                                     <h2>Detalle</h2>
                                     <div className="line"></div>
                                     <div className="container__Detalle">
@@ -84,7 +81,7 @@ const SalesNew: React.FC<SalesNewProps> = ({ }) => {
                                             <label htmlFor="importe" className='labells__inputs__label'>TOTAL FACTURA</label>
                                             <input type="text" id='importe' className='labells__inputs__input' disabled />
                                            </div> 
-                                           <BtnModal btnModalName='Vender' className='modal__sale' >
+                                           <BtnModal btnModalName='Vender' className='modal__sale' btnVenderClassName='btn__Modal' overlayClassName='overlay-inner' >
             
                                             <div className="sub__modal">
                                                 <div className="sub__modal__titulo">

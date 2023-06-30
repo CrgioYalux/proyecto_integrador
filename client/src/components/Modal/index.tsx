@@ -11,13 +11,18 @@ type modalProps = {
      nameBtn?: string;
      btnModalName: string;
      closeModal?: boolean 
+     btnCerrar?: string
+     btnCerrarClassname?:string
+     btnModal?: string
+     btnVenderClassName?: string
+     overlayClassName?: string
      
 }
 
 
 
 
-const BtnModal: React.FC<modalProps> = ({ children, nameBtn, btnModalName, className}) =>{
+const BtnModal: React.FC<modalProps> = ({ children, overlayClassName , nameBtn, btnModalName, className, btnCerrar, btnCerrarClassname, btnVenderClassName }) =>{
 
     const [modal, setModal] = useState(false)
 
@@ -27,18 +32,19 @@ const BtnModal: React.FC<modalProps> = ({ children, nameBtn, btnModalName, class
 
 return(
     <>
-        <button className='bnt-Modal' onClick={toggleModal}>
+        <button className={btnVenderClassName} onClick={toggleModal}>
             {btnModalName}
         </button>
 
         {modal && (
             <>
                 <div className="containerModal">
-                    <div className="overlay">
+                    <div className={`overlay ${overlayClassName}`}>
                         <div className={className}>
+                        {btnCerrar === 'si' && <button className={btnCerrarClassname} onClick={toggleModal}>{nameBtn}</button>}
                         {children}
                         </div>
-                        {nameBtn === 'btncerrar' && <button onClick={toggleModal}>HOLA</button>}
+                        
                     </div>
                     
                 </div>

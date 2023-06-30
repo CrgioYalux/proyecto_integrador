@@ -61,11 +61,10 @@
     height: 100px;
 }
 .containerInputModal{
-    margin: 20px;
+    padding: 5%;
     background-color: rgb(255, 255, 255);
-    height: 82%;
-    
-   
+    flex: 1 1 auto;
+    border-radius: 10px;
 }
 .TextLabel{
     margin-left: 10px;
@@ -113,7 +112,8 @@
     font-size: 12px;
 }
 .containerBill{
-    width: 50px;
+    flex: 0 0 auto;
+    width: 200px;
     height: 30px;
     margin: 5px;
     border-radius: 5px;
@@ -198,6 +198,7 @@ border-radius: 5px;
     flex: 1 0 30%;
 }
 .cart{
+    position: relative;
     flex-direction: column;
     flex: 1 0 30%;
 }
@@ -221,14 +222,16 @@ border-radius: 5px;
     flex-wrap: wrap;
 }
 .modalContent{
-    background-color: #fff;
+    background-color: #ffffff;
     width: 80vw;
     max-width: 700px;
     min-height: 80vh;
     border-radius: 5px;
     margin: 0 auto;
     margin-top: 60px;
+    display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 .sub__modal{
     display: flex;
@@ -267,8 +270,57 @@ border-radius: 5px;
     color: #ffff;
     border-radius: 5px;
     border-style: hidden;
-    font-size: 15px;  
+    font-size: 15px;
+    cursor: pointer;  
 }
 .btn__vender__modal-btnfactura:hover{
     background-color: #8bdf5b;
+}
+.btn__cerrar{
+    background-color: #e03838;
+    padding: 5px;
+    color: #ffff;
+    border-radius: 5px;
+    border-style: hidden;
+    font-size: 21px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 3%;
+    left: 3%;
+}
+.btncerrar:hover{
+    background-color: #f84040;
+}
+.btn__vender{
+    color: #ffff;
+    background-color: #70b641;
+    font-size: 20px;
+    font-weight: 100;
+    cursor: pointer;
+    border-style: hidden;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s;
+    position: absolute;
+    bottom: 2%;
+    right: 5%;
+}
+.btn__Modal{
+    color: #ffff;
+    background-color: #6dcd47;
+    font-size: 20px;
+    font-weight: 100;
+    cursor: pointer;
+    border-style: hidden;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s;
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
+}
+.overlay-inner{
+    
 }

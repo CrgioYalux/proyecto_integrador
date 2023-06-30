@@ -25,20 +25,21 @@
 }
 .overlay{
     backdrop-filter: blur(0.2rem);
-    background-color: rgba(179, 179, 179, 0.24);
+    background-color: rgba(168, 168, 168, 0.24);
     
     
+}
+.overlay>div{
+    position: relative;
 }
 
 .btn-cerrar{
     color: #ffff;
-    background-color: #cd4747;
+    background-color: #00af1d;
     font-size: 20px;
     font-weight: 100;
     cursor: pointer;
     border-style: hidden;
-    height: 40px;
-    width: 100px;
     border-radius: 5px;
     transition: transform 0.3s ease, background-color 0.3s;
     margin-left: 5%;
@@ -68,4 +69,5 @@ background-color: #fc6767;
     cursor: pointer;
 
 }
+
 

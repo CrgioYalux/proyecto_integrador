@@ -38,7 +38,7 @@ const PurchasesNew: React.FC<PurchasesNewProps> = ({}) => {
     const database = useDatabase();
 
     const confirmPurchase = (): void => {
-        const highestId: number = database.actions.purchases.getAll().reduce((acc, el) => acc + el.id, 0);
+        const highestId: number = database.actions.purchases.getAll().reduce((acc, el) => acc + el.id, 1);
         if (selectedProvider && cart.length !== 0) {
             const purchase: Purchase = {
                 id: highestId,

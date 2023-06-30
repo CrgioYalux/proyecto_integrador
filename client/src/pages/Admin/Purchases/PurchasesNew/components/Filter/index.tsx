@@ -2,7 +2,7 @@ import './Filter.css';
 
 import RadioListInput from '../../../../../../components/RadioListInput';
 
-import type { ProductVariety } from '../../utils';
+import type { ProductVariety } from '../../../utils';
 
 interface FilterProps {
     className?: string;
@@ -45,7 +45,7 @@ const Filter: React.FC<FilterProps> = ({
                         <div
                         title={item.name}
                         className={`Filter-RadioListInput__box Filter-size__box ${selectedSize?.id === item.id ? '--selected' : '--not-selected'}`}
-                        >{item.name.toUpperCase()}</div>
+                        >{item.name?.toUpperCase()}</div>
                     );
                 }}
                 />

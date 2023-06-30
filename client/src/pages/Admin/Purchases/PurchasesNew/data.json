@@ -9,7 +9,7 @@
                 {
                     "id":1,
                     "name":"T-Shirt",
-                    "stock":200,
+                    "units":200,
                     "unitPrice":100,
                     "description":"simple tshirt",
                     "sizes":["s", "m", "l", "xl"],
@@ -18,7 +18,7 @@
                 {
                     "id":2,
                     "name":"Joggings",
-                    "stock":200,
+                    "units":200,
                     "unitPrice":150,
                     "description":"simple joggins",
                     "sizes":["s", "m", "l", "xl"],
@@ -27,7 +27,7 @@
                 {
                     "id":3,
                     "name":"Jeans",
-                    "stock":200,
+                    "units":200,
                     "unitPrice":100,
                     "description":"simple jeans",
                     "sizes":["s", "m", "l", "xl"],
@@ -36,7 +36,7 @@
                 {
                     "id": 4,
                     "name": "Men's Jeans",
-                    "stock": 15,
+                    "units": 15,
                     "unitPrice": 79.99,
                     "description": "Classic denim jeans for men.",
                     "sizes": ["30W x 32L", "32W x 32L", "34W x 32L", "36W x 32L"],
@@ -45,7 +45,7 @@
                 {
                     "id": 5,
                     "name": "Women's Blouse",
-                    "stock": 8,
+                    "units": 8,
                     "unitPrice": 39.99,
                     "description": "A stylish blouse for women.",
                     "sizes": ["XS", "S", "M", "L"],
@@ -54,7 +54,7 @@
                 {
                     "id": 6,
                     "name": "Unisex Sweatpants",
-                    "stock": 12,
+                    "units": 12,
                     "unitPrice": 34.99,
                     "description": "Comfortable sweatpants suitable for both men and women.",
                     "sizes": ["S", "M", "L", "XL"],
@@ -63,7 +63,7 @@
                 {
                     "id": 7,
                     "name": "Men's Polo Shirt",
-                    "stock": 20,
+                    "units": 20,
                     "unitPrice": 49.99,
                     "description": "A classic polo shirt for men.",
                     "sizes": ["S", "M", "L", "XL"],
@@ -72,7 +72,7 @@
                   {
                     "id": 8,
                     "name": "Women's Skirt",
-                    "stock": 6,
+                    "units": 6,
                     "unitPrice": 59.99,
                     "description": "A fashionable skirt for women.",
                     "sizes": ["XS", "S", "M", "L"],
@@ -81,7 +81,7 @@
                   {
                     "id": 9,
                     "name": "Unisex Sneakers",
-                    "stock": 9,
+                    "units": 9,
                     "unitPrice": 89.99,
                     "description": "Versatile sneakers suitable for both men and women.",
                     "sizes": ["US 7", "US 8", "US 9", "US 10"],
@@ -90,7 +90,7 @@
                   {
                     "id": 10,
                     "name": "Men's Shorts",
-                    "stock": 18,
+                    "units": 18,
                     "unitPrice": 29.99,
                     "description": "Casual shorts for men.",
                     "sizes": ["S", "M", "L", "XL"],
@@ -99,7 +99,7 @@
                   {
                     "id": 11,
                     "name": "Women's Cardigan",
-                    "stock": 11,
+                    "units": 11,
                     "unitPrice": 49.99,
                     "description": "A cozy cardigan for women.",
                     "sizes": ["S", "M", "L"],
@@ -108,7 +108,7 @@
                   {
                     "id": 12,
                     "name": "Unisex Beanie Hat",
-                    "stock": 14,
+                    "units": 14,
                     "unitPrice": 19.99,
                     "description": "A warm beanie hat suitable for both men and women.",
                     "sizes": ["One Size"],
@@ -117,7 +117,7 @@
                   {
                     "id": 13,
                     "name": "Men's Dress Shirt",
-                    "stock": 16,
+                    "units": 16,
                     "unitPrice": 54.99,
                     "description": "A formal dress shirt for men.",
                     "sizes": ["S", "M", "L", "XL"],
@@ -126,7 +126,7 @@
                   {
                     "id":14,
                     "name":"Striped T-Shirt",
-                    "stock":200,
+                    "units":200,
                     "unitPrice":100,
                     "description":"simple striped tshirt",
                     "sizes":["s", "m", "l", "xl"],
@@ -138,13 +138,13 @@
         {
           "id": 2,
           "name": "Mock Provider 2",
-          "cuit": 987654321,
+          "cuit": "987654321",
           "address": "456 Mock Avenue",
           "products": [
             {
               "id": 1,
               "name": "T-Shirt",
-              "stock": 30,
+              "units": 30,
               "unitPrice": 19.99,
               "description": "A comfortable and stylish t-shirt.",
               "sizes": ["S", "M", "L"],
@@ -153,7 +153,7 @@
             {
               "id": 2,
               "name": "Jeans",
-              "stock": 40,
+              "units": 40,
               "unitPrice": 49.99,
               "description": "Classic denim jeans for everyday wear.",
               "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
@@ -162,7 +162,7 @@
             {
               "id": 3,
               "name": "Sweatshirt",
-              "stock": 25,
+              "units": 25,
               "unitPrice": 29.99,
               "description": "A cozy sweatshirt for casual outings.",
               "sizes": ["S", "M", "L"],
@@ -171,7 +171,7 @@
             {
               "id": 4,
               "name": "Shorts",
-              "stock": 35,
+              "units": 35,
               "unitPrice": 24.99,
               "description": "Comfortable shorts for warm weather.",
               "sizes": ["S", "M", "L"],
@@ -180,7 +180,7 @@
             {
               "id": 5,
               "name": "Dress",
-              "stock": 20,
+              "units": 20,
               "unitPrice": 59.99,
               "description": "An elegant dress for special occasions.",
               "sizes": ["S", "M", "L"],
@@ -189,7 +189,7 @@
             {
               "id": 6,
               "name": "Jacket",
-              "stock": 15,
+              "units": 15,
               "unitPrice": 79.99,
               "description": "A stylish jacket to keep you warm.",
               "sizes": ["S", "M", "L"],
@@ -198,7 +198,7 @@
             {
               "id": 7,
               "name": "Blouse",
-              "stock": 30,
+              "units": 30,
               "unitPrice": 34.99,
               "description": "A fashionable blouse for women.",
               "sizes": ["S", "M", "L"],
@@ -207,7 +207,7 @@
             {
               "id": 8,
               "name": "Pants",
-              "stock": 20,
+              "units": 20,
               "unitPrice": 44.99,
               "description": "Versatile pants for everyday wear.",
               "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
@@ -216,7 +216,7 @@
             {
               "id": 9,
               "name": "Skirt",
-              "stock": 25,
+              "units": 25,
               "unitPrice": 39.99,
               "description": "A trendy skirt for any occasion.",
               "sizes": ["S", "M", "L"],
@@ -225,7 +225,7 @@
             {
               "id": 10,
               "name": "Sweater",
-              "stock": 30,
+              "units": 30,
               "unitPrice": 49.99,
               "description": "A cozy sweater for chilly days.",
               "sizes": ["S", "M", "L"],
@@ -236,13 +236,13 @@
         {
           "id": 3,
           "name": "Mock Provider 3",
-          "cuit": 567890123,
+          "cuit": "567890123",
           "address": "789 Mock Road",
           "products": [
             {
               "id": 1,
               "name": "Dress",
-              "stock": 15,
+              "units": 15,
               "unitPrice": 59.99,
               "description": "An elegant dress for special occasions.",
               "sizes": ["S", "M", "L"],
@@ -251,7 +251,7 @@
             {
               "id": 2,
               "name": "Blazer",
-              "stock": 10,
+              "units": 10,
               "unitPrice": 79.99,
               "description": "A sophisticated blazer for formal events.",
               "sizes": ["S", "M", "L"],
@@ -260,7 +260,7 @@
             {
               "id": 3,
               "name": "Pants",
-              "stock": 20,
+              "units": 20,
               "unitPrice": 44.99,
               "description": "Versatile pants for everyday wear.",
               "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
@@ -269,7 +269,7 @@
             {
               "id": 4,
               "name": "Skirt",
-              "stock": 25,
+              "units": 25,
               "unitPrice": 39.99,
               "description": "A trendy skirt for any occasion.",
               "sizes": ["S", "M", "L"],
@@ -278,7 +278,7 @@
             {
               "id": 5,
               "name": "Blouse",
-              "stock": 30,
+              "units": 30,
               "unitPrice": 34.99,
               "description": "A fashionable blouse for women.",
               "sizes": ["S", "M", "L"],
@@ -287,7 +287,7 @@
             {
               "id": 6,
               "name": "Jumpsuit",
-              "stock": 15,
+              "units": 15,
               "unitPrice": 69.99,
               "description": "A trendy jumpsuit for a stylish look.",
               "sizes": ["S", "M", "L"],
@@ -296,7 +296,7 @@
             {
               "id": 7,
               "name": "Sweater",
-              "stock": 20,
+              "units": 20,
               "unitPrice": 49.99,
               "description": "A cozy sweater for chilly days.",
               "sizes": ["S", "M", "L"],
@@ -305,7 +305,7 @@
             {
               "id": 8,
               "name": "Shirt",
-              "stock": 25,
+              "units": 25,
               "unitPrice": 24.99,
               "description": "A classic shirt for a polished look.",
               "sizes": ["S", "M", "L"],
@@ -314,7 +314,7 @@
             {
               "id": 9,
               "name": "Coat",
-              "stock": 10,
+              "units": 10,
               "unitPrice": 89.99,
               "description": "A warm and stylish coat for winter.",
               "sizes": ["S", "M", "L"],
@@ -323,7 +323,7 @@
             {
               "id": 10,
               "name": "Jeans",
-              "stock": 30,
+              "units": 30,
               "unitPrice": 59.99,
               "description": "Classic denim jeans for everyday wear.",
               "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
@@ -334,13 +334,13 @@
         {
           "id": 4,
           "name": "Mock Provider 4",
-          "cuit": 321098765,
+          "cuit": "321098765",
           "address": "987 Mock Lane",
           "products": [
             {
               "id": 1,
               "name": "Sweater",
-              "stock": 30,
+              "units": 30,
               "unitPrice": 39.99,
               "description": "A cozy sweater for chilly days.",
               "sizes": ["S", "M", "L"],
@@ -349,7 +349,7 @@
             {
               "id": 2,
               "name": "T-Shirt",
-              "stock": 20,
+              "units": 20,
               "unitPrice": 19.99,
               "description": "A comfortable and stylish t-shirt.",
               "sizes": ["S", "M", "L"],
@@ -358,7 +358,7 @@
             {
               "id": 3,
               "name": "Jeans",
-              "stock": 25,
+              "units": 25,
               "unitPrice": 49.99,
               "description": "Classic denim jeans for everyday wear.",
               "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
@@ -367,7 +367,7 @@
             {
               "id": 4,
               "name": "Shorts",
-              "stock": 15,
+              "units": 15,
               "unitPrice": 24.99,
               "description": "Comfortable shorts for warm weather.",
               "sizes": ["S", "M", "L"],
@@ -376,7 +376,7 @@
             {
               "id": 5,
               "name": "Dress",
-              "stock": 20,
+              "units": 20,
               "unitPrice": 59.99,
               "description": "An elegant dress for special occasions.",
               "sizes": ["S", "M", "L"],
@@ -385,7 +385,7 @@
             {
               "id": 6,
               "name": "Jacket",
-              "stock": 10,
+              "units": 10,
               "unitPrice": 79.99,
               "description": "A stylish jacket to keep you warm.",
               "sizes": ["S", "M", "L"],
@@ -394,7 +394,7 @@
             {
               "id": 7,
               "name": "Blouse",
-              "stock": 25,
+              "units": 25,
               "unitPrice": 34.99,
               "description": "A fashionable blouse for women.",
               "sizes": ["S", "M", "L"],
@@ -403,7 +403,7 @@
             {
               "id": 8,
               "name": "Pants",
-              "stock": 20,
+              "units": 20,
               "unitPrice": 44.99,
               "description": "Versatile pants for everyday wear.",
               "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
@@ -412,7 +412,7 @@
             {
               "id": 9,
               "name": "Skirt",
-              "stock": 15,
+              "units": 15,
               "unitPrice": 39.99,
               "description": "A trendy skirt for any occasion.",
               "sizes": ["S", "M", "L"],
@@ -421,7 +421,7 @@
             {
               "id": 10,
               "name": "Sweatshirt",
-              "stock": 30,
+              "units": 30,
               "unitPrice": 29.99,
               "description": "A cozy sweatshirt for casual outings.",
               "sizes": ["S", "M", "L"],
@@ -432,13 +432,13 @@
         {
           "id": 5,
           "name": "Mock Provider 5",
-          "cuit": 123456789,
+          "cuit": "123456789",
           "address": "123 Mock Street",
           "products": [
             {
               "id": 1,
               "name": "T-Shirt",
-              "stock": 50,
+              "units": 50,
               "unitPrice": 19.99,
               "description": "A comfortable and stylish t-shirt.",
               "sizes": ["S", "M", "L"],
@@ -447,7 +447,7 @@
             {
               "id": 2,
               "name": "Jeans",
-              "stock": 20,
+              "units": 20,
               "unitPrice": 49.99,
               "description": "Classic denim jeans for everyday wear.",
               "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
@@ -456,7 +456,7 @@
             {
               "id": 3,
               "name": "Sweatshirt",
-              "stock": 30,
+              "units": 30,
               "unitPrice": 29.99,
               "description": "A cozy sweatshirt for casual outings.",
               "sizes": ["S", "M", "L"],
@@ -465,7 +465,7 @@
             {
               "id": 4,
               "name": "Shorts",
-              "stock": 15,
+              "units": 15,
               "unitPrice": 24.99,
               "description": "Comfortable shorts for warm weather.",
               "sizes": ["S", "M", "L"],
@@ -474,7 +474,7 @@
             {
               "id": 5,
               "name": "Dress",
-              "stock": 10,
+              "units": 10,
               "unitPrice": 59.99,
               "description": "An elegant dress for special occasions.",
               "sizes": ["S", "M", "L"],
@@ -483,7 +483,7 @@
             {
               "id": 6,
               "name": "Jacket",
-              "stock": 25,
+              "units": 25,
               "unitPrice": 79.99,
               "description": "A stylish jacket to keep you warm.",
               "sizes": ["S", "M", "L"],
@@ -492,7 +492,7 @@
             {
               "id": 7,
               "name": "Blouse",
-              "stock": 20,
+              "units": 20,
               "unitPrice": 34.99,
               "description": "A fashionable blouse for women.",
               "sizes": ["S", "M", "L"],
@@ -501,7 +501,7 @@
             {
               "id": 8,
               "name": "Pants",
-              "stock": 25,
+              "units": 25,
               "unitPrice": 44.99,
               "description": "Versatile pants for everyday wear.",
               "sizes": ["30Wx32L", "32Wx32L", "34Wx32L"],
@@ -510,7 +510,7 @@
             {
               "id": 9,
               "name": "Skirt",
-              "stock": 15,
+              "units": 15,
               "unitPrice": 39.99,
               "description": "A trendy skirt for any occasion.",
               "sizes": ["S", "M", "L"],
@@ -519,7 +519,7 @@
             {
               "id": 10,
               "name": "Sweater",
-              "stock": 20,
+              "units": 20,
               "unitPrice": 49.99,
               "description": "A cozy sweater for chilly days.",
               "sizes": ["S", "M", "L"],

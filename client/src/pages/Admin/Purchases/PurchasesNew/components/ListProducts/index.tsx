@@ -3,7 +3,7 @@ import './ListProducts.css';
 import RadioListInput from '../../../../../../components/RadioListInput';
 import Item from "../Item";
 
-import type { Product } from "../../utils";
+import type { Product } from "../../../utils";
 
 interface ListProductsProps {
     className?: string;

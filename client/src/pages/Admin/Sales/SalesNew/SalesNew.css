@@ -1,22 +1,11 @@
-.Titulo{
-    text-align: center;
-    margin: 10px;
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
 }
-.main-container{
-    background-color: var(--primary-color-l-base);
-    height: 600px;
-    width: 1000px;
-    border-radius: 1rem;
-}
-.containerDer{
-    margin: 10px;
-    padding: 10px;
-    
-    
-    border-radius: 10px;
-    width: 600px;
-    
-}
+
+
 .Inputs{
     margin: 5px;
     color: #4b4b4b;
@@ -28,27 +17,7 @@
     font-size: 20px;
     padding: 5px;
 }
-.ContainerIzq{
-    
-    margin: 10px;
-    border-radius: 10px;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-    border-color: #cfcfcf;
-    
-    
-}
-.FormContainer{
-    background-color: rgb(226, 226, 226);
-    height: 70%;
-    border-radius: 1rem;
-    box-shadow: 0 5px 10px -5px rgb(0 0 0  / 30%);
-    display: flex;
-    
-}
+
 .FormBoton{
     background-color: rgb(127, 158, 81);
     color:rgb(226, 226, 226);
@@ -63,20 +32,6 @@
 }
 .FormBoton:hover{
     background-color: rgb(153, 204, 77);
-}
-.containerVender{
-    width: 200px;
-    border-style: solid;
-    border-color: #cfcfcf;
-    padding: 10px;
-    border-radius: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.ProviderContainer{
-    margin: 10px;
-    overflow-x: hidden;
 }
 .ButtonBill{
     color: var(--primary-color-l-high);
@@ -106,11 +61,10 @@
     height: 100px;
 }
 .containerInputModal{
-    margin: 20px;
+    padding: 5%;
     background-color: rgb(255, 255, 255);
-    height: 82%;
-    
-   
+    flex: 1 1 auto;
+    border-radius: 10px;
 }
 .TextLabel{
     margin-left: 10px;
@@ -127,7 +81,7 @@
     flex-wrap: wrap;
     height: 80%;
 }
-.Container__Detalle_Ropa{
+.Container__Detalle__Ropa{
     width: 60%;
     height: 40%;
 }
@@ -158,7 +112,8 @@
     font-size: 12px;
 }
 .containerBill{
-    width: 50px;
+    flex: 0 0 auto;
+    width: 200px;
     height: 30px;
     margin: 5px;
     border-radius: 5px;
@@ -180,4 +135,189 @@
 }
 .btn__vender:hover{
     background-color: #5fd33c;
+}
+
+/*Style DropDown*/
+*{
+    font-family:"Product Sans";
+    
+}
+.dropdown{
+    width: 200px;
+}
+.dropdown__btn{
+    background-color: #ececec;
+    width: auto;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.dropdown__btn:hover{
+    background-color: #e6e6e6;
+}
+.dropdown__content{
+background-color: #f0f0f0;
+border-radius: 5px;
+}
+.dropdown__item{
+    padding: 5px;
+    cursor: pointer;
+}
+.dropdown__item:hover{
+    background-color: #e7e7e7;
+}
+/*form datos venta*/
+.main__container{
+    --sales-new-spacing:7.5px;
+
+    background-color: var(--primary-color-l-base);
+    border-radius: var(--brand-border-radius);
+
+    width: 80vw;
+    max-width: 1000px;
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: var(--sales-new-spacing);
+    gap: var(--sales-new-spacing);
+}
+.sales__new__data{
+    
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 64%;
+    gap: var(--sales-new-spacing);
+}
+.sales__new__inventory{
+    flex: 0 0 5%;
+}
+.sales__new__table{
+    flex: 1 0 30%;
+}
+.cart{
+    position: relative;
+    flex-direction: column;
+    flex: 1 0 30%;
+}
+.sales__new__products{
+    flex: 1 0 10%;
+}
+.salesnew__section{
+    padding: var(--sales-new-spacing);
+    border-radius:calc(var(--brand-border-radius) - var(--sales-new-spacing));
+    background-color: var(--primary-color-l-high);
+}
+
+/*modal venta realizada con exito*/
+.modal__sale{
+    background-color: #fff;
+    width: 80vw;
+    max-width: 400px;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 70px;
+    flex-wrap: wrap;
+}
+.modalContent{
+    background-color: #ffffff;
+    width: 80vw;
+    max-width: 700px;
+    min-height: 80vh;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.sub__modal{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+.sub__modal__titulo{
+    text-align: center;
+    flex: 1 0 10%;
+}
+.sub__modal__content{
+    flex: 1 0 40%;
+    margin: 2%;
+}
+.sub__modal__buttons{
+    flex: 1 0 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+}
+.btn__vender__modal-btncerrar{
+    background-color: #e03838;
+    padding: 5px;
+    color: #ffff;
+    border-radius: 5px;
+    border-style: hidden;
+    font-size: 15px;  
+}
+.btn__vender__modal-btncerrar:hover{
+    background-color: #f84040;
+}
+.btn__vender__modal-btnfactura{
+    background-color:  #5fd33c;
+    padding: 5px;
+    color: #ffff;
+    border-radius: 5px;
+    border-style: hidden;
+    font-size: 15px;
+    cursor: pointer;  
+}
+.btn__vender__modal-btnfactura:hover{
+    background-color: #8bdf5b;
+}
+.btn__cerrar{
+    background-color: #e03838;
+    padding: 5px;
+    color: #ffff;
+    border-radius: 5px;
+    border-style: hidden;
+    font-size: 21px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 3%;
+    left: 3%;
+}
+.btncerrar:hover{
+    background-color: #f84040;
+}
+.btn__vender{
+    color: #ffff;
+    background-color: #70b641;
+    font-size: 20px;
+    font-weight: 100;
+    cursor: pointer;
+    border-style: hidden;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s;
+    position: absolute;
+    bottom: 2%;
+    right: 5%;
+}
+.btn__Modal{
+    color: #ffff;
+    background-color: #6dcd47;
+    font-size: 20px;
+    font-weight: 100;
+    cursor: pointer;
+    border-style: hidden;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s;
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
 }

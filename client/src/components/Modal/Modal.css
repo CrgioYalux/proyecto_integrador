@@ -24,31 +24,26 @@
     bottom: 0;
 }
 .overlay{
-    background-color: rgba(49, 49, 49, 0.8);
+    backdrop-filter: blur(0.2rem);
+    background-color: rgba(168, 168, 168, 0.24);
     
     
 }
-.modalContent{
-    background-color: #fff;
-    width: 700px;
-    height: 800px;
-    border-radius: 5px;
-    margin-left: 32%;
-    margin-top: 5%;
+.overlay>div{
+    position: relative;
+}
 
-}
 .btn-cerrar{
     color: #ffff;
-    background-color: #cd4747;
+    background-color: #00af1d;
     font-size: 20px;
     font-weight: 100;
     cursor: pointer;
     border-style: hidden;
-    height: 40px;
-    width: 100px;
     border-radius: 5px;
     transition: transform 0.3s ease, background-color 0.3s;
     margin-left: 5%;
+    margin-bottom: 5%;
     
 }
 .btn-cerrar:hover{
@@ -68,4 +63,11 @@ background-color: #fc6767;
     font-size: 15px;
     
 }
+.select__option{
+    font-size: medium;
+    width: 100px;
+    cursor: pointer;
+
+}
+
 

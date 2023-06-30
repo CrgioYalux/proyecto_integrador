@@ -1,6 +1,9 @@
 import './Cart.css';
 
+import { useNavigate } from 'react-router-dom';
+
 import XMark from '../../../../../../components/Icons/XMark';
+import Button from '../../../../../../components/Button';
 
 import type { CartCustomProduct } from "../../../utils";
 
@@ -17,6 +20,8 @@ const Cart: React.FC<CartProps> = ({
     products,
     deleteFromCart,
 }) => {
+    const navigate = useNavigate();
+
     const total = products.reduce((acc, curr) => acc + curr.unitPrice * curr.units, 0).toFixed(2);
 
     return (
@@ -37,6 +42,10 @@ const Cart: React.FC<CartProps> = ({
                 ))}
             </div>
             <strong className='Cart__total'>Total ${total}</strong>
+            <Button onClick={() => {
+                alert('Purchased sucessfully');
+                navigate('/admin/purchases');
+            }}>Confirm</Button>
         </div>
     );
 };

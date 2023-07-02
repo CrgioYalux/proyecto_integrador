@@ -1,9 +1,12 @@
 import './SalesNew.css'
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import BtnModal from '../../../../components/Modal';
 import DropDown from '../../../../components/DropDown';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../../../components/Button';
+import RadioListInput from '../../../../components/RadioListInput';
+import data from "../Inventory/data.json"
+import type { Purchase } from '../../Purchases/utils'
 
 interface SalesNewProps {
 };
@@ -20,6 +23,13 @@ const SalesNew: React.FC<SalesNewProps> = ({ }) => {
     }
     const[selected, setSelected] = useState('')
     const navigate = useNavigate();
+
+
+    const [purchases, setPurchases] = useState<Purchase[]>([]);
+
+    useEffect(() => {
+            setPurchases(data.inventory as Purchase[]);
+        }, []);
     
 
     return (
@@ -33,7 +43,7 @@ const SalesNew: React.FC<SalesNewProps> = ({ }) => {
 
                 </div>
                 <div className="salesnew__section sales__new__products">
-
+                    <RadioListInput  htmlFor='product' list={} />
                 </div>
             </div>   
             <div className="salesnew__section cart">

@@ -2,9 +2,10 @@ import './PurchasesNew.css';
 
 import { useEffect, useState } from 'react';
 
-import data from './data.json';
-
 import { MAX_QUANTITY_TO_BUY } from './const';
+import { useDatabase } from '../../../../providers/Database';
+
+// import data from './data.json';
 
 import Filter from './components/Filter';
 import ListProviders from './components/ListProviders';
@@ -14,10 +15,13 @@ import Button from '../../../../components/Button';
 import Cart from './components/Cart';
 
 import type { ProductVariety, Product, CartCustomProduct, Provider } from '../utils';
+import type { Purchase } from '../../../../providers/Database/utils';
 
 interface PurchasesNewProps {};
 
 const PurchasesNew: React.FC<PurchasesNewProps> = ({}) => {
+    const [fixedProvider, setFixedProvider] = useState<boolean>(false);
+
     const [providers, setProviders] = useState<Provider[]>([]);
     const [providerProducts, setProviderProducts] = useState<Product[]>([]);
 
@@ -32,13 +36,29 @@ const PurchasesNew: React.FC<PurchasesNewProps> = ({}) => {
     const [units, setUnits] = useState<number>(0);
 
     const [cart, setCart] = useState<CartCustomProduct[]>([]);
+    
+    const database = useDatabase();
+
+    const confirmPurchase = (): void => {
+        const highestId: number = database.actions.purchases.getAll().reduce((acc, el) => acc + el.id, 1);
+        if (selectedProvider && cart.length !== 0) {
+            const purchase: Purchase = {
+                id: highestId,
+                amount: cart.reduce((acc, el) => acc + el.units * el.unitPrice, 0),
+                provider: selectedProvider,
+                cart,
+                dateInMs: Date.now().toString(),
+            };
+            database.actions.purchases.post(purchase);
+        }
+    };
 
     useEffect(() => {
         // this simulates the get request bringing the providers from the API
-        
-        setProviders(data.providers as Provider[]);
-        setSelectedProvider(data.providers[0] as Provider);
-        setProviderProducts(data.providers[0].products as Product[]);
+        const providers = database.actions.providers.getAll() as Provider[];
+        setProviders(providers);
+        setSelectedProvider(providers[0] as Provider);
+        setProviderProducts(providers[0].products as Product[]);
     }, []);
 
     const clearSelectedProduct = (): void => {
@@ -56,6 +76,7 @@ const PurchasesNew: React.FC<PurchasesNewProps> = ({}) => {
                 color: selectedProductcolor.name as string,
                 brand: selectedProvider.name,
             }]);
+            setFixedProvider(true);
 
             clearSelectedProduct();
         }
@@ -88,12 +109,14 @@ const PurchasesNew: React.FC<PurchasesNewProps> = ({}) => {
     return (
         <div className='PurchasesNew'>
             <div className='PurchasesNew__form'>
-                <ListProviders
+                {fixedProvider 
+                ? <strong>{selectedProvider?.name}</strong>
+                :<ListProviders
                 className='PurchasesNew__section PurchasesNew-form__providers'
                 providers={providers}
                 selectedProvider={selectedProvider} 
                 selectProvider={selectProvider} 
-                />
+                />}
                 <div className='PurchasesNew__section PurchasesNew-form__products'>
                     <ListProducts
                     products={providerProducts}
@@ -132,7 +155,7 @@ const PurchasesNew: React.FC<PurchasesNewProps> = ({}) => {
             <div className='PurchasesNew__section PurchasesNew__cart'>
                 {!cart.length 
                     ? <span>Add products</span>
-                    : <Cart products={cart} deleteFromCart={deleteFromCart} />}
+                    : <Cart products={cart} deleteFromCart={deleteFromCart} confirmPurchase={confirmPurchase} />}
             </div>
         </div>
    );

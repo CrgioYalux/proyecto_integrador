@@ -1,5 +1,5 @@
-{"providers":[
-
+{
+    "providers":[
         {   
             "id":1,
             "name":"adidas",
@@ -527,5 +527,5 @@
             }
           ]
         }
-]}
-
+    ]
+}

@@ -20,6 +20,12 @@
 
 .ListPurchases .ListPurchases__item {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ListPurchases .ListPurchases__item > .ListPurchases-item__compressed-view {
+    width: 100%;
     flex: 1 1 auto;
 
     display: flex;
@@ -33,7 +39,17 @@
     background-color: var(--primary-color-l-highest);
 }
 
-.ListPurchases .ListPurchases__item > .ListPurchases-item__content {
+.ListPurchases .ListPurchases__item > .ListPurchases-item__expanded-view {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color-l-highest);
+    padding: var(--Purchases-spacing);
+
+    font-size: 1em;
+    color: var(--primary-color-l-base);
+}
+
+.ListPurchases .ListPurchases__item > .ListPurchases-item__compressed-view > .ListPurchases-item__content {
     flex: 1 1 auto;
 
     display: flex;
@@ -43,7 +59,7 @@
     overflow: hidden;
 }
 
-.ListPurchases .ListPurchases__item > button {
+.ListPurchases .ListPurchases__item > .ListPurchases-item__compressed-view > button {
     flex: 0 0 7.5%;
     height: 100%;
     aspect-ratio: 1;
@@ -53,14 +69,14 @@
     cursor: pointer;
 }
 
-.ListPurchases .ListPurchases__item > button > .ListPurchases-item__expand-bt {
+.ListPurchases .ListPurchases__item > .ListPurchases-item__compressed-view > button > .ListPurchases-item__expand-bt {
     width: 55%;
     height: 55%;
 
     fill: var(--primary-color-l-high);
 }
 
-.ListPurchases .ListPurchases__item > .ListPurchases-item__content > span {
+.ListPurchases .ListPurchases__item > .ListPurchases-item__compressed-view > .ListPurchases-item__content > span {
     flex: 1 0 fit-content;
 
     font-size: 1em;
@@ -73,8 +89,8 @@
     background-color: var(--primary-color-l-high);
 }
 
-.ListPurchases .ListPurchases__item > .ListPurchases-item__content > span::selection,
-.ListPurchases .ListPurchases__item > .ListPurchases-item__content > span > strong::selection {
+.ListPurchases .ListPurchases__item > .ListPurchases-item__compressed-view > .ListPurchases-item__content > span::selection,
+.ListPurchases .ListPurchases__item > .ListPurchases-item__compressed-view > .ListPurchases-item__content > span > strong::selection {
     background-color: var(--secondary-color-l-low);
     color: var(--primary-color-l-high);
 }

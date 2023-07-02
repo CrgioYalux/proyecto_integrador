@@ -18,7 +18,8 @@ interface LocalStorageAction {
     value?: string;
 };
 
-type LocalStorageState<T> = T | null;
+// type LocalStorageState<T> = T | null;
+type LocalStorageState<T> = T;
 
 const GetItemCase = <T,>(state: LocalStorageState<T>, action: LocalStorageAction): LocalStorageState<T> => {
     const { key } = action;
@@ -34,7 +35,7 @@ const GetItemCase = <T,>(state: LocalStorageState<T>, action: LocalStorageAction
     }
     catch (error) {
         console.error(error);
-        return null;
+        return state;
     };
 };
 
@@ -56,7 +57,7 @@ const RemoveItemCase = <T,>(state: LocalStorageState<T>, action: LocalStorageAct
     const { key } = action;
     if (key === undefined) return state;
     window.localStorage.removeItem(key);
-    return null;
+    return state;
 };
 
 const reducer = <T,>(state: T, action: LocalStorageAction) => {

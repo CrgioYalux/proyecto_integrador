@@ -67,6 +67,7 @@
   /* States */
   --success-color: hsl(90, 50%, 50%);
   --unsuccess-color: hsl(0, 50%, 50%);
+  --warning-color: hsl(60, 50%, 50%);
 }
 
 :root.light {

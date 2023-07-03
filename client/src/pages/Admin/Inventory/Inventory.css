@@ -1,62 +1,137 @@
-.Title {
-    text-align: center;
-    position: fixed;
-    top: 60px;
-}
+.Inventory {
+    --Inventory-spacing: 7.5px;
 
-.Search-box {
-    position: fixed;
-    top: 150px;
-    left: 25px;
-}
+    flex: 0 1 fit-content;
+    width: 90%;
+    max-height: 550px;
 
-.Search-box input {
-    width: 200px;
-    padding: 5px;
-    border-radius: 8px;
-}
-
-@media screen and  (max-width: 168px){
-    .Search-box {
-        position: static;
-    }
-}
-
-.Table {
     display: flex;
-    justify-content: center;
-    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+
+    font-size: clamp(1em, 8vw, .8em);
+
 }
 
+.Inventory > h1 {
+    flex: 0 0 fit-content;
+    width: fit-content;
 
-.Item-span {
-    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: auto;
+
+    font-size: 2em;
     color: var(--secondary-color-l-base);
-    outline: var(--secondary-color-l-base) 1px solid;
-    padding-left: 5px;
-    padding-right: 5px;
-    outline-offset: -1px;
-    flex: 0 0 50%;
+    text-align: center;
 }
 
-.Item-span-no-stock {
-    font-size: 20px;
-    color: var(--secondary-color-l-base);
-    outline: var(--secondary-color-l-base) 1px solid;
-    padding-left: 5px;
-    padding-right: 5px;
-    outline-offset: -1px;
-    flex: 0 0 50%;
-    background-color: #c63637;
+.Inventory > .Inventory__content {
+    flex: 1 1 auto;
+    width: 100%;
+    padding: var(--Inventory-spacing);
+
+    margin-top: 0;
+    margin-bottom: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--Inventory-spacing);
+
+    background-color: var(--primary-color-l-high);
+    border: 1px solid var(--primary-color-l-highest);
+    border-top: 0;
+    border-radius: var(--brand-border-radius);
 }
 
-.Item-span-little-stock {
-    font-size: 20px;
-    color: var(--secondary-color-l-base);
-    outline: var(--secondary-color-l-base) 1px solid;
-    padding-left: 5px;
-    padding-right: 5px;
-    outline-offset: -1px;
-    flex: 0 0 50%;
-    background-color:#c8ca66;
+.Inventory > .Inventory__content > .Inventory__filter {
+    flex: 0 0 fit-content;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--Inventory-spacing);
 }
+
+.Inventory > .Inventory__content > .Inventory__filter > .Inventory-filter__input {
+    flex: 0 1 25%;
+
+    font-size: .9em;
+    padding: .5em;
+
+    border: 0;
+    border-radius: calc(var(--brand-border-radius) - var(--Inventory-spacing));
+
+    color: var(--primary-color-l-base);
+    background-color: var(--secondary-color-l-low);
+}
+
+.Inventory > .Inventory__content > .Inventory__filter > .Inventory-filter__icon {
+    flex: 0 0 auto;
+    fill: var(--secondary-color-l-low);
+
+    cursor: pointer;
+}
+
+.Inventory > .Inventory__content > .Inventory__list {
+    flex: 1 1 auto;
+    width: 100%;
+    max-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: auto;
+
+    background-color: var(--primary-color-l-higher);
+    border-radius: calc(var(--brand-border-radius) - var(--Inventory-spacing));
+}
+
+.Inventory > .Inventory__content > .Inventory__list > .Inventory-list__item {
+    flex: 0 0 fit-content;
+    padding: var(--Inventory-spacing) 0;
+
+    display: flex;
+    flex-direction: row;
+
+    border-bottom: 1px solid currentColor;
+    border-radius: 0;
+}
+
+.Inventory > .Inventory__content > .Inventory__list > .Inventory-list__item:last-of-type {
+    border-radius: calc(var(--brand-border-radius) - var(--Inventory-spacing));
+}
+
+.Inventory > .Inventory__content > .Inventory__list > .Inventory-list__item > span {
+    display: block;
+    flex: 1 0 20%;
+    height: fit-content;
+
+    font-size: .9em;
+    font-family: var(--secondary-font);
+    text-align: center;
+
+    color: var(--secondary-color-l-base);
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* word-wrap: break-word; */
+}
+
+.Inventory > .Inventory__content > .Inventory__list > .Inventory-list__item > span:first-of-type {
+    flex: 0 0 4ch;
+}
+
+.Inventory > .Inventory__content > .Inventory__list > .Inventory-list__item:not(.Inventory-list__header):not(.--above-warning-threshold) > span {
+    color: black;
+}
+
+.Inventory > .Inventory__content > .Inventory__list > .Inventory-list__item.--no-stock {
+    background-color: var(--unsuccess-color);
+}
+
+.Inventory > .Inventory__content > .Inventory__list > .Inventory-list__item.--below-warning-threshold {
+    background-color: var(--warning-color);
+}
+

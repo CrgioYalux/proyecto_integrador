@@ -12,7 +12,7 @@
         },
         {
             "id": 2,
-            "name": "t-shirt",
+            "name": "shirt",
             "description": "soft and elegant",
             "unitPrice": 200,
             "stock": 10,
@@ -22,7 +22,7 @@
         },
         {
             "id": 3,
-            "name": "t-shirt",
+            "name": "skirt",
             "description": "soft and elegant",
             "unitPrice": 200,
             "stock": 10,
@@ -32,13 +32,93 @@
         },
         {
             "id": 4,
-            "name": "t-shirt",
+            "name": "socks",
+            "description": "soft and elegant",
+            "unitPrice": 200,
+            "stock": 5,
+            "color": "pink",
+            "size": "xl",
+            "brand": "Adidas"
+        },
+        {
+            "id": 5,
+            "name": "socks",
+            "description": "soft and elegant",
+            "unitPrice": 200,
+            "stock": 0,
+            "color": "pink",
+            "size": "xl",
+            "brand": "Puma"
+        },
+        {
+            "id": 6,
+            "name": "trainers",
+            "description": "soft and elegant",
+            "unitPrice": 200,
+            "stock": 50,
+            "color": "pink",
+            "size": "xl",
+            "brand": "Nike"
+        },
+        {
+            "id": 7,
+            "name": "socks",
+            "description": "soft and elegant",
+            "unitPrice": 200,
+            "stock": 0,
+            "color": "pink",
+            "size": "xl",
+            "brand": "Puma"
+        },
+        {
+            "id": 8,
+            "name": "socks",
+            "description": "soft and elegant",
+            "unitPrice": 200,
+            "stock": 100,
+            "color": "pink",
+            "size": "xl",
+            "brand": "Puma"
+        },
+        {
+            "id": 9,
+            "name": "socks",
+            "description": "soft and elegant",
+            "unitPrice": 200,
+            "stock": 8,
+            "color": "pink",
+            "size": "xl",
+            "brand": "Puma"
+        },
+        {
+            "id": 10,
+            "name": "hat",
             "description": "soft and elegant",
             "unitPrice": 200,
             "stock": 10,
             "color": "pink",
             "size": "xl",
-            "brand": "Adidas"
+            "brand": "Puma"
+        },
+        {
+            "id": 11,
+            "name": "socks",
+            "description": "soft and elegant",
+            "unitPrice": 200,
+            "stock": 8,
+            "color": "pink",
+            "size": "xl",
+            "brand": "Puma"
+        },
+        {
+            "id": 12,
+            "name": "beanie",
+            "description": "soft and elegant",
+            "unitPrice": 200,
+            "stock": 10,
+            "color": "pink",
+            "size": "xl",
+            "brand": "Puma"
         }
     ]
 }

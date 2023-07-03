@@ -78,3 +78,13 @@ $ git push -u origin my_branch
         DB_PASS="user_password"
         DB_NAME="database_name"
     ```
+
+---
+
+### Interesting stuff learned while doing this
+- IN, OUT and INOUT params in a stored procedure definition
+    - [Stack overflow nice explanation](https://stackoverflow.com/questions/5537978/stored-procedures-in-out-inout-parameters)
+    - [A more detailed one](https://www.mysqltutorial.org/stored-procedures-parameters.aspx)
+    - TL;DR: pass by value (IN - allows to use the param inside),
+    by reference (OUT - allows to modify the param)
+    or both (INOUT - allows IN and OUT behaviors at the same time).

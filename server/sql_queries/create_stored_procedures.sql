@@ -34,7 +34,7 @@ BEGIN
 		SET @complex_accounting_entry_id := LAST_INSERT_ID();
 	END IF;
 
-	INSERT INTO SimpleAccountingEntry (side, amount, account_id, complexAccoutingEntry_id)
+	INSERT INTO SimpleAccountingEntry (side, amount, account_id, complexAccountingEntry_id)
 	VALUES ("DEBIT", param_amount, param_account_id, @complex_accounting_entry_id);
 
 	IF is_last = 1 THEN
@@ -74,7 +74,7 @@ BEGIN
 		SET @complex_accounting_entry_id := LAST_INSERT_ID();
 	END IF;
 
-	INSERT INTO SimpleAccountingEntry (side, amount, account_id, complexAccoutingEntry_id)
+	INSERT INTO SimpleAccountingEntry (side, amount, account_id, complexAccountingEntry_id)
 	VALUES ("CREDIT", param_amount, param_account_id, @complex_accounting_entry_id);
 
 	IF is_last = 1 THEN

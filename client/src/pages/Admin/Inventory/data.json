@@ -1,0 +1,44 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "t-shirt",
+            "description": "soft and elegant",
+            "unitPrice": 200,
+            "stock": 10,
+            "color": "pink",
+            "size": "xl",
+            "brand": "Adidas"
+        },
+        {
+            "id": 2,
+            "name": "t-shirt",
+            "description": "soft and elegant",
+            "unitPrice": 200,
+            "stock": 10,
+            "color": "pink",
+            "size": "xl",
+            "brand": "Adidas"
+        },
+        {
+            "id": 3,
+            "name": "t-shirt",
+            "description": "soft and elegant",
+            "unitPrice": 200,
+            "stock": 10,
+            "color": "pink",
+            "size": "xl",
+            "brand": "Adidas"
+        },
+        {
+            "id": 4,
+            "name": "t-shirt",
+            "description": "soft and elegant",
+            "unitPrice": 200,
+            "stock": 10,
+            "color": "pink",
+            "size": "xl",
+            "brand": "Adidas"
+        }
+    ]
+}

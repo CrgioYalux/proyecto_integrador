@@ -26,6 +26,11 @@ type SoldProduct = Omit<BoughtProduct, 'provider'> & {
     brand: string,
 };
 
+type InventoryProduct = Omit<SoldProduct, 'units'> & {
+    stock: number;
+};
+
+
 type Client = {
     id: number,
     name: string,
@@ -92,6 +97,7 @@ type DependentMinimunCRUDOperations<T> = {
 export type { 
     Product,
     BoughtProduct,
+    InventoryProduct,
     Client,
     Sale,
     Purchase,

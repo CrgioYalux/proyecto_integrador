@@ -76,6 +76,7 @@
 .Inventory > .Inventory__content > .Inventory__list {
     flex: 1 1 auto;
     width: 100%;
+    min-height: 400px;
     max-height: 400px;
 
     display: flex;

@@ -1,4 +1,4 @@
--- USE database;
+-- USE database
 
 DROP TABLE IF EXISTS SimpleAccountingEntry;
 DROP TABLE IF EXISTS ComplexAccountingEntry;
@@ -10,6 +10,17 @@ DROP TABLE IF EXISTS Client;
 DROP TABLE IF EXISTS Product;
 DROP TABLE IF EXISTS ComplexPurchaseOperation;
 DROP TABLE IF EXISTS Provider;
+
+-- DELETE FROM SimpleAccountingEntry;
+-- DELETE FROM ComplexAccountingEntry;
+-- DELETE FROM Account;
+-- DELETE FROM SimplePurchaseOperation;
+-- DELETE FROM SimpleSaleOperation;
+-- DELETE FROM ComplexSaleOperation;
+-- DELETE FROM Client;
+-- DELETE FROM Product;
+-- DELETE FROM ComplexPurchaseOperation;
+-- DELETE FROM Provider;
 
 CREATE TABLE IF NOT EXISTS Account (
 	id INT AUTO_INCREMENT NOT NULL,
@@ -33,6 +44,7 @@ CREATE TABLE IF NOT EXISTS Client (
 CREATE TABLE IF NOT EXISTS ComplexAccountingEntry (
 	id INT AUTO_INCREMENT NOT NULL,
 	description VARCHAR(250) NOT NULL,
+	date DATETIME DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY (id)
 );
 
@@ -72,7 +84,7 @@ CREATE TABLE IF NOT EXISTS Product (
 CREATE TABLE IF NOT EXISTS ComplexSaleOperation (
 	id INT AUTO_INCREMENT NOT NULL,
 	amount DECIMAL(10, 2) NOT NULL,
-	date DATE NOT NULL,
+	date DATETIME DEFAULT CURRENT_TIMESTAMP,
 	client_id INT NOT NULL,
 	PRIMARY KEY (id),
 	FOREIGN KEY (client_id) REFERENCES Client(id)
@@ -91,7 +103,7 @@ CREATE TABLE IF NOT EXISTS SimpleSaleOperation (
 CREATE TABLE IF NOT EXISTS ComplexPurchaseOperation (
 	id INT AUTO_INCREMENT NOT NULL,
 	amount DECIMAL(10, 2) NOT NULL,
-	date DATE NOT NULL,
+	date DATETIME DEFAULT CURRENT_TIMESTAMP,
 	provider_id INT NOT NULL,
 	PRIMARY KEY (id),
 	FOREIGN KEY (provider_id) REFERENCES Provider(id)
@@ -106,5 +118,3 @@ CREATE TABLE IF NOT EXISTS SimplePurchaseOperation (
 	FOREIGN KEY (complexPurchaseOperation_id) REFERENCES ComplexPurchaseOperation(id),
 	FOREIGN KEY (product_id) REFERENCES Product(id)
 );
-
-SHOW TABLES;

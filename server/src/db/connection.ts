@@ -3,7 +3,6 @@ import path from 'path'
 import mysql from 'mysql';
 
 import { DB } from "../config/db";
-// import { CREATE_TABLES, CREATE_STORED_PROCEDURES } from './const';
 
 import type { PoolConnection } from "mysql";
 
@@ -17,7 +16,7 @@ const pool = mysql.createPool({
     database: DB.NAME,
 });
 
-const pathToQuery = (filename: string): string => path.join(__dirname, '..', '..', 'sql_queries', filename);
+const pathToQuery = (filename: string): string => path.join(__dirname, 'sql_queries', filename);
 
 function createTables(pool: PoolConnection): void {
     const query = fs.readFileSync(pathToQuery('create_tables.sql'), 'utf8');
@@ -72,11 +71,4 @@ function createStoredProcedures(pool: PoolConnection): void {
     });
 };
 
-function test(pool: PoolConnection): void {
-    pool.query('Show tables', [5], (err, results, fields) => {
-        if (err) throw err;
-        console.log(`Database tables: ${JSON.stringify(results, null, 2)}`);
-    });
-};
-
-export { pool, createTables, createStoredProcedures, test };
+export { pool, createTables, createStoredProcedures };

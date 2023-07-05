@@ -6,7 +6,7 @@ import { NOT_FOUND_PAGE } from './const';
 
 import type { Express } from 'express';
 
-const createServer = (): Express => {
+const createExpressApp = (): Express => {
     const app = express();
 
     app.disable('x-powered-by');
@@ -34,4 +34,4 @@ const createServer = (): Express => {
     return app;
 };
 
-export { createServer };
+export { createExpressApp };

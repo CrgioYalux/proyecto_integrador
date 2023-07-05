@@ -1,10 +1,5 @@
 import dotenv from 'dotenv';
-import path from 'path';
-
-const IS_PROD = process.env.NODE_ENV === 'production';
-const PATH_TO_ENV = path.join(
-    __dirname, '..', '..', '.env'
-);
+import { IS_PROD, PATH_TO_ENV_FILE } from './environment';
 
 type Database = {
     HOST: string,
@@ -14,7 +9,7 @@ type Database = {
     NAME: string,
 };
 
-const env = dotenv.config({ path: PATH_TO_ENV }).parsed;
+const env = dotenv.config({ path: PATH_TO_ENV_FILE }).parsed;
 
 const HOST = IS_PROD ? process.env.DB_HOST : env?.DB_HOST;
 const PORT = IS_PROD ? process.env.DB_PORT : env?.DB_PORT;

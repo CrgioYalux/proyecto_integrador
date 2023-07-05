@@ -1,0 +1,16 @@
+DROP TABLE IF EXISTS User;
+DROP TABLE IF EXISTS SimpleAccountingEntry;
+DROP TABLE IF EXISTS ComplexAccountingEntry;
+DROP TABLE IF EXISTS Account;
+DROP TABLE IF EXISTS SimplePurchaseOperation;
+DROP TABLE IF EXISTS SimpleSaleOperation;
+DROP TABLE IF EXISTS ComplexSaleOperation;
+DROP TABLE IF EXISTS Client;
+DROP TABLE IF EXISTS Product;
+DROP TABLE IF EXISTS ComplexPurchaseOperation;
+DROP TABLE IF EXISTS Provider;
+
+DROP PROCEDURE IF EXISTS create_user;
+DROP PROCEDURE IF EXISTS create_account;
+DROP PROCEDURE IF EXISTS debit_account;
+DROP PROCEDURE IF EXISTS credit_account;

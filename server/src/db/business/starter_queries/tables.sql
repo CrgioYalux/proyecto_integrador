@@ -1,26 +1,10 @@
--- USE database
-
-DROP TABLE IF EXISTS SimpleAccountingEntry;
-DROP TABLE IF EXISTS ComplexAccountingEntry;
-DROP TABLE IF EXISTS Account;
-DROP TABLE IF EXISTS SimplePurchaseOperation;
-DROP TABLE IF EXISTS SimpleSaleOperation;
-DROP TABLE IF EXISTS ComplexSaleOperation;
-DROP TABLE IF EXISTS Client;
-DROP TABLE IF EXISTS Product;
-DROP TABLE IF EXISTS ComplexPurchaseOperation;
-DROP TABLE IF EXISTS Provider;
-
--- DELETE FROM SimpleAccountingEntry;
--- DELETE FROM ComplexAccountingEntry;
--- DELETE FROM Account;
--- DELETE FROM SimplePurchaseOperation;
--- DELETE FROM SimpleSaleOperation;
--- DELETE FROM ComplexSaleOperation;
--- DELETE FROM Client;
--- DELETE FROM Product;
--- DELETE FROM ComplexPurchaseOperation;
--- DELETE FROM Provider;
+CREATE TABLE IF NOT EXISTS User (
+	id INT AUTO_INCREMENT NOT NULL,
+	username VARCHAR(50) NOT NULL,
+	hash CHAR(60) NOT NULL,
+	salt CHAR(20) NOT NULL,
+	PRIMARY KEY (id)
+);
 
 CREATE TABLE IF NOT EXISTS Account (
 	id INT AUTO_INCREMENT NOT NULL,

@@ -1,10 +1,13 @@
-DROP PROCEDURE IF EXISTS check_tables;
-CREATE PROCEDURE check_tables()
+CREATE PROCEDURE create_user(
+	IN param_username VARCHAR(50),
+	IN param_hash CHAR(60),
+	IN param_salt CHAR(60)
+)
 BEGIN
-	SHOW TABLES;
+	INSERT INTO User (username, hash, salt)
+	VALUES (param_username, param_hash, param_salt);
 END;
 
-DROP PROCEDURE IF EXISTS create_account;
 CREATE PROCEDURE create_account(
 	IN param_name VARCHAR(50),
 	IN param_balance DECIMAL(10, 2),
@@ -15,7 +18,6 @@ BEGIN
 	VALUES (param_name, param_balance, param_parent_id);
 END;
 
-DROP PROCEDURE IF EXISTS debit_account;
 CREATE PROCEDURE debit_account(
 	IN param_description VARCHAR(250),
 	IN param_amount DECIMAL(10, 2),
@@ -55,7 +57,6 @@ BEGIN
 	END IF;
 END;
 
-DROP PROCEDURE IF EXISTS credit_account;
 CREATE PROCEDURE credit_account(
 	IN param_description VARCHAR(250),
 	IN param_amount DECIMAL(10, 2),

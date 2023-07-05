@@ -24,6 +24,11 @@ const PROVIDERS_ROUTES = {
     GET: /\/api\/providers\/get\/?/,
 };
 
+const USER_ROUTES = {
+    POST: /\/api\/users\/post\/?/,
+    AUTH: /\/api\/users\/auth\/?/,
+};
+
 export {
     PRODUCTS_ROUTES,
     SALES_ROUTES,
@@ -31,4 +36,5 @@ export {
     ACCOUNTS_ROUTES,
     ACCOUNTING_ENTRIES_ROUTES,
     PROVIDERS_ROUTES,
+    USER_ROUTES,
 };

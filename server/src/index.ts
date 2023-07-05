@@ -11,8 +11,8 @@ const PORT = process.env.PORT ?? '4000';
             console.log(`Error while attempting connection to database: ${err}`);
             return;
         }
-        db.business.setStarterConfig(connection);
-        connection.release();
+        db.business.setStarterConfig(connection)
+        .then(() => connection.release());
     });
 
     const server = http.createServer(createExpressApp());

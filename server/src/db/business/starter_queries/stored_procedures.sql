@@ -95,3 +95,29 @@ BEGIN
 		
 	END IF;
 END;
+
+CREATE PROCEDURE increase_product_stock(
+	IN param_product_id INT,
+	IN param_stock INT
+)
+BEGIN
+	
+	UPDATE Inventory I
+	SET I.stock = I.stock + param_stock
+	WHERE I.product_id = param_product_id;
+
+END;
+
+CREATE PROCEDURE decrease_product_stock(
+	IN param_product_id INT,
+	IN param_stock INT
+)
+BEGIN
+
+	UPDATE INVENTORY I
+	SET I.stock = I.stock - param_stock
+	WHERE I.product_id = param_product_id;
+
+END;
+
+

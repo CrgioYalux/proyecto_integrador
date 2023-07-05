@@ -6,4 +6,6 @@ type CheckHealthExpect = {
     };
 };
 
-export type { CheckHealthExpect };
+type QueryExecutionState = { ok: boolean, msg: string };
+
+export type { CheckHealthExpect, QueryExecutionState };

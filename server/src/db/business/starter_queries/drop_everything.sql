@@ -1,16 +1,40 @@
-DROP TABLE IF EXISTS User;
-DROP TABLE IF EXISTS SimpleAccountingEntry;
-DROP TABLE IF EXISTS ComplexAccountingEntry;
-DROP TABLE IF EXISTS Account;
-DROP TABLE IF EXISTS SimplePurchaseOperation;
-DROP TABLE IF EXISTS SimpleSaleOperation;
-DROP TABLE IF EXISTS ComplexSaleOperation;
-DROP TABLE IF EXISTS Client;
-DROP TABLE IF EXISTS Product;
-DROP TABLE IF EXISTS ComplexPurchaseOperation;
-DROP TABLE IF EXISTS Provider;
+DROP PROCEDURE IF EXISTS drop_everything;
 
-DROP PROCEDURE IF EXISTS create_user;
-DROP PROCEDURE IF EXISTS create_account;
-DROP PROCEDURE IF EXISTS debit_account;
-DROP PROCEDURE IF EXISTS credit_account;
+-- SELECT CONCAT('DROP TABLE IF EXISTS ', t.table_name, ' CASCADE;') as query
+-- FROM information_schema.tables t
+-- WHERE 
+-- 	t.table_schema = param_db_name
+-- 	AND
+-- 	t.table_type = "BASE TABLE"
+
+CREATE PROCEDURE drop_everything(
+	IN param_db_name VARCHAR(50)
+)
+BEGIN
+
+	-- SELECT CONCAT('DROP TABLE IF EXISTS ', t.table_name, ' CASCADE;') as query
+	-- FROM information_schema.tables t
+	-- WHERE 
+	-- 	t.table_schema = param_db_name
+	-- 	AND
+	-- 	t.table_type = "BASE TABLE"
+	-- UNION (
+	-- 	SELECT CONCAT('DROP VIEW IF EXISTS ', v.table_name, ';') as query
+	-- 	FROM information_schema.views v
+	-- 	WHERE v.table_schema = param_db_name
+	-- ) UNION (
+	-- 	SELECT CONCAT('DROP ', r.routine_type, ' IF EXISTS ', r.routine_name, ';') as query
+	-- 	FROM information_schema.routines r
+	-- 	WHERE r.routine_schema = param_db_name
+	-- );
+
+	SELECT CONCAT('DROP VIEW IF EXISTS ', v.table_name, ';') as query
+	FROM information_schema.views v
+	WHERE v.table_schema = param_db_name
+	UNION (
+		SELECT CONCAT('DROP ', r.routine_type, ' IF EXISTS ', r.routine_name, ';') as query
+		FROM information_schema.routines r
+		WHERE r.routine_schema = param_db_name
+	);
+
+END;

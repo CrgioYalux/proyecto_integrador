@@ -4,9 +4,9 @@ import { pathToStarterQueries } from './helpers';
 import type { PoolConnection } from 'mysql';
 import type { QueryExecutionState } from './utils';
 
-function createStarterStoredProcedures(pool: PoolConnection, logs?: boolean): Promise<QueryExecutionState> {
-    const query = fs.readFileSync(pathToStarterQueries('stored_procedures.sql'), 'utf8');
-
+function createStarterViews(pool: PoolConnection, logs?: boolean): Promise<QueryExecutionState> {
+    const query = fs.readFileSync(pathToStarterQueries('views.sql'), 'utf8');
+    
     return new Promise<QueryExecutionState>((resolve) => {
         pool.beginTransaction((transaction_error) => {
             if (transaction_error) throw { transaction_error };
@@ -22,6 +22,7 @@ function createStarterStoredProcedures(pool: PoolConnection, logs?: boolean): Pr
                     console.log(`Exec ${query}`);
                     console.log(`Resulted in ${results}`);
                 }
+
             });
 
             pool.commit((commit_error) => {
@@ -31,11 +32,10 @@ function createStarterStoredProcedures(pool: PoolConnection, logs?: boolean): Pr
                     });
                 }
 
-                resolve({ ok: true, msg: 'Commit: stored procedures' });
+                resolve({ ok: true, msg: `Commit: create views` });
             });
         });
     });
-
 };
 
-export { createStarterStoredProcedures };
+export { createStarterViews };

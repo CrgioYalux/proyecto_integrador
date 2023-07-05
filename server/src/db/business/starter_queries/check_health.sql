@@ -5,7 +5,23 @@ CREATE PROCEDURE check_tables_exist(
 BEGIN
 	SELECT	t.table_name
 	FROM information_schema.tables t
-	WHERE t.table_schema = param_db_name;
+	WHERE
+		t.table_schema = param_db_name
+		AND
+		t.table_type = "BASE TABLE";
+END;
+
+DROP PROCEDURE IF EXISTS check_views_exist;
+CREATE PROCEDURE check_views_exist(
+	IN param_db_name VARCHAR(50)
+)
+BEGIN
+	SELECT	t.table_name as view_name
+	FROM information_schema.tables t
+	WHERE
+		t.table_schema = param_db_name
+		AND
+		t.table_type = "VIEW";
 END;
 
 DROP PROCEDURE IF EXISTS check_stored_procedures_exist;

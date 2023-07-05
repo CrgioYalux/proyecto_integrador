@@ -57,12 +57,21 @@ CREATE TABLE IF NOT EXISTS Product (
 	name VARCHAR(50) NOT NULL,
 	description VARCHAR(250) NOT NULL,
 	unitPrice DECIMAL(10, 2) NOT NULL,
-	units INT NOT NULL,
 	provider_id INT NOT NULL,
-	colors VARCHAR(100) NOT NULL,
-	sizes VARCHAR(100) NOT NULL,
+	colors VARCHAR(150) NOT NULL,
+	sizes VARCHAR(150) NOT NULL,
 	PRIMARY KEY (id),
 	FOREIGN KEY (provider_id) REFERENCES Provider(id)
+);
+
+CREATE TABLE IF NOT EXISTS Inventory (
+	id INT AUTO_INCREMENT NOT NULL,
+	product_id INT NOT NULL,
+	stock INT NOT NULL CHECK (stock > -1),
+	color VARCHAR(20) NOT NULL,
+	size VARCHAR(20) NOT NULL,
+	PRIMARY KEY (id),
+	FOREIGN KEY (product_id) REFERENCES Product (id)
 );
 
 CREATE TABLE IF NOT EXISTS ComplexSaleOperation (

@@ -1,32 +1,44 @@
 import type { PoolConnection } from 'mysql';
-import type { CheckHealthExpect } from './utils';
+import type { CheckHealthExpect, QueryExecutionState } from './utils';
+
+const checkTablesExistQuery: string = `
+	SELECT t.table_name as table_name
+	FROM information_schema.tables t
+	WHERE 
+            t.table_schema = ?
+            AND
+            t.table_type = 'BASE TABLE';
+`;
+
+const checkViewsExistQuery: string = `
+	SELECT t.table_name as view_name
+	FROM information_schema.tables t
+	WHERE 
+            t.table_schema = ?
+            AND
+            t.table_type = 'VIEW';
+`;
 
 const checkStoredProceduresExistQuery: string = `
 	SELECT	r.routine_name as stored_procedure_name
 	FROM information_schema.routines as r
 	WHERE
-		r.routine_schema = ?
-		AND
-		r.routine_type = 'PROCEDURE';
+            r.routine_schema = ?
+            AND
+            r.routine_type = 'PROCEDURE';
 `;
 
 const checkFunctionsExistQuery: string = `
 	SELECT	r.routine_name as function_name
 	FROM information_schema.routines as r
 	WHERE
-		r.routine_schema = ?
-		AND
-		r.routine_type = 'FUNCTION';
+            r.routine_schema = ?
+            AND
+            r.routine_type = 'FUNCTION';
 `;
 
-const checkTablesExistQuery: string = `
-	SELECT t.table_name as table_name
-	FROM information_schema.tables t
-	WHERE t.table_schema = ?;
-`;
-
-function checkHealth(pool: PoolConnection, expect: CheckHealthExpect, logs?: boolean): Promise<{ ok: boolean, msg: string }> {
-    return new Promise<{ ok: boolean, msg: string }>((resolve) => {
+function checkHealth(pool: PoolConnection, expect: CheckHealthExpect, logs?: boolean): Promise<QueryExecutionState> {
+    return new Promise<QueryExecutionState>((resolve) => {
         pool.query(checkTablesExistQuery, [pool.config?.database], (checkTablesExistQueryError, results) => {
             if (checkTablesExistQueryError) throw { checkTablesExistQueryError };
 
@@ -37,26 +49,36 @@ function checkHealth(pool: PoolConnection, expect: CheckHealthExpect, logs?: boo
                 return;
             }
 
-            pool.query(checkStoredProceduresExistQuery, [pool.config?.database], (checkStoredProceduresExistQueryError, results) => {
-                if (checkStoredProceduresExistQueryError) throw { checkStoredProceduresExistQueryError };
+            pool.query(checkViewsExistQuery, [pool.config?.database], (checkViewsExistQueryError, results) => {
+                if (checkViewsExistQueryError) throw { checkViewsExistQueryError };
 
-                const storedProceduresRows = results as { stored_procedure_name: string }[];
-                if (expect.storedProcedures && expect.storedProcedures.count !== storedProceduresRows.length) {
-                    resolve({ ok: false, msg: 'at stored procedures check' });
+                const viewsRows = results as { view_name: string }[];
+                if (expect.views && expect.views.count !== viewsRows.length) {
+                    resolve({ ok: false, msg: 'at views check' });
                     return;
                 }
 
-                pool.query(checkFunctionsExistQuery, [pool.config?.database], (checkFunctionsExistQueryError, results) => {
-                    if (checkFunctionsExistQueryError) throw { checkFunctionsExistQueryError };
+                pool.query(checkStoredProceduresExistQuery, [pool.config?.database], (checkStoredProceduresExistQueryError, results) => {
+                    if (checkStoredProceduresExistQueryError) throw { checkStoredProceduresExistQueryError };
 
-                    const functionsRows = results as { function_name: string }[];
-                    if (expect.functions && expect.functions.count !== functionsRows.length) {
-                        resolve({ ok: false, msg: 'at functions check' });
+                    const storedProceduresRows = results as { stored_procedure_name: string }[];
+                    if (expect.storedProcedures && expect.storedProcedures.count !== storedProceduresRows.length) {
+                        resolve({ ok: false, msg: 'at stored procedures check' });
                         return;
                     }
-                    
-                    // can keep making sure if other resources of the database exist
-                    resolve({ ok: true, msg: 'Database resources look fine!' });
+
+                    pool.query(checkFunctionsExistQuery, [pool.config?.database], (checkFunctionsExistQueryError, results) => {
+                        if (checkFunctionsExistQueryError) throw { checkFunctionsExistQueryError };
+
+                        const functionsRows = results as { function_name: string }[];
+                        if (expect.functions && expect.functions.count !== functionsRows.length) {
+                            resolve({ ok: false, msg: 'at functions check' });
+                            return;
+                        }
+                        
+                        // can keep making sure if other resources of the database exist
+                        resolve({ ok: true, msg: 'Database resources look fine!' });
+                    });
                 });
             });
         });

@@ -6,6 +6,7 @@ import {
     ACCOUNTS_ROUTES,
     ACCOUNTING_ENTRIES_ROUTES,
     PROVIDERS_ROUTES,
+    USER_ROUTES,
 } from './routes';
 
 const router = express.Router();
@@ -26,10 +27,20 @@ router.get(SALES_ROUTES.GET, (req, res, next) => {
     res.status(200).json({ sales: [] }).end();
 });
 
+router.post(SALES_ROUTES.POST, (req, res, next) => {
+    const newSale = req.body;
+    res.status(201).json({ created: newSale }).end();
+});
+
 // PURCHASES ROUTES
 
 router.get(PURCHASES_ROUTES.GET, (req, res, next) => {
     res.status(200).json({ purchases: [] }).end();
+});
+
+router.post(PURCHASES_ROUTES.POST, (req, res, next) => {
+    const newPurchase = req.body;
+    res.status(201).json({ created: newPurchase }).end();
 });
 
 // ACCOUNTS ROUTES
@@ -52,6 +63,18 @@ router.get(ACCOUNTING_ENTRIES_ROUTES.GET, (req, res, next) => {
 
 router.get(PROVIDERS_ROUTES.GET, (req, res, next) => {
     res.status(200).json({ providers: [] }).end();
+});
+
+// USERS ROUTES
+//
+router.post(USER_ROUTES.POST, (req, res, next) => {
+    const newUser = req.body;
+    res.status(201).json({ created: newUser }).end();
+});
+
+router.post(USER_ROUTES.AUTH, (req, res, next) => {
+    const authUser = req.body;
+    res.status(200).json({ }).end();
 });
 
 export { router };

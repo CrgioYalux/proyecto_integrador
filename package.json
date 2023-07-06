@@ -10,6 +10,7 @@
   "scripts": {
     "dev:client": "yarn --cwd client dev",
     "dev:server": "yarn --cwd server dev",
+    "dev:server:fresh": "yarn --cwd server dev:fresh",
     "dev:both": "npm-run-all --parallel dev:server dev:client",
     "build:client": "yarn --cwd client build",
     "build:server": "yarn --cwd server build",

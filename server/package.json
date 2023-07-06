@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "cross-env NODE_ENV=dev nodemon src/index.ts",
+    "dev:fresh": "cross-env NODE_ENV=dev DB_MODE=fresh nodemon src/index.ts",
     "start": "node dist/src/index.js",
     "build": "tsc"
   },

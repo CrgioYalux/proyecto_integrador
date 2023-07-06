@@ -1,12 +1,11 @@
 import cors from 'cors';
 import express from 'express';
-import { router } from '../api/router';
 
-import { NOT_FOUND_PAGE } from './const';
+import { auth } from '../middlewares/auth';
+import { loginRouter } from '../api/loginRouter';
+import { businessRouter } from '../api/businessRouter';
 
-import type { Express } from 'express';
-
-const createExpressApp = (): Express => {
+const createExpressApp = () => {
     const app = express();
 
     app.disable('x-powered-by');
@@ -14,21 +13,23 @@ const createExpressApp = (): Express => {
     app.use(express.json());
     app.use(cors());
 
-    router.all('/api/**', (req, _, next) => {
+    app.all('/**', (req, _, next) => {
         console.log(`
             ${req.method} ${req.url} at ${Date.now()}
         `);
         next();
     });
 
-    app.use(router);
-
     app.get('/ping', (_, res) => {
         res.status(200).send('pong').end();
     });
 
-    app.get('/**', (_, res) => {
-        res.status(404).send(NOT_FOUND_PAGE).end();
+    app.use(loginRouter);
+    app.use(auth);
+    app.use(businessRouter);
+
+    app.all('/**', (_, res) => {
+        res.status(404).end();
     });
 
     return app;

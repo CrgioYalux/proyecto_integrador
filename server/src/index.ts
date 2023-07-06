@@ -1,5 +1,7 @@
 import http from 'http';
 
+import { IS_FRESH_START } from './config/environment';
+
 import db from './db';
 import { createExpressApp } from './config/express';
 
@@ -11,7 +13,7 @@ const PORT = process.env.PORT ?? '4000';
             console.log(`Error while attempting connection to database: ${err}`);
             return;
         }
-        db.business.setStarterConfig(connection)
+        db.business.setStarterConfig(connection, IS_FRESH_START)
         .then(() => connection.release());
     });
 

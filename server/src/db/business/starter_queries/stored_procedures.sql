@@ -1,11 +1,10 @@
 CREATE PROCEDURE create_user(
 	IN param_username VARCHAR(50),
-	IN param_hash CHAR(60),
-	IN param_salt CHAR(60)
+	IN param_hash VARCHAR(100)
 )
 BEGIN
-	INSERT INTO User (username, hash, salt)
-	VALUES (param_username, param_hash, param_salt);
+	INSERT INTO User (username, hash)
+	VALUES (param_username, param_hash);
 END;
 
 CREATE PROCEDURE create_account(

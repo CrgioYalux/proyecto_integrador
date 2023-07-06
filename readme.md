@@ -26,7 +26,26 @@ para hacer la estructura del proyecto (monorepo) que abarca las aplicaciones **c
         DB_NAME="database_name"
     ```
 
----
+- Se tiene que crear una base de datos en MySQL (utilizando Shell o Workbench):  
+
+    ```
+        CREATE DATABASE database_name;
+    ```
+
+Al iniciar el proyecto puede ocurrir que de un error que diga algo como:
+
+    ```
+        $ yarn run dev:server
+        Server listening on http://localhost:4000/
+        Client does not support authentication protocol requested by server (...)
+    ```
+
+En este caso, se resuelve ejecutando las siguientes queries:  
+
+    ```
+        ALTER USER 'DB_USER'@'DB_HOST' IDENTIFIED WITH mysql_native_password BY 'DB_PASS';
+        flush privileges;
+    ```
 
 ### Comandos del proyecto
 - Para instalar las dependencias del proyecto: `$ yarn install`

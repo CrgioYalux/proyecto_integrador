@@ -10,7 +10,7 @@ const auth = (request: Request, response: Response, next: NextFunction): void =>
     if (token) {
         jwt.verify(token, INCREDIBLY_SAFE_SECRET_KEY, (err, decoded) => {
             if (err) {
-                response.status(403).json({ reason: 'Wrong credentials' }).end();
+                response.status(403).json({ reason: 'Wrong/expired credentials' }).end();
             } else {
                 request.body.user = decoded;
                 next();

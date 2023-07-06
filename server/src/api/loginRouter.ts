@@ -30,12 +30,14 @@ loginRouter.post(USER_ROUTES.POST, (request, response) => {
             .then((res) => {
                 if (res.exists) {
                     response.status(400).json({ reason: 'User already exists' }).end();
+                    connection.release();
                     return;
                 }
                 createUser(connection, newUser)
                     .then((res) => {
                         if (res.created) {
                             response.status(201).end();
+                            connection.release();
                             return;
                         }
                     })

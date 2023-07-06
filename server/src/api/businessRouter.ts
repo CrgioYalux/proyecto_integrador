@@ -8,14 +8,50 @@ import {
     PROVIDERS_ROUTES
 } from './routes';
 
+import { Query } from './queries';
+
+import { pool } from '../db/connection';
+
+import type { Product } from './utils';
+
 const businessRouter = express.Router();
 
 // PRODUCTS ROUTES
 
 businessRouter.get(PRODUCTS_ROUTES.GET, (req, res, next) => {
     const productId = req.params[0];
-    console.log({ productId });
-    res.status(200).json({ products: [] }).end();
+
+    pool.getConnection((error, connection) => {
+        if (error) {
+            console.error(error);
+            res.status(500).end();
+        } else {
+
+            if (productId) {
+                connection.query(Query.products.getOneById, (query_error, results) => {
+                    if (query_error) {
+                        console.error(query_error);
+                        res.status(500).end();
+                    } else {
+                        const product = results as Product[];
+                        res.status(302).json({ product }).end();
+                    }
+                });
+            } else {
+                connection.query(Query.products.getAll, (query_error, results) => {
+                    if (query_error) {
+                        console.error(query_error);
+                        res.status(500).end();
+                    } else {
+                        const products = results as Product[];
+                        res.status(200).json({ products }).end();
+                    }
+                });
+            }
+        }
+
+        connection.release();
+    });
 });
 
 // SALES ROUTES
